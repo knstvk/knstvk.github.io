@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Filter :: Jmix Documentation</title>
+    <link rel="canonical" href="https://docs.jmix.io/jmix/ui/vcl/components/filter.html">
+    <link rel="prev" href="file-upload-field.html">
+    <link rel="next" href="filter-components.html">
+    <meta name="generator" content="Antora 3.0.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"><link rel="stylesheet" href="../../../../_/css/search.css">
+<link rel="stylesheet" href="../../../../_/css/overrides.css">
+<link rel="shortcut icon" href="https://www.jmix.io/dark-favicon.ico" />
+<link rel="icon" href="https://www.jmix.io/dark-favicon.ico" /> <script>uiRootPath = '../../../../_'</script>
+<!-- Google Tag Manager -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH3DTWV');</script>
+-->
+<!-- End Google Tag Manager -->
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.jmix.io">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8205 2.64855L7.33011 9.13895L9.71136 11.5202L16.2018 5.0298C17.7889 3.44265 20.3363 3.41231 21.9764 4.91232L23.9484 6.85824L26.323 4.48334L24.3643 2.52437C21.4098 -0.289033 16.7211 -0.251991 13.8205 2.64855Z"
+                        fill="#FC1264" />
+                    <path
+                        d="M12.1333 18.7388L19.2167 11.6554L26.2444 18.6831L19.161 25.7665L12.1333 18.7388ZM21.5592 28.1651L28.6426 21.0816L29.2917 20.4325C30.2576 19.4666 30.2576 17.9003 29.2917 16.934L28.6426 16.2849L21.6149 9.25723L20.9658 8.60847C19.9999 7.64221 18.4332 7.64221 17.4673 8.60847L16.8182 9.25723L9.73511 16.3407L9.086 16.9898C8.1201 17.9557 8.1201 19.522 9.086 20.4883L9.73511 21.1374L16.7628 28.1651L17.4116 28.8138C18.3778 29.7801 19.9441 29.7801 20.9101 28.8138L21.5592 28.1651Z"
+                        fill="white" />
+                    <path
+                        d="M22.143 32.4252C20.5555 34.0123 18.0081 34.0427 16.3677 32.5423L16.3663 32.5441L14.3748 30.5523L11.9886 32.9388L13.9801 34.9302C16.9342 37.744 21.6234 37.7073 24.5243 34.8064L31.0475 28.2832L28.6662 25.902L22.143 32.4252Z"
+                        fill="#25CDE3" />
+                    <path d="M31.0646 23.5038L31.8584 24.2972L31.0646 23.5038Z" fill="#25CDE3" />
+                    <path d="M4.93164 11.5374L6.12227 12.728L4.93164 11.5374Z" fill="#FC1264" />
+                    <path
+                        d="M5.4746 21.6751C3.88745 20.0883 3.85711 17.5405 5.35713 15.9005L7.32633 13.9316L4.93167 11.5373L2.96282 13.5062L2.96953 13.5129C0.15577 16.467 0.192812 21.1558 3.09335 24.0567L9.58376 30.5468L11.965 28.1655L5.4746 21.6751Z"
+                        fill="#FDB42B" />
+                    <path
+                        d="M35.274 13.3757L28.7836 6.88529L26.4023 9.26654L32.8927 15.7569C34.4799 17.3441 34.5102 19.8915 33.0102 21.5316L31.0647 23.5036L33.4392 25.8781L35.3982 23.9192C38.2116 20.965 38.1745 16.2762 35.274 13.3757Z"
+                        fill="#22D685" />
+                </svg>
+                &nbsp;
+                Jmix Documentation
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <input id="search-input" placeholder="Search docs" onfocusout="this.value=''"
+                        style="font-size: 16px;" />
+                </div>
+            </div>
+            <div class="header-btn">
+                <a class="header-link" href="https://www.jmix.io/" target="_blank">Go to Jmix website</a>
+            </div>
+        </div>
+    </nav>
+</header><div class="body">
+<div class="nav-container" data-component="jmix" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../intro.html">Jmix Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../whats-new/index.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../setup.html">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../tutorial/index.html">Tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/project-setup.html">1. Project Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/simple-crud.html">2. Simple CRUD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/references.html">3. References And Unique Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/customize-ui.html">4. Customizing UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/data-in-ui.html">5. Working With Data in UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/entity-events.html">6. Using Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/ui-from-scratch.html">7. Creating UI From Scratch</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../studio/index.html">Using Studio</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/install.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/update.html">Update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/subscription.html">Subscription</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/project.html">Working with Project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../studio/studio-features.html">Studio Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/welcome.html">Welcome Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/tool-window.html">Jmix Tool Window</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/project-properties.html">Project Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/marketplace.html">Add-ons Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/entity-designer.html">Entity Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/screen-wizard.html">Screen Wizard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/screen-designer.html">Screen Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/fetch-plan-designer.html">Fetch Plan Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/menu-designer.html">Menu Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/role-designer.html">Role Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/bpmn-designer.html">BPMN Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/coding-assistance.html">Coding Assistance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/code-snippets.html">Code Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/reverse-engineering.html">Reverse Engineering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/hot-deploy.html">Hot Deploy</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/plugin-settings.html">Jmix Plugin Settings</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../data-model/index.html">Data Model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/entities.html">Entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/data-types.html">Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/enumerations.html">Enumerations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/soft-deletion.html">Soft Deletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/metadata.html">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/bean-validation.html">Bean Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/db-migration.html">Database Migration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../data-access/index.html">Data Access</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/data-manager.html">Using DataManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/entity-manager.html">Using EntityManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/entity-events.html">Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/fetching.html">Fetching Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/transactions.html">Transaction Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/jpql-extensions.html">JPQL Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../screens.html">Screens and Fragments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../screens/screen-controllers.html">Screen Controllers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/annotations.html">Screen Controller Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/methods.html">Screen Controller Methods</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/screen-events.html">Screen Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/screen-fragment-events.html">ScreenFragment Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/descriptors.html">XML Descriptors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/mixins.html">Screen Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/root-screens.html">Root Screens</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/validation.html">Screen Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../opening-screens.html">Opening Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../using-fragments.html">Using Screen Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-components.html">Data Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data/data-containers.html">Data Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/instance-container.html">InstanceContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/collection-container.html">CollectionContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/property-containers.html">Property Containers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/key-value-containers.html">Key-Value Containers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data/data-loaders.html">Data Loaders</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data/data-context.html">DataContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data/data-examples.html">Using Data Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../vcl.html">Visual Components Library</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../components.html">Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="app-menu.html">AppMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="browser-frame.html">BrowserFrame</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="button.html">Button</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="caps-lock-indicator.html">CapsLockIndicator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="calendar.html">Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="check-box.html">CheckBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="check-box-group.html">CheckBoxGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="color-picker.html">ColorPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="combo-box.html">ComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="currency-field.html">CurrencyField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="data-grid.html">DataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="date-field.html">DateField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="date-picker.html">DatePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="entity-combo-box.html">EntityComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="entity-picker.html">EntityPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="entity-suggestion-field.html">EntitySuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="file-multi-upload-field.html">FileMultiUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="file-storage-upload-field.html">FileStorageUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="file-upload-field.html">FileUploadField</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="filter.html">Filter</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="filter-components.html">Filter Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="group-table.html">GroupTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="image.html">Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="label.html">Label</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="link.html">Link</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="link-button.html">LinkButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="masked-field.html">MaskedField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="multi-select-list.html">MultiSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="password-field.html">PasswordField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="popup-button.html">PopupButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="popup-view.html">PopupView</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="progress-bar.html">ProgressBar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="property-filter.html">PropertyFilter</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="radio-button-group.html">RadioButtonGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="related-entities.html">RelatedEntities</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="resizable-text-area.html">ResizableTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rich-text-area.html">RichTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="side-menu.html">SideMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="simple-pagination.html">SimplePagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-select-list.html">SingleSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="slider.html">Slider</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="source-code-editor.html">SourceCodeEditor</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="suggestion-field.html">SuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="table.html">Table</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tag-field.html">TagField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tag-picker.html">TagPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-area.html">TextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-field.html">TextField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="time-field.html">TimeField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tree.html">Tree</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tree-data-grid.html">TreeDataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tree-table.html">TreeTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="twin-column.html">TwinColumn</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="value-picker.html">ValuePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="values-picker.html">ValuesPicker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../containers.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/accordion.html">Accordion</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/box-layout.html">BoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/buttons-panel.html">ButtonsPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/css-layout.html">CssLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/drawer.html">Drawer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/grid-layout.html">GridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/group-box-layout.html">GroupBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/html-box-layout.html">HtmlBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/responsive-grid-layout.html">ResponsiveGridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/scroll-box-layout.html">ScrollBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/split-panel.html">SplitPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/tab-sheet.html">TabSheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../miscellaneous.html">Miscellaneous</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../miscellaneous/validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../miscellaneous/formatter.html">Formatter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../api.html">Components API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../xml.html">Components XML Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../facets.html">Facets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/clipboard-trigger.html">ClipboardTrigger</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/data-load-coordinator.html">DataLoadCoordinator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/dynamic-attributes-facet.html">DynamicAttributes Facet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/editor-screen-facet.html">EditorScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/input-dialog-facet.html">InputDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/lookup-screen-facet.html">LookupScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/message-dialog-facet.html">MessageDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/notification-facet.html">NotificationFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/option-dialog-facet.html">OptionDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/presentations-facet.html">PresentationsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/screen-facet.html">ScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/screen-settings-facet.html">ScreenSettingsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/timer.html">Timer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../actions.html">Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../actions/declarative-actions.html">Declarative Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../actions/standard-actions.html">Standard Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/add-action.html">AddAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/bulk-edit-action.html">BulkEditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/create-action.html">CreateAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/edit-action.html">EditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-clear-action.html">EntityClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-lookup-action.html">EntityLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-open-action.html">EntityOpenAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-open-composition-action.html">EntityOpenCompositionAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/exclude-action.html">ExcludeAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/refresh-action.html">RefreshAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/related-action.html">RelatedAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/remove-action.html">RemoveAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/tag-lookup-action.html">TagLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/value-clear-action.html">ValueClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/view-action.html">ViewAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../actions/custom-action-type.html">Custom Action Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../actions/base-action.html">BaseAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../dialogs.html">Dialogs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../background-tasks.html">Background Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../notifications.html">Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../exception-handlers.html">Exception Handlers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../exception-handlers/unique-constraint-violation-exception.html">Handling Unique Constraint Violation Exceptions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../themes.html">Themes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../themes/theme_usage.html">Using Existing Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../themes/custom_theme.html">Creating a Custom Theme</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../themes/theme_addon.html">Creating and Using a Theme Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../icons.html">Icons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../icons/icon-sets.html">Icon Sets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../icons/icon-provider.html">Using Icons from Other Font Libraries</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../menu-config.html">MenuConfig</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../url-history-navigation.html">URL History and Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/handling-url-changes.html">Handling URL Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/routing-api.html">Routing API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/url-navigation-api-usage.html">Using URL History and Navigation API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/url-routes-generator.html">URL Routes Generator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../anonymous-access-to-screens.html">Anonymous Access to Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../pluggable-component-factories.html">Pluggable Component Factories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../custom-components.html">Creating Custom Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/composite-components.html">Composite Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/js-component.html">Generic JavaScriptComponent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/custom-widget-sets.html">Creating GWT Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/widgetset-add-on.html">Creating and Using Widgets Add-On</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../app-properties.html">UI Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../rest/index.html">Generic REST</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/getting-started.html">Getting Started with REST</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../rest/entities-api.html">Entities API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/load-entities.html">Load Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/create-entities.html">Create Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/update-entities.html">Update Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/delete-entities.html">Delete Entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/files-api.html">Files API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/messages-api.html">Messages API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/metadata-api.html">Metadata API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/user-session-api.html">User Session API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/business-logic.html">Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../rest/security.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/security/authentication.html">Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/api-docs.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/app-properties.html">REST Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../localization/index.html">Localization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../localization/message-bundles.html">Message Bundles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../localization/framework-translations.html">Framework Translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../files/index.html">Managing Files</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/files-in-database.html">Storing Files in Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/file-storage.html">Using File Storage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/downloading-files.html">Downloading and Displaying Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../security/index.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/resource-roles.html">Resource Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/row-level-roles.html">Row-level Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/authorization.html">Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../features/index.html">Other Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../features/sequences.html">Sequence Generation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../modularity/index.html">Modularity and Extension</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../modularity/creating-add-ons.html">Creating Add-ons</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../modularity/extension.html">Extending Functionality</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../deployment/index.html">Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/k8s.html">Kubernetes Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/aws-beanstalk.html">Amazon Web Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/azure.html">Azure App Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/google-cloud-appengine.html">Google Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../add-ons.html">Add-ons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../appsettings/index.html">Application Settings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../audit/index.html">Audit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../audit/entity-log.html">Entity Log</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/index.html">BPM</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/getting-started.html">Getting Started with BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/admin-screens.html">Administration Screens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/modeler.html">Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/proc-definitions.html">Process Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/proc-instances.html">Process Instances</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/user-groups.html">User Groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/user-tasks.html">User Tasks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/forms.html">Process Forms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/input-dialog.html">Input Dialog</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/jmix-screen.html">Jmix Screen</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/custom.html">Custom Form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/tasks.html">Tasks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/user-task.html">User Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/service-task.html">Service Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/script-task.html">Script Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/data-task.html">Entity Data Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/email-task.html">Email Sending Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/sub-process-call-activity.html">Sub-Processes and Call Activities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/listeners.html">Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/dmn.html">DMN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/instance-migration.html">Process Instances Migration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/auto-deployment.html">Automatic Models Deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/api.html">BPM API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../business-calendar/index.html">Business Calendars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../business-calendar/creating.html">Creating Business Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../business-calendar/api.html">Business Calendars API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../charts/index.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../charts/types.html">Charts Types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/angular-gauge-chart.html">AngularGaugeChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/funnel-chart.html">FunnelChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/gantt-chart.html">GanttChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/pie-chart.html">PieChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/radar-chart.html">RadarChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/serial-chart.html">SerialChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/stock-chart-group.html">StockChartGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/xy-chart.html">XYChart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/config.html">Configuring Charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/export.html">Charts Export</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/data.html">Connecting Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/events.html">Events</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../dashboards/index.html">Dashboards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/user-interface.html">Administration UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/adding-business-logic.html">Adding Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/using-dashboard-in-screen.html">Using Dashboard in Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/dashboard-chart-addon.html">Dashboard Chart Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../data-tools/index.html">Data Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../data-tools/entity-inspector.html">Entity Inspector</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../data-tools/entity-info-action.html">Entity Information Action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../dyn-attr/index.html">Dynamic Attributes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dyn-attr/dynattr-managing.html">Managing Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dyn-attr/dynattr-view.html">Displaying Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dyn-attr/dynattr-api.html">Dynamic Attributes API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../email/index.html">Email Sending</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/getting-started.html">Getting Started with Email</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/api.html">Email Sending API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/email-history.html">Email History</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../email-template/index.html">Email Templates</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email-template/getting-started.html">Getting Started with Email Templates</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email-template/usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email-template/api.html">Email Templates API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../grapes-js/index.html">GrapesJS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grapes-js/components.html">GrapesJS UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grapes-js/html-editor-ui.html">HTML Editor UI</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../grid-export/index.html">Grid Export Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grid-export/exporters.html">Table Exporters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grid-export/actions.html">Export Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grid-export/limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../ldap/index.html">LDAP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/getting-started.html">Getting Started with LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/obtaining-user-authorities.html">Obtaining User Authorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/in-memory-user-management.html">In-memory User Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/usage-with-active-directory.html">Usage with Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/global-user-synchronization.html">Global User Synchronization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/properties.html">LDAP Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../maps/index.html">Maps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/getting-started.html">Getting Started with Maps</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/maps-ui.html">Maps UI Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../maps/layers.html">Layers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/raster-layers.html">Raster Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/vector-layers.html">Vector Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/heatmap-layer.html">Heatmap Layer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/canvas-layer.html">Canvas Layer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/additional-options.html">Additional Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/drawing-geometry.html">Drawing Geometry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/map-services.html">Map Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../multitenancy/index.html">Multitenancy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../notifications/index.html">Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../notifications/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../notifications/creating-notifications.html">Creating Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../notifications/viewing-notifications.html">Viewing Notifications</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../pivot-table/index.html">Pivot Table</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/elements.html">Elements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/export.html">Exporting PivotTable Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/show-pivot-action.html">Using ShowPivotAction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../quartz/index.html">Quartz</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../reports/index.html">Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/getting-started.html">Getting Started with Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../reports/create-reports.html">Creating Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/data-structure.html">Report Data Structure</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/templates.html">Report Template</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/parameter-and-format.html">Report Parameters and Field Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/permissions.html">Report Access Rights</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/localization.html">Report Name Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/run-report.html">Running Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/exec-history.html">Report Execution History</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/sample-reports.html">Sample Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/rest-api.html">REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../search/index.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/getting-started.html">Getting Started with Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/index-definitions.html">Index Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/indexing-queue.html">Indexing Queue</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/search-in-ui.html">Using Search in UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/config-options.html">Search Configuration Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/search-api.html">Search API and Internals</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/search-properties.html">Search Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../webdav/index.html">WebDAV</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/ui-components.html">UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendices</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../app-properties.html">Application Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text"><a href="https://docs.jmix.io/api/1.3" target="_blank" rel="noopener">Java API Reference</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../quartz-setup.html">Quartz Job Scheduler Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../publish-add-on.html">Publishing an Add-on</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../cuba/index.html">Migration from CUBA Platform</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jmix Documentation</span>
+    <span class="version">1.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../intro.html">Jmix Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../intro.html">1.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../intro.html">Jmix Documentation</a></li>
+    <li><a href="../../index.html">User Interface</a></li>
+    <li><a href="../../vcl.html">Visual Components Library</a></li>
+    <li><a href="../components.html">Components</a></li>
+    <li><a href="filter.html">Filter</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/ui/pages/vcl/components/filter.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Filter</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="jmix-ui-live-demo-container">
+    <a href="https://demo.jmix.io/sampler/#main/sample?id=filter-multiple-conditions" class="live-demo-btn" target="_blank">LIVE DEMO</a>
+</div>
+<div class="paragraph">
+<p>The <code>Filter</code> component is a versatile tool for filtering the data it is bound to.</p>
+</div>
+<div class="paragraph">
+<p>The component enables <a href="#quick-filtering">quick data filtering</a> by arbitrary conditions, as well as creating <a href="#configuration">configurations</a> for repeated use.</p>
+</div>
+<div class="paragraph">
+<p>Component’s XML-name: <code>filter</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basics"><a class="anchor" href="#_basics"></a>Basics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>Filter</code> should be connected to a data loader of a standalone <code>CollectionContainer</code> or <code>KeyValueCollectionContainer</code>. It generates a <code>Condition</code> object that is set to the loader and later processed by the <a href="../../../data-model/data-stores.html" class="xref page">data store</a>. For a <a href="../../../data-model/entities.html#jpa" class="xref page">JPA entity</a>, the data store modifies the resulting JPQL query, so the filtering is done on the database level, and only selected data is loaded from the database to the application memory.</p>
+</div>
+<div class="paragraph">
+<p>By default, Jmix Studio generates the <code>Filter</code> component when creating browser and master-detail screens for an entity.</p>
+</div>
+<div class="paragraph">
+<p>An example of <code>filter</code> declaration in the XML screen descriptor is shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    &lt;collection id="customersDc" class="ui.ex1.entity.Customer"&gt;
+        &lt;fetchPlan extends="_base"&gt;
+            &lt;property fetchPlan="_base" name="city"/&gt;
+            &lt;property name="favouriteBrands" fetchPlan="_base"/&gt;
+        &lt;/fetchPlan&gt;
+        &lt;loader id="customersDl"&gt;
+            &lt;query&gt;
+                &lt;![CDATA[select e from uiex1_Customer e]]&gt;
+            &lt;/query&gt;
+        &lt;/loader&gt;
+    &lt;/collection&gt;
+&lt;/data&gt;
+&lt;layout spacing="true" expand="customersTable"&gt;
+            &lt;filter dataLoader="customersDl" caption="Simple filter"&gt;
+                &lt;properties include=".*"/&gt;
+            &lt;/filter&gt;
+    &lt;table id="customersTable"
+           width="100%"
+           dataContainer="customersDc"&gt;
+        &lt;columns&gt;
+            &lt;column id="level"/&gt;
+            &lt;column id="age"/&gt;
+            &lt;column id="hobby"/&gt;
+            &lt;column id="firstName"/&gt;
+            &lt;column id="lastName"/&gt;
+            &lt;column id="city"/&gt;
+            &lt;column id="rewardPoints"/&gt;
+        &lt;/columns&gt;
+    &lt;/table&gt;
+&lt;/layout&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the example above, the data container holds the collection of <code>Customer</code> entity instances. The data loader loads the collection using a JPQL query. The <code>filter</code> component is connected to the loader using the <code>dataLoader</code> attribute. Data is displayed using the <code>Table</code> component, which is connected to the data container.</p>
+</div>
+<div class="paragraph">
+<p>A typical filter is shown below:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-anatomy.png" alt="filter anatomy">
+</div>
+</div>
+<div id="add-condition-link" class="ulist">
+<ul>
+<li>
+<p>The <strong>Add search condition</strong> link (1).</p>
+</li>
+</ul>
+</div>
+<div id="refresh-drop-down-menu" class="ulist">
+<ul>
+<li>
+<p>The drop-down menu with the saved filters and configurations (2).</p>
+</li>
+</ul>
+</div>
+<div id="refresh-button" class="ulist">
+<ul>
+<li>
+<p>The <strong>Refresh</strong> button with the drop-down menu (3).</p>
+</li>
+</ul>
+</div>
+<div id="operation-selector" class="ulist">
+<ul>
+<li>
+<p>The operation selector (4).</p>
+</li>
+</ul>
+</div>
+<div id="condition-fields" class="ulist">
+<ul>
+<li>
+<p>The condition value field (5).</p>
+</li>
+</ul>
+</div>
+<div id="filter-settings-button" class="ulist">
+<ul>
+<li>
+<p>The filter settings popup button (6).</p>
+</li>
+</ul>
+</div>
+<div id="quick-filtering" class="paragraph">
+<p>By default, the component is in quick filter mode. It means that a user can add a set of conditions for a one-off data search. After the screen is closed, the conditions will disappear.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="quick-filter-example"><a class="anchor" href="#quick-filter-example"></a>Quick Filter Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let’s consider that we have the <code>Customer</code> entity and want to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a quick filter with multiple conditions in the <strong>Customer browser</strong> screen.</p>
+</li>
+<li>
+<p>Save this filter for the future.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_creating_a_quick_filter"><a class="anchor" href="#_creating_a_quick_filter"></a>Creating a Quick Filter</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the <strong>Add search condition</strong> link(<a href="#add-condition-link">1</a>).</p>
+</li>
+<li>
+<p>Select the <strong>Age</strong> property in the <strong>Properties</strong> list.</p>
+</li>
+<li>
+<p>Select the <strong>Hobby</strong> property.</p>
+<div class="paragraph">
+<p>Selected conditions are displayed at the top of the filter panel.</p>
+</div>
+</li>
+<li>
+<p>Modify the condition value fields and operations:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-sample.png" alt="filter sample">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_saving_the_filter"><a class="anchor" href="#_saving_the_filter"></a>Saving the Filter</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Click the filter settings icon(<a href="#filter-settings-button">6</a>), select <strong>Save with values</strong>.</p>
+</li>
+<li>
+<p>Provide a new filter configuration name in the <strong>Save filter configuration</strong> dialog:</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-sample-save.png" alt="filter sample save">
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After that, the filter will be saved and appear in the <strong>Refresh</strong> button&#8217;s drop-down menu(<a href="#refresh-button">3</a>).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-sample-refresh.png" alt="filter sample refresh">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Reset filter</strong> menu lets you reset all currently applied search conditions.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-condition"><a class="anchor" href="#add-condition"></a>Adding Conditions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create a quick filter, click the <strong>Add search condition</strong> link (<a href="#add-condition-link">1</a>). The <strong>Add condition</strong> screen will be displayed:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-add-condition.png" alt="filter add condition">
+</div>
+</div>
+<div class="paragraph">
+<p>Possible condition types are described below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Properties</strong> - attributes of this entity and related entities. Only persistent attributes are displayed. They are displayed according to the rules specified in the <a href="#filter-element-properties">properties</a> element.</p>
+</li>
+</ul>
+</div>
+<div id="predefined-conditions" class="ulist">
+<ul>
+<li>
+<p><strong>Predefined conditions</strong> are conditions specified by the developer in the <a href="#filter-element-conditions">conditions</a> element in the XML descriptor. Predefined conditions are not initially added to any configurations, but the user can select them in the <strong>Add Condition</strong> screen and add to the <a href="#run-time-configuration">run-time configuration</a>.</p>
+</li>
+<li>
+<p><strong>Configurations</strong> can be created at design-time or run-time (via the <a href="#configuration">Configuration editor</a>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Selected conditions are displayed at the top of the filter panel. The <span class="image"><img src="../../_images/vcl/components/filter-remove-condition.png" alt="filter remove condition"></span> icon will appear next to each condition field, allowing them to be removed from the set.</p>
+</div>
+<div id="registered-filters-popup-button" class="paragraph">
+<p>The drop-down actions of the <strong>Create</strong> button correspond to the <a href="filter-components.html#filter-component-registration" class="xref page">registered</a> filter components. Three filter components named <code>PropertyFilter</code>, <code>JpqlFilter</code>, and <code>GroupFilter</code> are available by default:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>PropertyFilter</code> corresponds to <a href="#property-conditions">property conditions</a>.</p>
+</li>
+<li>
+<p><code>JpqlFilter</code> corresponds to <a href="#jpql-conditions">JPQL conditions</a>.</p>
+</li>
+<li>
+<p><code>GroupFilter</code> corresponds to <a href="#group-conditions">group conditions</a>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-create-filter-button.png" alt="filter create filter button">
+</div>
+</div>
+<div class="paragraph">
+<p>When the <a href="../../../search/index.html" class="xref page">Search</a> add-on is added to the project, a new <a href="../../../search/search-in-ui.html#fts-condition-in-filter-component" class="xref page">Full-text condition</a> is available for usage.</p>
+</div>
+<div class="paragraph">
+<p>So the user has the opportunity to create filter conditions in run-time.</p>
+</div>
+<div class="sect2">
+<h3 id="property-conditions"><a class="anchor" href="#property-conditions"></a>Property Conditions</h3>
+<div class="paragraph">
+<p>The <strong>Property conditions editor</strong> allows users to configure the attributes of the <a href="property-filter.html" class="xref page">PropertyFilter</a> component. <code>PropertyFilter</code> is related to the entity property.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-property-conditions.png" alt="filter property conditions">
+</div>
+</div>
+<div class="paragraph">
+<p>Select the entity attribute in the <strong>Property</strong> field.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Operation</strong> field enables selecting the condition <a href="property-filter.html#operation" class="xref page">operator</a>. The list of available operations depends on the attribute type.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Parameter name</strong> attribute to set the name of the associated query parameter name. You can use this name to introduce dependencies between filter components in configuration. If not defined, then the parameter name is randomly generated.</p>
+</div>
+<div class="paragraph">
+<p>You can set the custom caption of the property filter condition in the <strong>Caption</strong> field.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Operation editable</strong> checkbox to set whether an operation selector is visible. If you select this checkbox, the operation field enables selecting the condition operator in run-time.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Operation caption visible</strong> checkbox to define the visibility of the operation caption.</p>
+</div>
+<div class="paragraph">
+<p>You can set the default value for the filter condition in the <strong>Default value</strong> field.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jpql-conditions"><a class="anchor" href="#jpql-conditions"></a>JPQL Conditions</h3>
+<div class="paragraph">
+<p>The <strong>JPQL conditions editor</strong> allows users to create conditions based on JPQL expressions.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-jpql-conditions.png" alt="filter jpql conditions">
+</div>
+</div>
+<div class="paragraph">
+<p>In the <strong>Parameter type</strong> field, you should select the Java class of the condition parameter. The <code>No parameter</code> value lets you create a condition without parameters. For example:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-jpql-conditions-no-parameters.png" alt="filter jpql conditions no parameters">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Caption</strong> field is required. You should set the condition name displayed in the filter.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Parameter name</strong> attribute to set the name of the associated query parameter. You can use this name to introduce dependencies between filter components in configuration. If not defined, then the parameter name is randomly generated.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Has IN expression</strong> checkbox to define whether JPQL expression should contain <code>IN</code> expression. In this case, the application will use the <a href="values-picker.html" class="xref page">ValuesPicker</a> component for creating the list of condition values.</p>
+</div>
+<div class="paragraph">
+<p>You can set the default value for the filter condition in the <strong>Default value</strong> field.</p>
+</div>
+<div id="jpql-conditions-join" class="paragraph">
+<p>In the <strong>Join</strong> field, you can specify JPQL expression, which will be added to the <code>from</code> data loader query section. This can be required to create a complex condition based on an attribute of a related collection. The expression should be started with <code>join</code> or <code>left join</code> statements. The <code>{E}</code> placeholder should be used in the expression instead of the alias of the entity being selected.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-jpql-conditions-join.png" alt="filter jpql conditions join">
+</div>
+</div>
+<div id="jpql-conditions-where" class="paragraph">
+<p>The value in the <strong>Where</strong> field specifies the JPQL expression, which will be added to the <code>where</code> data loader query section. The <code>{E}</code> placeholder should be used in the expression instead of the alias of the entity being selected. The condition can only have one parameter denoted by <code>?</code>, if a parameter is defined in the <strong>Parameter type</strong> field described above. Apart from such a user-entered parameter, you can also use any number of <a href="../../../data-access/jpql-extensions.html#session-and-user-attributes" class="xref page">session and user attributes</a> parameters, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-jpql hljs" data-lang="jpql">{E}.code = ? and {E}.area = :session_area</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="group-conditions"><a class="anchor" href="#group-conditions"></a>Group Conditions</h3>
+<div class="paragraph">
+<p>The <strong>Group conditions editor</strong> allows users to combine several conditions into a logical group.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-group-conditions.png" alt="filter group conditions">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Operation</strong> drop-down allows users to select a logical group operator.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Caption</strong> field is required. You should set the condition name displayed in the filter.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Operation caption visible</strong> checkbox to define the visibility of the operation caption.</p>
+</div>
+<div class="paragraph">
+<p>To add a condition, click the <strong>Add</strong> button. The <a href="#add-condition">Add condition</a> screen will be displayed.</p>
+</div>
+<div class="paragraph">
+<p>The filter conditions are contained in the tree. Users can determine the order of filter conditions in a filter using the <span class="image"><img src="../../_images/vcl/components/filter-group-conditions-move-down.png" alt="filter group conditions move down"></span>/<span class="image"><img src="../../_images/vcl/components/filter-group-conditions-move-up.png" alt="filter group conditions move up"></span> buttons and remove and edit conditions using the <strong>Remove</strong> and <strong>Edit</strong> buttons.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration"><a class="anchor" href="#configuration"></a>Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A configuration is a set of filter components.</p>
+</div>
+<div class="paragraph">
+<p><code>LogicalFilterComponent</code> is the root element of the configuration.</p>
+</div>
+<div class="paragraph">
+<p>The configuration does not store a reference to all components but stores a reference only to the root element, from which the rest filter components can be obtained.</p>
+</div>
+<div class="paragraph">
+<p>Configurations can be created at design-time or run-time (via the <a href="#run-time-configuration">Configuration editor</a> screen).</p>
+</div>
+<div class="sect2">
+<h3 id="design-time-configuration"><a class="anchor" href="#design-time-configuration"></a>Design-time Configuration</h3>
+<div class="paragraph">
+<p>Design-time configuration cannot be changed and saved in run-time. Still, the user can use the <code>Copy</code> action that copies all conditions from the design-time configuration to the run-time configuration.</p>
+</div>
+<div class="paragraph">
+<p>All design-time configurations are displayed in the drop-down menu(<a href="#refresh-drop-down-menu">2</a>) with the saved filters and configurations:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-design-time-configuration.png" alt="filter design time configuration">
+</div>
+</div>
+<div class="paragraph">
+<p>An example of <code>filter</code> with design-time configurations in the XML screen descriptor is shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter dataLoader="customersDl"
+        id="filterDesignTime"
+        caption="Filter with design-time configurations"&gt;
+    &lt;properties include=".*"/&gt;
+    &lt;configurations&gt;
+        &lt;configuration id="configuration_age_hobby" operation="AND"
+                       name="Age AND Hobby Configuration" default="true"&gt;
+            &lt;propertyFilter property="age" operation="GREATER"/&gt;
+            &lt;propertyFilter property="hobby" operation="IN_LIST"/&gt;
+        &lt;/configuration&gt;
+        &lt;configuration id="configuration_level_rewards_points" operation="OR"
+                       name="Level OR Rewards Points Configuration"&gt;
+            &lt;propertyFilter property="level" operation="EQUAL"/&gt;
+            &lt;propertyFilter property="rewardPoints" operation="LESS_OR_EQUAL"/&gt;
+        &lt;/configuration&gt;
+    &lt;/configurations&gt;
+&lt;/filter&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>id</code> is a required attribute and must be unique within this filter. If the <code>name</code> attribute is not specified, then <code>id</code> is used as a key in the <a href="../../../localization/message-bundles.html" class="xref page">message bundle</a>.</p>
+</div>
+<div id="design-time-configuration-default" class="paragraph">
+<p>Use the <code>default</code> XML attribute to set the design-time configuration as default for filter. So it appears right after opening the screen.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="run-time-configuration"><a class="anchor" href="#run-time-configuration"></a>Run-time Configuration</h3>
+<div class="paragraph">
+<p>To create, edit or remove configurations in run-time, a user should have <a href="#ui-filter-modifyConfiguration">ui.filter.modifyConfiguration</a> security permission.</p>
+</div>
+<div class="paragraph">
+<p>To open the <strong>Configuration editor</strong> screen, use the <strong>Edit</strong> action in the Settings(<a href="#filter-settings-button">6</a>) popup button.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/filter-run-time-configuration.png" alt="filter run time configuration">
+</div>
+</div>
+<div class="paragraph">
+<p>The <strong>Configuration name</strong> field is required. You should set the configuration name displayed in the drop-down menu(<a href="#refresh-drop-down-menu">2</a>) with the saved filters and configurations.</p>
+</div>
+<div id="available-for-all-users" class="paragraph">
+<p>You can set filter available to all users using the <strong>Available for all users</strong> checkbox. This checkbox is only available to users having the specific <a href="#ui-filter-modifyGlobalConfiguration">ui.filter.modifyGlobalConfiguration</a> permission.</p>
+</div>
+<div id="default-for-all-users" class="paragraph">
+<p>Use the <strong>Default for all users</strong> checkbox to set whether the created configuration will be automatically selected when users open the screen. This checkbox is enabled if the <strong>Available for all users</strong> checkbox is selected.</p>
+</div>
+<div class="paragraph">
+<p>The other <strong>Configuration editor</strong> fields are described in <a href="#group-conditions">Group Conditions</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="filter-elements"><a class="anchor" href="#filter-elements"></a>Filter Elements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>filter</code> defined in the XML descriptor may contain nested elements. They describe conditions available for user selection in the <strong>Add Condition</strong> dialog:</p>
+</div>
+<div class="sect2">
+<h3 id="filter-element-properties"><a class="anchor" href="#filter-element-properties"></a>properties</h3>
+<div class="paragraph">
+<p>The <code>properties</code> element allows you to make multiple entity attributes available for selection. This element has the following attributes:</p>
+</div>
+<div id="filter-element-properties-include" class="ulist">
+<ul>
+<li>
+<p><code>include</code> is a required attribute. It contains a regular expression, which should match an entity attribute name.</p>
+</li>
+</ul>
+</div>
+<div id="filter-element-properties-exclude" class="ulist">
+<ul>
+<li>
+<p><code>exclude</code> - contains a regular expression. If an attribute matches the expression, it will be excluded from previously included (using <code>include</code>).</p>
+</li>
+<li>
+<p><code>excludeProperties</code> - contains a comma-separated list of property paths that should be excluded from filtering. As opposed to exclude, it supports traversing the entity graphs, for example, <code>customer.name</code>.</p>
+</li>
+<li>
+<p><code>excludeRecursively</code> - defines if an attribute from <code>excludeProperties</code> should be excluded recursively for the whole object graph. If <code>true</code>, an attribute and all its nested attributes with the same name will be excluded.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the example below, we declare a <code>filter</code> component with the <code>properties</code> nested element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter id="filterWithProperties"
+        dataLoader="customersDl"&gt;
+    &lt;properties include=".*"
+                exclude="(hobby)|(age)"
+                excludeProperties="id"
+                excludeRecursively="true"/&gt;
+&lt;/filter&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following entity attributes are ignored when the <code>properties</code> element is used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Not accessible due to the <a href="../../../security/index.html" class="xref page">security</a> permissions.</p>
+</li>
+<li>
+<p>Collections (<code>@OneToMany</code>, <code>@ManyToMany</code>).</p>
+</li>
+<li>
+<p>Non-persistent attributes.</p>
+</li>
+<li>
+<p>Attributes annotated with <code>@SystemLevel</code>.</p>
+</li>
+<li>
+<p>Attributes of type <code>byte[]</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter-element-conditions"><a class="anchor" href="#filter-element-conditions"></a>conditions</h3>
+<div class="paragraph">
+<p>The <code>conditions</code> element is used to create <a href="#predefined-conditions">predefined conditions</a>.</p>
+</div>
+<div class="paragraph">
+<p>In the example below, we declare a <code>filter</code> component with the <code>conditions</code> nested element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter id="filterWithСonditions"
+        dataLoader="customersDl"&gt;
+    &lt;properties include=".*"/&gt;
+    &lt;conditions&gt;
+        &lt;propertyFilter property="hobby"
+                        operation="NOT_IN_LIST"
+                        operationEditable="true"
+                        caption="Hobby condition"/&gt;
+    &lt;/conditions&gt;
+&lt;/filter&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>conditions</code> element may contain any number of <a href="filter-components.html#property-filter" class="xref page">propertyFilter</a>, <a href="filter-components.html#jpql-filter" class="xref page">jpqlFilter</a> or <a href="filter-components.html#group-filter" class="xref page">groupFilter</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter-element-configurations"><a class="anchor" href="#filter-element-configurations"></a>configurations</h3>
+<div class="paragraph">
+<p>The <code>configurations</code> element is used to create <a href="#design-time-configuration">design-time configurations</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter-element-actions"><a class="anchor" href="#filter-element-actions"></a>actions</h3>
+<div class="paragraph">
+<p><code>actions</code> - an optional element to define the list of actions for filter management.</p>
+</div>
+<div id="filter-default-actions" class="paragraph">
+<p>The framework provides the following default actions in the filter settings popup button(<a href="#filter-settings-button">6</a>) <span class="image"><img src="../../_images/vcl/components/filter-settings-popup.png" alt="filter settings popup"></span>:</p>
+</div>
+<div id="filter-save-action" class="ulist">
+<ul>
+<li>
+<p><strong>Save</strong> - implemented by <code>FilterSaveAction</code> (<code>type="filter_save"</code> in XML) which saves changes to the current filter configuration.</p>
+</li>
+</ul>
+</div>
+<div id="filter-save-with-values-action" class="ulist">
+<ul>
+<li>
+<p><strong>Save with values</strong> - implemented by <code>FilterSaveWithValuesAction</code> (<code>type="filter_saveWithValues"</code> in XML) which saves changes to the current filter using the values in the condition fields(<a href="#condition-fields">5</a>) as the filter default values.</p>
+</li>
+</ul>
+</div>
+<div id="filter-save-as-action" class="ulist">
+<ul>
+<li>
+<p><strong>Save as</strong> - implemented by <code>FilterSaveAsAction</code> (<code>type="filter_saveAs"</code> in XML) which saves the filter configuration under a new name.</p>
+</li>
+</ul>
+</div>
+<div id="filter-edit-action" class="ulist">
+<ul>
+<li>
+<p><strong>Edit</strong> - implemented by <code>FilterEditAction</code> (<code>type="filter_edit"</code> in XML) which edits the current <a href="#run-time-configuration">run-time filter configuration</a> (opens the <strong>Configuration editor</strong> screen). Disabled for <a href="#design-time-configuration">design-time configurations</a>.</p>
+</li>
+</ul>
+</div>
+<div id="filter-remove-action" class="ulist">
+<ul>
+<li>
+<p><strong>Remove</strong> - implemented by <code>FilterRemoveAction</code> (<code>type="filter_remove"</code> in XML) which removes the current run-time filter configuration. Disabled for design-time configurations.</p>
+</li>
+</ul>
+</div>
+<div id="filter-make-default-action" class="ulist">
+<ul>
+<li>
+<p><strong>Make default</strong> - implemented by <code>FilterMakeDefaultAction</code> (<code>type="filter_makeDefault"</code> in XML) which makes the filter configuration default for this screen. The filter will be automatically displayed on the filter panel when the screen is opened. Takes precedence over the <a href="#design-time-configuration-default">default</a> attribute of design-time configuration and the <a href="#default-for-all-users">Default for all users</a> checkbox of run-time configuration. It is disabled if no <code>screenSettings</code> facet is added to the screen.</p>
+</li>
+</ul>
+</div>
+<div id="filter-copy-action" class="ulist">
+<ul>
+<li>
+<p><strong>Copy</strong> - implemented by <code>FilterCopyAction</code> (<code>type="filter_copy"</code> in XML) which copies all conditions from the design-time configuration to the run-time configuration.</p>
+</li>
+</ul>
+</div>
+<div id="filter-clear-values-action" class="ulist">
+<ul>
+<li>
+<p><strong>Clear values</strong> - implemented by <code>FilterClearValuesAction</code> (<code>type="filter_clearValues"</code> in XML) which clears the filter condition values(<a href="#condition-fields">5</a>).</p>
+</li>
+</ul>
+</div>
+<div id="filter-add-condition-action" class="ulist">
+<ul>
+<li>
+<p><strong>Add</strong> implemented by <code>FilterAddConditionAction</code> (<code>type="filter_addCondition"</code> in XML) which adds a condition to the current filter configuration.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Users can override <a href="#filter-default-actions">default</a> actions using the <code>actions</code> nested element. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter id="filterWithActions"
+        dataLoader="customersDl"&gt;
+    &lt;properties include=".*"/&gt;
+    &lt;actions&gt;
+        &lt;action id="addCondition" type="filter_addCondition"/&gt;
+        &lt;action id="clearValues" type="filter_clearValues"/&gt;
+    &lt;/actions&gt;
+&lt;/filter&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can configure common action parameters using XML attributes of the <code>action</code> element, see <a href="../../actions.html" class="xref page">Actions</a> for details.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="filter-attributes"><a class="anchor" href="#filter-attributes"></a>Filter Attributes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="filter-attribute-auto-apply"><a class="anchor" href="#filter-attribute-auto-apply"></a>autoApply</h3>
+<div class="paragraph">
+<p>The <code>autoApply</code> attribute specifies when the filter is applied. If the attribute value is <code>false</code>, filter will be applied only after the <strong>Refresh</strong> button is clicked. If the attribute value is <code>true</code>, filter is applied immediately after changing the filter components. The default value is specified in the <a href="../../app-properties.html#jmix.ui.component.filter-auto-apply" class="xref page">jmix.ui.component.filter-auto-apply</a> property.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter-attribute-columns-count"><a class="anchor" href="#filter-attribute-columns-count"></a>columnsCount</h3>
+<div class="paragraph">
+<p>The <code>columnsCount</code> sets the number of columns to be displayed on one row. The default value is specified in the <a href="../../app-properties.html#jmix.ui.component.filter-columns-count" class="xref page">jmix.ui.component.filter-columns-count</a> property.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="filter-attribute-caption-position"><a class="anchor" href="#filter-attribute-caption-position"></a>captionPosition</h3>
+<div class="paragraph">
+<p>The <code>captionPosition</code> attribute defines the caption position of filter child components: <code>TOP</code> or <code>LEFT</code>. The default value is <code>LEFT</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="permissions"><a class="anchor" href="#permissions"></a>Permissions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Advanced filter management requires special permissions:</p>
+</div>
+<div id="ui-filter-modifyConfiguration" class="ulist">
+<ul>
+<li>
+<p>To create/change/delete filter <a href="#configuration">configurations</a>, users must have the
+<code>ui.filter.modifyConfiguration</code> specific permission.</p>
+</li>
+</ul>
+</div>
+<div id="ui-filter-modifyGlobalConfiguration" class="ulist">
+<ul>
+<li>
+<p>To create/change/delete global (<a href="#available-for-all-users">available for all users</a>) filter configurations, users must have the <code>ui.filter.modifyGlobalConfiguration</code> specific permission.</p>
+</li>
+</ul>
+</div>
+<div id="ui-filter-modifyJpqlCondition" class="ulist">
+<ul>
+<li>
+<p>To create/change <a href="#jpql-conditions">JPQL conditions</a> in run-time, users must have the <code>ui.filter.modifyJpqlCondition</code> specific permission.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can either give users the <strong>UI: edit filters</strong> predefined resource role, or configure the necessary permissions in your own <a href="../../../security/resource-roles.html#create" class="xref page">role</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="app-properties"><a class="anchor" href="#app-properties"></a>Application Properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following application properties affect the filter behavior:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../app-properties.html#jmix.ui.component.filter-auto-apply" class="xref page">jmix.ui.component.filter-auto-apply</a>;</p>
+</li>
+<li>
+<p><a href="../../app-properties.html#jmix.ui.component.filter-columns-count" class="xref page">jmix.ui.component.filter-columns-count</a>;</p>
+</li>
+<li>
+<p><a href="../../app-properties.html#jmix.ui.component.filter-properties-hierarchy-depth" class="xref page">jmix.ui.component.filter-properties-hierarchy-depth</a>;</p>
+</li>
+<li>
+<p><a href="../../app-properties.html#jmix.ui.component.filter-show-configuration-id-field" class="xref page">jmix.ui.component.filter-show-configuration-id-field</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="creating-filter-programmatically"><a class="anchor" href="#creating-filter-programmatically"></a>Creating Filter Programmatically</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the example below, we will create the <code>Filter</code> component with a <a href="#design-time-configuration">design-time configuration</a> and add this filter to the tab, defined in the XML descriptor.</p>
+</div>
+<div class="paragraph">
+<p>To create the <code>Filter</code> component in the controller, use the <code>UiComponents</code> factory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+protected UiComponents uiComponents;
+
+@Autowired
+protected CollectionLoader&lt;Customer&gt; customersDl;
+
+@Autowired
+protected SingleFilterSupport singleFilterSupport;
+@Autowired
+protected Filter pfdtcFilter;
+@Autowired
+protected Filter jfdtcFilter;
+@Autowired
+protected JpqlFilterSupport jpqlFilterSupport;
+@Autowired
+protected Filter gfdtcFilter;
+@Subscribe
+protected void onAfterInit(AfterInitEvent event) {
+    Filter filter = uiComponents.create(Filter.NAME); <i class="conum" data-value="1"></i><b>(1)</b>
+    filter.setId("programmaticFilter");
+    filter.setDataLoader(customersDl);
+    filter.loadConfigurationsAndApplyDefault();
+
+    DesignTimeConfiguration javaDefaultConfiguration =
+            filter.addConfiguration("javaDefaultConfiguration",
+                    "Default configuration"); <i class="conum" data-value="2"></i><b>(2)</b>
+
+    PropertyFilter&lt;Integer&gt; agePropertyFilter =
+            uiComponents.create(PropertyFilter.NAME); <i class="conum" data-value="3"></i><b>(3)</b>
+
+    agePropertyFilter.setConditionModificationDelegated(true);
+    agePropertyFilter.setDataLoader(customersDl);
+    agePropertyFilter.setProperty("age");
+    agePropertyFilter.setOperation(PropertyFilter.Operation.LESS_OR_EQUAL);
+    agePropertyFilter.setOperationEditable(true);
+    agePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
+            agePropertyFilter.getProperty()));
+    agePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(
+            customersDl.getContainer().getEntityMetaClass(),
+            agePropertyFilter.getProperty(),
+            agePropertyFilter.getOperation())); <i class="conum" data-value="4"></i><b>(4)</b>
+
+    javaDefaultConfiguration.getRootLogicalFilterComponent().add(agePropertyFilter); <i class="conum" data-value="5"></i><b>(5)</b>
+    filter.setCurrentConfiguration(javaDefaultConfiguration); <i class="conum" data-value="6"></i><b>(6)</b>
+
+    VBoxLayout tab = (VBoxLayout) getWindow()
+            .getComponentNN("programmaticFilterTab"); <i class="conum" data-value="7"></i><b>(7)</b>
+    tab.add(filter); <i class="conum" data-value="8"></i><b>(8)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Creates <code>Filter</code> and sets its properties.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Adds a design-time configuration with the <code>javaDefaultConfiguration</code> id and the <code>Default configuration</code> name.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Creates <code>PropertyFilter</code> and sets its properties.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Generates the filter value component by the given metaClass, entity property and operation.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Adds the created property filter to the <code>javaDefaultConfiguration</code> configuration.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Sets the <code>javaDefaultConfiguration</code> configuration as current.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>Gets the tab by its <code>id</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td>Adds the created <code>Filter</code> component to the <code>programmaticFilterTab</code> tab.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="handlers"><a class="anchor" href="#handlers"></a>Events and Handlers</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To generate a handler stub in Jmix Studio, select the component in the screen descriptor XML or in the <strong>Component Hierarchy</strong> panel and use the <strong>Handlers</strong> tab of the <strong>Component Inspector</strong> panel.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can use the <strong>Generate Handler</strong> button in the top panel of the screen controller.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="context-help-icon-click-handler"><a class="anchor" href="#context-help-icon-click-handler"></a>ContextHelpIconClickHandler</h3>
+<div class="paragraph">
+<p>See <a href="../api.html#context-help-icon-click-handler" class="xref page">ContextHelpIconClickHandler</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expanded-state-change-event"><a class="anchor" href="#expanded-state-change-event"></a>ExpandedStateChangeEvent</h3>
+<div class="paragraph">
+<p>See <a href="../api.html#expanded-state-change-event" class="xref page">ExpandedStateChangeEvent</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configuration-change-event"><a class="anchor" href="#configuration-change-event"></a>ConfigurationChangeEvent</h3>
+<div class="paragraph">
+<p>ConfigurationChangeEvent is sent when the <a href="#configuration">configuration</a> is changed. Example of subscribing to the event for <code>filter</code> defined in the screen XML with the <code>filter</code> id:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Subscribe("filter")
+public void onFilterConfigurationChange(Filter.ConfigurationChangeEvent event) {
+    notifications.create()
+            .withCaption("Before: " + event.getPreviousConfiguration().getName() +
+                    ". After: " + event.getNewConfiguration().getName())
+            .show();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To register the event handler programmatically, use the <code>addConfigurationChangeListener()</code> component method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="properties-filter-predicate"><a class="anchor" href="#properties-filter-predicate"></a>PropertiesFilterPredicate</h3>
+<div class="paragraph">
+<p>To <a href="#filter-element-properties-include">include</a> or <a href="#filter-element-properties-exclude">exclude</a> properties programmatically, use the <code>PropertiesFilterPredicate</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "filter", subject = "propertiesFilterPredicate")
+private boolean filterPropertiesFilterPredicate(MetaPropertyPath metaPropertyPath) {
+    return !metaPropertyPath.getMetaProperty().getName().equals("hobby");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This predicate is added to the current properties filter predicate and tests whether a property with the given path should be available for filtering.</p>
+</div>
+<div class="paragraph">
+<p>To add a predicate programmatically, use the <code>addPropertiesFilterPredicate()</code> component method. The resulting predicate is a composed predicate that represents a short-circuiting logical AND of given predicate and current properties filter predicate.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="xml"><a class="anchor" href="#xml"></a>All XML Attributes</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can view and edit attributes applicable to the component using the <strong>Component Inspector</strong> panel of the Studio&#8217;s Screen Designer.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="xml-filter-elements"><a class="anchor" href="#xml-filter-elements"></a>Filter XML Elements</h3>
+<div class="paragraph">
+<p><a href="#filter-element-actions">actions</a> -
+<a href="#filter-element-conditions">conditions</a> -
+<a href="#filter-element-configurations">configurations</a> -
+<a href="#filter-element-properties">properties</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="xml-filter-attributes"><a class="anchor" href="#xml-filter-attributes"></a>Filter XML Attributes</h3>
+<div class="paragraph">
+<p><a href="../xml.html#align" class="xref page">align</a> -
+<a href="#filter-attribute-auto-apply">autoApply</a> -
+<a href="../xml.html#caption" class="xref page">caption</a> -
+<a href="../xml.html#caption-as-html" class="xref page">captionAsHtml</a> -
+<a href="#filter-attribute-caption-position">captionPosition</a> -
+<a href="../containers/group-box-layout.html#collapsable" class="xref page">collapsable</a> -
+<a href="../containers/group-box-layout.html#collapsed" class="xref page">collapsable</a> -
+<a href="../xml.html#colspan" class="xref page">colspan</a> -
+<a href="../xml.html#context-help-text" class="xref page">contextHelpText</a> -
+<a href="../xml.html#context-help-text-html-enabled" class="xref page">contextHelpTextHtmlEnabled</a> -
+<a href="../xml.html#css" class="xref page">css</a> -
+<a href="../xml.html#description" class="xref page">description</a> -
+<a href="../xml.html#description-as-html" class="xref page">descriptionAsHtml</a> -
+<a href="../xml.html#enable" class="xref page">enable</a> -
+<a href="../xml.html#box-expand-ratio" class="xref page">box.expandRatio</a> -
+<a href="../xml.html#height" class="xref page">height</a> -
+<a href="../xml.html#html-sanitizer-enabled" class="xref page">htmlSanitizerEnabled</a> -
+<a href="../xml.html#icon" class="xref page">icon</a> -
+<a href="../xml.html#id" class="xref page">id</a> -
+<a href="../containers/box-layout.html#margin" class="xref page">margin</a> -
+<a href="../xml.html#responsive" class="xref page">responsive</a> -
+<a href="../xml.html#rowspan" class="xref page">rowspan</a> -
+<a href="../xml.html#stylename" class="xref page">stylename</a> -
+<a href="../xml.html#visible" class="xref page">visible</a> -
+<a href="../xml.html#width" class="xref page">width</a></p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="file-upload-field.html">FileUploadField</a></span>
+  <span class="next"><a href="filter-components.html">Filter Components</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"
+></script>
+<script>
+  hljs.highlightAll();
+</script>
+<script src="../../../../_/js/vendor/lunr.js"></script>
+<script src="../../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../../_/.." data-snippet-length="100" data-stylesheet="../../../../_/css/search.css"></script>
+<script async src="../../../../_/../search-index.js"></script>
+  </body>
+</html>

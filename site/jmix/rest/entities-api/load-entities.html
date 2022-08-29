@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Load Entities :: Jmix Documentation</title>
+    <link rel="canonical" href="https://docs.jmix.io/jmix/rest/entities-api/load-entities.html">
+    <link rel="prev" href="../entities-api.html">
+    <link rel="next" href="create-entities.html">
+    <meta name="generator" content="Antora 3.0.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"><link rel="stylesheet" href="../../../_/css/search.css">
+<link rel="stylesheet" href="../../../_/css/overrides.css">
+<link rel="shortcut icon" href="https://www.jmix.io/dark-favicon.ico" />
+<link rel="icon" href="https://www.jmix.io/dark-favicon.ico" /> <script>uiRootPath = '../../../_'</script>
+<!-- Google Tag Manager -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH3DTWV');</script>
+-->
+<!-- End Google Tag Manager -->
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.jmix.io">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8205 2.64855L7.33011 9.13895L9.71136 11.5202L16.2018 5.0298C17.7889 3.44265 20.3363 3.41231 21.9764 4.91232L23.9484 6.85824L26.323 4.48334L24.3643 2.52437C21.4098 -0.289033 16.7211 -0.251991 13.8205 2.64855Z"
+                        fill="#FC1264" />
+                    <path
+                        d="M12.1333 18.7388L19.2167 11.6554L26.2444 18.6831L19.161 25.7665L12.1333 18.7388ZM21.5592 28.1651L28.6426 21.0816L29.2917 20.4325C30.2576 19.4666 30.2576 17.9003 29.2917 16.934L28.6426 16.2849L21.6149 9.25723L20.9658 8.60847C19.9999 7.64221 18.4332 7.64221 17.4673 8.60847L16.8182 9.25723L9.73511 16.3407L9.086 16.9898C8.1201 17.9557 8.1201 19.522 9.086 20.4883L9.73511 21.1374L16.7628 28.1651L17.4116 28.8138C18.3778 29.7801 19.9441 29.7801 20.9101 28.8138L21.5592 28.1651Z"
+                        fill="white" />
+                    <path
+                        d="M22.143 32.4252C20.5555 34.0123 18.0081 34.0427 16.3677 32.5423L16.3663 32.5441L14.3748 30.5523L11.9886 32.9388L13.9801 34.9302C16.9342 37.744 21.6234 37.7073 24.5243 34.8064L31.0475 28.2832L28.6662 25.902L22.143 32.4252Z"
+                        fill="#25CDE3" />
+                    <path d="M31.0646 23.5038L31.8584 24.2972L31.0646 23.5038Z" fill="#25CDE3" />
+                    <path d="M4.93164 11.5374L6.12227 12.728L4.93164 11.5374Z" fill="#FC1264" />
+                    <path
+                        d="M5.4746 21.6751C3.88745 20.0883 3.85711 17.5405 5.35713 15.9005L7.32633 13.9316L4.93167 11.5373L2.96282 13.5062L2.96953 13.5129C0.15577 16.467 0.192812 21.1558 3.09335 24.0567L9.58376 30.5468L11.965 28.1655L5.4746 21.6751Z"
+                        fill="#FDB42B" />
+                    <path
+                        d="M35.274 13.3757L28.7836 6.88529L26.4023 9.26654L32.8927 15.7569C34.4799 17.3441 34.5102 19.8915 33.0102 21.5316L31.0647 23.5036L33.4392 25.8781L35.3982 23.9192C38.2116 20.965 38.1745 16.2762 35.274 13.3757Z"
+                        fill="#22D685" />
+                </svg>
+                &nbsp;
+                Jmix Documentation
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <input id="search-input" placeholder="Search docs" onfocusout="this.value=''"
+                        style="font-size: 16px;" />
+                </div>
+            </div>
+            <div class="header-btn">
+                <a class="header-link" href="https://www.jmix.io/" target="_blank">Go to Jmix website</a>
+            </div>
+        </div>
+    </nav>
+</header><div class="body">
+<div class="nav-container" data-component="jmix" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../intro.html">Jmix Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../whats-new/index.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../setup.html">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tutorial/index.html">Tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/project-setup.html">1. Project Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/simple-crud.html">2. Simple CRUD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/references.html">3. References And Unique Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/customize-ui.html">4. Customizing UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/data-in-ui.html">5. Working With Data in UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/entity-events.html">6. Using Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/ui-from-scratch.html">7. Creating UI From Scratch</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../studio/index.html">Using Studio</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/install.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/update.html">Update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/subscription.html">Subscription</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/project.html">Working with Project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../studio/studio-features.html">Studio Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/welcome.html">Welcome Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/tool-window.html">Jmix Tool Window</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/project-properties.html">Project Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/marketplace.html">Add-ons Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/entity-designer.html">Entity Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/screen-wizard.html">Screen Wizard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/screen-designer.html">Screen Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/fetch-plan-designer.html">Fetch Plan Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/menu-designer.html">Menu Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/role-designer.html">Role Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/bpmn-designer.html">BPMN Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/coding-assistance.html">Coding Assistance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/code-snippets.html">Code Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/reverse-engineering.html">Reverse Engineering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/hot-deploy.html">Hot Deploy</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/plugin-settings.html">Jmix Plugin Settings</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-model/index.html">Data Model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/entities.html">Entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/data-types.html">Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/enumerations.html">Enumerations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/soft-deletion.html">Soft Deletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/metadata.html">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/bean-validation.html">Bean Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/db-migration.html">Database Migration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-access/index.html">Data Access</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/data-manager.html">Using DataManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/entity-manager.html">Using EntityManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/entity-events.html">Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/fetching.html">Fetching Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/transactions.html">Transaction Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/jpql-extensions.html">JPQL Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/screens.html">Screens and Fragments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/screens/screen-controllers.html">Screen Controllers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/annotations.html">Screen Controller Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/methods.html">Screen Controller Methods</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/screen-events.html">Screen Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/screen-fragment-events.html">ScreenFragment Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/descriptors.html">XML Descriptors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/mixins.html">Screen Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/root-screens.html">Root Screens</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/validation.html">Screen Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/opening-screens.html">Opening Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/using-fragments.html">Using Screen Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/data-components.html">Data Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/data/data-containers.html">Data Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/instance-container.html">InstanceContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/collection-container.html">CollectionContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/property-containers.html">Property Containers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/key-value-containers.html">Key-Value Containers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/data/data-loaders.html">Data Loaders</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/data/data-context.html">DataContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/data/data-examples.html">Using Data Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl.html">Visual Components Library</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/components.html">Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/app-menu.html">AppMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/browser-frame.html">BrowserFrame</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/button.html">Button</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/caps-lock-indicator.html">CapsLockIndicator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/calendar.html">Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/check-box.html">CheckBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/check-box-group.html">CheckBoxGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/color-picker.html">ColorPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/combo-box.html">ComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/currency-field.html">CurrencyField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/data-grid.html">DataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/date-field.html">DateField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/date-picker.html">DatePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/entity-combo-box.html">EntityComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/entity-picker.html">EntityPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/entity-suggestion-field.html">EntitySuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/file-multi-upload-field.html">FileMultiUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/file-storage-upload-field.html">FileStorageUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/file-upload-field.html">FileUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/components/filter.html">Filter</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../ui/vcl/components/filter-components.html">Filter Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/group-table.html">GroupTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/image.html">Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/label.html">Label</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/link.html">Link</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/link-button.html">LinkButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/masked-field.html">MaskedField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/multi-select-list.html">MultiSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/password-field.html">PasswordField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/popup-button.html">PopupButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/popup-view.html">PopupView</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/progress-bar.html">ProgressBar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/property-filter.html">PropertyFilter</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/radio-button-group.html">RadioButtonGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/related-entities.html">RelatedEntities</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/resizable-text-area.html">ResizableTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/rich-text-area.html">RichTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/side-menu.html">SideMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/simple-pagination.html">SimplePagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/single-select-list.html">SingleSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/slider.html">Slider</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/source-code-editor.html">SourceCodeEditor</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/suggestion-field.html">SuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/table.html">Table</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tag-field.html">TagField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tag-picker.html">TagPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/text-area.html">TextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/text-field.html">TextField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/time-field.html">TimeField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tree.html">Tree</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tree-data-grid.html">TreeDataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tree-table.html">TreeTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/twin-column.html">TwinColumn</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/value-picker.html">ValuePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/values-picker.html">ValuesPicker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/containers.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/accordion.html">Accordion</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/box-layout.html">BoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/buttons-panel.html">ButtonsPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/css-layout.html">CssLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/drawer.html">Drawer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/grid-layout.html">GridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/group-box-layout.html">GroupBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/html-box-layout.html">HtmlBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/responsive-grid-layout.html">ResponsiveGridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/scroll-box-layout.html">ScrollBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/split-panel.html">SplitPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/tab-sheet.html">TabSheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/miscellaneous.html">Miscellaneous</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/miscellaneous/validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/miscellaneous/formatter.html">Formatter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/vcl/api.html">Components API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/vcl/xml.html">Components XML Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/facets.html">Facets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/clipboard-trigger.html">ClipboardTrigger</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/data-load-coordinator.html">DataLoadCoordinator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/dynamic-attributes-facet.html">DynamicAttributes Facet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/editor-screen-facet.html">EditorScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/input-dialog-facet.html">InputDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/lookup-screen-facet.html">LookupScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/message-dialog-facet.html">MessageDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/notification-facet.html">NotificationFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/option-dialog-facet.html">OptionDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/presentations-facet.html">PresentationsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/screen-facet.html">ScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/screen-settings-facet.html">ScreenSettingsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/timer.html">Timer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/actions.html">Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/actions/declarative-actions.html">Declarative Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/actions/standard-actions.html">Standard Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/add-action.html">AddAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/bulk-edit-action.html">BulkEditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/create-action.html">CreateAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/edit-action.html">EditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-clear-action.html">EntityClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-lookup-action.html">EntityLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-open-action.html">EntityOpenAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-open-composition-action.html">EntityOpenCompositionAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/exclude-action.html">ExcludeAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/refresh-action.html">RefreshAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/related-action.html">RelatedAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/remove-action.html">RemoveAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/tag-lookup-action.html">TagLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/value-clear-action.html">ValueClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/view-action.html">ViewAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/actions/custom-action-type.html">Custom Action Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/actions/base-action.html">BaseAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/dialogs.html">Dialogs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/background-tasks.html">Background Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/notifications.html">Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/exception-handlers.html">Exception Handlers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/exception-handlers/unique-constraint-violation-exception.html">Handling Unique Constraint Violation Exceptions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/themes.html">Themes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/themes/theme_usage.html">Using Existing Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/themes/custom_theme.html">Creating a Custom Theme</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/themes/theme_addon.html">Creating and Using a Theme Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/icons.html">Icons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/icons/icon-sets.html">Icon Sets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/icons/icon-provider.html">Using Icons from Other Font Libraries</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/menu-config.html">MenuConfig</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/url-history-navigation.html">URL History and Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/handling-url-changes.html">Handling URL Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/routing-api.html">Routing API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/url-navigation-api-usage.html">Using URL History and Navigation API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/url-routes-generator.html">URL Routes Generator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/anonymous-access-to-screens.html">Anonymous Access to Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/pluggable-component-factories.html">Pluggable Component Factories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/custom-components.html">Creating Custom Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/composite-components.html">Composite Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/js-component.html">Generic JavaScriptComponent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/custom-widget-sets.html">Creating GWT Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/widgetset-add-on.html">Creating and Using Widgets Add-On</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/app-properties.html">UI Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Generic REST</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started.html">Getting Started with REST</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../entities-api.html">Entities API</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="load-entities.html">Load Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="create-entities.html">Create Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="update-entities.html">Update Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="delete-entities.html">Delete Entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files-api.html">Files API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../messages-api.html">Messages API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../metadata-api.html">Metadata API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../user-session-api.html">User Session API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../business-logic.html">Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../security/authentication.html">Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../api-docs.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app-properties.html">REST Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../localization/index.html">Localization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../localization/message-bundles.html">Message Bundles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../localization/framework-translations.html">Framework Translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../files/index.html">Managing Files</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/files-in-database.html">Storing Files in Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/file-storage.html">Using File Storage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/downloading-files.html">Downloading and Displaying Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../security/index.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/resource-roles.html">Resource Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/row-level-roles.html">Row-level Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/authorization.html">Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/index.html">Other Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../features/sequences.html">Sequence Generation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../modularity/index.html">Modularity and Extension</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modularity/creating-add-ons.html">Creating Add-ons</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modularity/extension.html">Extending Functionality</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../deployment/index.html">Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/k8s.html">Kubernetes Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/aws-beanstalk.html">Amazon Web Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/azure.html">Azure App Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/google-cloud-appengine.html">Google Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../add-ons.html">Add-ons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../appsettings/index.html">Application Settings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../audit/index.html">Audit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../audit/entity-log.html">Entity Log</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/index.html">BPM</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/getting-started.html">Getting Started with BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/admin-screens.html">Administration Screens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/modeler.html">Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/proc-definitions.html">Process Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/proc-instances.html">Process Instances</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/user-groups.html">User Groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/user-tasks.html">User Tasks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/forms.html">Process Forms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/input-dialog.html">Input Dialog</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/jmix-screen.html">Jmix Screen</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/custom.html">Custom Form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/tasks.html">Tasks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/user-task.html">User Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/service-task.html">Service Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/script-task.html">Script Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/data-task.html">Entity Data Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/email-task.html">Email Sending Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/sub-process-call-activity.html">Sub-Processes and Call Activities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/listeners.html">Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/dmn.html">DMN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/instance-migration.html">Process Instances Migration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/auto-deployment.html">Automatic Models Deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/api.html">BPM API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../business-calendar/index.html">Business Calendars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../business-calendar/creating.html">Creating Business Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../business-calendar/api.html">Business Calendars API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../charts/index.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../charts/types.html">Charts Types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/angular-gauge-chart.html">AngularGaugeChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/funnel-chart.html">FunnelChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/gantt-chart.html">GanttChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/pie-chart.html">PieChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/radar-chart.html">RadarChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/serial-chart.html">SerialChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/stock-chart-group.html">StockChartGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/xy-chart.html">XYChart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/config.html">Configuring Charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/export.html">Charts Export</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/data.html">Connecting Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/events.html">Events</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../dashboards/index.html">Dashboards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/user-interface.html">Administration UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/adding-business-logic.html">Adding Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/using-dashboard-in-screen.html">Using Dashboard in Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/dashboard-chart-addon.html">Dashboard Chart Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-tools/index.html">Data Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data-tools/entity-inspector.html">Entity Inspector</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data-tools/entity-info-action.html">Entity Information Action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../dyn-attr/index.html">Dynamic Attributes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dyn-attr/dynattr-managing.html">Managing Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dyn-attr/dynattr-view.html">Displaying Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dyn-attr/dynattr-api.html">Dynamic Attributes API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../email/index.html">Email Sending</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/getting-started.html">Getting Started with Email</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/api.html">Email Sending API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/email-history.html">Email History</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../email-template/index.html">Email Templates</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email-template/getting-started.html">Getting Started with Email Templates</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email-template/usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email-template/api.html">Email Templates API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../grapes-js/index.html">GrapesJS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grapes-js/components.html">GrapesJS UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grapes-js/html-editor-ui.html">HTML Editor UI</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../grid-export/index.html">Grid Export Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grid-export/exporters.html">Table Exporters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grid-export/actions.html">Export Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grid-export/limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ldap/index.html">LDAP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/getting-started.html">Getting Started with LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/obtaining-user-authorities.html">Obtaining User Authorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/in-memory-user-management.html">In-memory User Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/usage-with-active-directory.html">Usage with Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/global-user-synchronization.html">Global User Synchronization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/properties.html">LDAP Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../maps/index.html">Maps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/getting-started.html">Getting Started with Maps</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/maps-ui.html">Maps UI Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../maps/layers.html">Layers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/raster-layers.html">Raster Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/vector-layers.html">Vector Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/heatmap-layer.html">Heatmap Layer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/canvas-layer.html">Canvas Layer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/additional-options.html">Additional Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/drawing-geometry.html">Drawing Geometry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/map-services.html">Map Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multitenancy/index.html">Multitenancy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../notifications/index.html">Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../notifications/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../notifications/creating-notifications.html">Creating Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../notifications/viewing-notifications.html">Viewing Notifications</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../pivot-table/index.html">Pivot Table</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/elements.html">Elements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/export.html">Exporting PivotTable Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/show-pivot-action.html">Using ShowPivotAction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quartz/index.html">Quartz</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reports/index.html">Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reports/getting-started.html">Getting Started with Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reports/create-reports.html">Creating Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../reports/creation/data-structure.html">Report Data Structure</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../reports/creation/templates.html">Report Template</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../reports/creation/parameter-and-format.html">Report Parameters and Field Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../reports/creation/permissions.html">Report Access Rights</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../reports/creation/localization.html">Report Name Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reports/run-report.html">Running Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reports/exec-history.html">Report Execution History</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reports/sample-reports.html">Sample Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reports/rest-api.html">REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reports/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../search/index.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/getting-started.html">Getting Started with Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/index-definitions.html">Index Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/indexing-queue.html">Indexing Queue</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/search-in-ui.html">Using Search in UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/config-options.html">Search Configuration Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/search-api.html">Search API and Internals</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/search-properties.html">Search Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../webdav/index.html">WebDAV</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/ui-components.html">UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendices</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../app-properties.html">Application Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text"><a href="https://docs.jmix.io/api/1.3" target="_blank" rel="noopener">Java API Reference</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quartz-setup.html">Quartz Job Scheduler Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../publish-add-on.html">Publishing an Add-on</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cuba/index.html">Migration from CUBA Platform</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jmix Documentation</span>
+    <span class="version">1.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../intro.html">Jmix Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../intro.html">1.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../intro.html">Jmix Documentation</a></li>
+    <li><a href="../index.html">Generic REST</a></li>
+    <li><a href="../entities-api.html">Entities API</a></li>
+    <li><a href="load-entities.html">Load Entities</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/rest/pages/entities-api/load-entities.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Load Entities</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Entities API allows you to load entities through the API in various ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#load-by-id">Load Entity by ID</a> loads a single entity by its unique identifier (ID).</p>
+</li>
+<li>
+<p><a href="#load-list">Load List of Entities</a> load all entities with pagination and sorting.</p>
+</li>
+<li>
+<p><a href="#load-list-search-filter">Load Entities via Search Filter</a> allows you to filter for entities by filter criteria in the Request.</p>
+</li>
+<li>
+<p><a href="#load-list-jpql">Load Entities via JPQL</a> loads entities via pre-configuring named JPQL queries.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="load-by-id"><a class="anchor" href="#load-by-id"></a>Load Entity by ID</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The first way of loading an entity via the Entities API is by loading it via its ID. The corresponding endpoint for this is the Load Entity endpoint <code>/entities/:entityName/:entityId</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>:entityName</code> path parameter defines which entity type it is. The value is defined in the entity definition:</p>
+</div>
+<div class="listingblock">
+<div class="title">Order.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@JmixEntity
+@Table(name = "SAMPLE_ORDER")
+@Entity(name = "sample_Order") <i class="conum" data-value="1"></i><b>(1)</b>
+public class Order {
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The name attribute value <code>sample_Order</code> of the <code>@Entity</code> JPA annotation indicates the <code>entityName</code> parameter in the Entities API.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The Load Entity endpoint returns a single instance in case it is found by its identifier. Otherwise, HTTP status code <code>404 - Not Found</code> is returned.</p>
+</div>
+<div class="listingblock">
+<div class="title">Load Order Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Order
+            /21021f78-edac-224b-e6f8-6e71e02a0f0d</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Response: 200 - OK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "_entityName": "sample_Order", <i class="conum" data-value="1"></i><b>(1)</b>
+  "_instanceName": "rest.sample.entity.Order-21021f78-edac-224b-e6f8-6e71e02a0f0d [detached]",
+  "id": "21021f78-edac-224b-e6f8-6e71e02a0f0d",
+  "date": "2020-12-13", <i class="conum" data-value="2"></i><b>(2)</b>
+  "amount": 49.99,
+  "createdDate": "2021-02-06T12:03:38.049",
+  "createdBy": "admin",
+  "lastModifiedDate": "2021-02-06T12:03:38.049",
+  "version": 1
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Some metadata about the entity instance is returned as JSON keys (<code>entityName</code>, <code>_instanceName</code> and <code>id</code>).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The JSON Object contains each business attribute as a key.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Some attributes of the <code>Order</code> entity are missing in the JSON, as by default only local and persistent attributes of the entity are loaded. In case of reference attributes should also be included in the response you need to use <a href="#_using_fetch_plans">Fetch Plans</a> as described below.</p>
+</div>
+<div class="paragraph">
+<p>In case you want to include <a href="../../dyn-attr/index.html" class="xref page">dynamic attributes</a> in the response, use the <code>dynamicAttributes</code> parameter to add a special hint to the query:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Order
+            /21021f78-edac-224b-e6f8-6e71e02a0f0d
+            ?dynamicAttributes=true</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_using_fetch_plans"><a class="anchor" href="#_using_fetch_plans"></a>Using Fetch Plans</h3>
+<div class="paragraph">
+<p>Which attributes are needed normally varies based on the clients' use-case, UIs, or integration scenario. Loading only the direct attributes of an entity is oftentimes not enough.</p>
+</div>
+<div class="paragraph">
+<p>With only the ability to load each entity type in a dedicated request, it would require loading referenced entity information in subsequent requests. This would lead to N+1 query problems in the overall application. In particular, when interacting through HTTP, the corresponding overhead can be tremendous.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, the concept of <a href="../../data-access/fetching.html" class="xref page">Fetch Plans</a> is also supported in the Load Entities API. With Fetch Plans you can configure a tree of attributes that should be loaded all in one batch from the database and transferred through the Load Entities API to the client.</p>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates how to load a list of Orders with additional information about the corresponding customer, the linked order lines, and even information about the product of that product line.</p>
+</div>
+<div class="paragraph">
+<p>First, you need to register the fetch plan <code>order-with-details</code> in the <code>fetch-plans.xml</code> configuration file:</p>
+</div>
+<div class="listingblock">
+<div class="title">fetch-plans.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;fetchPlans xmlns="http://jmix.io/schema/core/fetch-plans"&gt;
+    &lt;fetchPlan class="rest.sample.entity.Order"
+               extends="_base"
+               name="order-with-details"&gt;
+        &lt;property name="customer"/&gt;
+        &lt;property name="lines" fetchPlan="_base"&gt;
+            &lt;property name="product" fetchPlan="_instance_name" /&gt;
+        &lt;/property&gt;
+    &lt;/fetchPlan&gt;
+&lt;/fetchPlans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With that fetch plan configuration in place, you can perform the request and reference the fetch plan through the <code>fetchPlan</code> URL parameter.</p>
+</div>
+<div class="paragraph">
+<p>In the example below the Order with the ID <code>21021f78-edac-224b-e6f8-6e71e02a0f0d</code> is loaded with the fetch plan <code>order-with-details</code> in order to additionally load <code>customer</code> and <code>lines</code> data:</p>
+</div>
+<div class="listingblock">
+<div class="title">Load Order with Fetch Plan Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Order
+            /21021f78-edac-224b-e6f8-6e71e02a0f0d
+            ?fetchPlan=order-with-details</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Response: 200 - OK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "id": "21021f78-edac-224b-e6f8-6e71e02a0f0d",
+  "date": "2020-12-13",
+  "amount": 49.99,
+  "lines": [ <i class="conum" data-value="1"></i><b>(1)</b>
+    {
+      "id": "64e4fbb0-7fd6-818b-984e-a8769c4fbe88",
+      "product": {
+        "id": "7750adbe-6c30-cede-31a6-577a1a96aa83",
+        "name": "Outback Power Remote Power System"
+      },
+      "quantity": 1.0
+    }
+  ],
+  "version": 1,
+  "customer": {
+    "id": "0826806e-6074-90fa-f241-564b5c94d018",
+    "name": "Sidney Chandler",
+  }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The fetch plan <code>order-with-details</code> ensures that additional attributes like <code>lines</code> and <code>customer</code> are also included.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="load-list"><a class="anchor" href="#load-list"></a>Load List of Entities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can load a list of entities of any type using the Load Entity List API endpoint: <code>/entities/:entityName</code>. This API includes pagination, sorting, and fetch plans.</p>
+</div>
+<div class="listingblock">
+<div class="title">Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest/entities/sample_Customer</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Response: HTTP 200 - OK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+    "id": "0826806e-6074-90fa-f241-564b5c94d018",
+    "name": "Sidney Chandler"
+  },
+  {
+    "id": "22efc597-69a9-aeef-4e4a-7afccd8e5767",
+    "name": "Randall Bishop"
+  },
+  {
+    "id": "bd1c8e90-3d35-cbe2-9efd-167202c758d2",
+    "name": "Shelby Robinson"
+  }
+]</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Every entity in the response has a <code>_entityName</code> attribute with the name of the entity, and an <code>_instanceName</code> attribute with the <a href="../../data-model/entities.html#instance-name" class="xref page">Instance Name</a> of the entity.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>It is also possible to further control the behavior of the API by using the following URL query parameters:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">dynamicAttributes</dt>
+<dd>
+<p>whether <a href="../../dyn-attr/index.html" class="xref page">dynamic attributes</a> should be loaded for an entity <code>(Boolean)</code>.</p>
+</dd>
+<dt class="hdlist1">fetchPlan</dt>
+<dd>
+<p>name of an entity&#8217;s <a href="../../data-access/fetching.html" class="xref page">fetch plan</a> <code>(String)</code>.</p>
+</dd>
+<dt class="hdlist1">limit</dt>
+<dd>
+<p>the number of entities to be returned by the API <code>(int)</code>.</p>
+</dd>
+<dt class="hdlist1">offset</dt>
+<dd>
+<p>the position of the first returned entity <code>(int)</code>.</p>
+</dd>
+<dt class="hdlist1">sort</dt>
+<dd>
+<p>an entity attribute that will be used for sorting <code>(String)</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>+attribute</code> or simply <code>attribute</code> for ascending order</p>
+</li>
+<li>
+<p><code>-attribute</code> for descending order.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="load-list-sorting"><a class="anchor" href="#load-list-sorting"></a>Using Sorting</h3>
+<div class="paragraph">
+<p>The Load Entities API supports the sorting of the result by entity attributes. You can use the <code>sort</code> URL parameter for controlling the order of entities.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When the <code>sort</code> parameter is not specified, the default sort order depends on the database implementation. Normally databases sort by the timestamp of record creation, but this behavior is not guaranteed and can vary in different situations.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Jmix has a special syntax to define the sort order. Ascending order is expressed through a <code>+</code> before the attribute name. This is optional though, as it is the default behavior sorting order. For descending order, you need to prefix the entity attribute with a <code>-</code> character.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how you can sort Customers by their <code>name</code> attribute ascending.</p>
+</div>
+<div class="listingblock">
+<div class="title">Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Customer
+            ?sort=name</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Response: HTTP 200 - OK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+    "id": "d83c9d66-cb23-075a-8d3c-d4035d338705",
+    "name": "Klaudia Kleinert"
+  },
+  {
+    "id": "8985ba1e-1cc8-eb5c-f9e0-738aee9d2ef1",
+    "name": "Randall Bishop"
+  }
+]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also sort by multiple attributes. In this case, the sort order takes a comma-separated list of attributes to sort by.</p>
+</div>
+<div class="listingblock">
+<div class="title">Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Order?sort=+date,-amount</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Response: HTTP 200 - OK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+    "id": "41aae331-b46b-85ee-b0bc-2de8cbf1ab86",
+    "date": "2021-02-02", <i class="conum" data-value="1"></i><b>(1)</b>
+    "amount": 283.55
+  },
+  {
+    "id": "288a5d75-f06f-d150-9b70-efee1272b96c",
+    "date": "2021-03-01",
+    "amount": 249.99, <i class="conum" data-value="2"></i><b>(2)</b>
+    "lastModifiedBy": "admin"
+  },
+  {
+    "id": "1068c217-5868-faf4-16aa-23655e9492da",
+    "date": "2021-03-01",
+    "amount": 130.08
+  }
+]</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The result with the oldest date is returned first.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>When the <code>date</code> attribute is the same, the <code>amount</code> is used to sort the results.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="load-list-pagination"><a class="anchor" href="#load-list-pagination"></a>Using Pagination</h3>
+<div class="paragraph">
+<p>The Entities API supports Pagination to respect the data processing limitation that might be present on the server or client-side. In case you want to load only a particular subset of the entities, you can provide the <code>offset</code> and <code>limit</code> URL parameters.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Pagination is active by default, even if it is not explicitly requested by the client. In case no <code>limit</code> value is present in the request, the Load APIs will return only the first <code>10,000</code> entities.</p>
+</div>
+<div class="paragraph">
+<p>This default value is configurable globally via <a href="../app-properties.html#jmix.rest.default-max-fetch-size" class="xref page">jmix.rest.default-max-fetch-size</a> or on an entity-by-entity basis via <a href="../app-properties.html#jmix.rest.entity-max-fetch-size" class="xref page">jmix.rest.entityMaxFetchSize</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates how to load the third Page containing two <code>Customer</code> entities (5. &amp; 6. entity):</p>
+</div>
+<div class="listingblock">
+<div class="title">Load Customer Request with Pagination</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Customer
+            ?limit=2
+            &amp;offset=4
+            &amp;sort=createdDate</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Response: HTTP 200 - OK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
+  {
+    "id": "2d620164-1e80-0696-c3aa-45b7b5c81f2c",
+    "name": "Maria Mitchell"
+  },
+  {
+    "id": "3c7ec69d-9b85-c6e9-387b-42a5bccb79de",
+    "name": "Anthony Knutson"
+  }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="load-list-search-filter"><a class="anchor" href="#load-list-search-filter"></a>Load Entities via Search Filter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can specify filter criteria when loading entities using the Entity Search Endpoint: <code>/entities/:entityName/search</code>.</p>
+</div>
+<div class="paragraph">
+<p>Both HTTP methods <code>GET</code> and <code>POST</code> are possible when interacting with the search endpoint. In both cases, the filter criterion has to be provided as part of the request.</p>
+</div>
+<div class="paragraph">
+<p>The filter definition is a JSON structure that contains a set of conditions. A condition consists of the following attributes:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">property</dt>
+<dd>
+<p>the entity attribute that is being filtered on (like <code>amount</code> on the Order entity).</p>
+<div class="paragraph">
+<p>In case the attribute is a reference to another entity, it can also be a property path like <code>customer.name</code></p>
+</div>
+</dd>
+<dt class="hdlist1">operator</dt>
+<dd>
+<p>the filter operator. An operator describes how to filter for a particular attribute. There are multiple operators that can be used independently of the datatype:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Standard Operators: <code>=</code>, <code>&lt;&gt;</code>, <code>notEmpty</code>, <code>isNull</code></p>
+</li>
+<li>
+<p>List Operators: <code>in</code>, <code>notIn</code></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Additionally, some operators are only possible for particular datatypes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Datatype</th>
+<th class="tableblock halign-left valign-top">Specific Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String, UUID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startsWith</code>, <code>endsWith</code>, <code>contains</code>, <code>doesNotContain</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer, Long, Double, BigDecimal, Date, DateTime, Time, LocalDate, LocalDateTime,  LocalTime, OffsetDateTime, OffsetTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>=</code>, <code>&lt;&gt;</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">value</dt>
+<dd>
+<p>the value to search for. Value is not required for the <code>notEmpty</code> and <code>isNull</code> operators.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Additionally, conditions can be combined via <code>AND</code>, <code>OR</code> group conditions to define a more complex filter criterion. The JSON structure of the filter definitions looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">Filter Criterion JSON structure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "conditions": [
+    {
+      "group": "OR",
+      "conditions": [
+        {
+          "property": "stringField",
+          "operator": "=",
+          "value": "stringValue"
+        },
+        {
+          "property": "intField",
+          "operator": "&gt;",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "property": "booleanField",
+      "operator": "=",
+      "value": true
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a representation of the Filter criterion: <code>((stringField = stringValue) OR (intField &gt; 100) AND (booleanField = true))</code>.</p>
+</div>
+<div class="paragraph">
+<p>When using the HTTP POST method, the filter is part of the request body.</p>
+</div>
+<div class="listingblock">
+<div class="title">Filter POST Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">POST http://localhost:8080/rest/entities/sample_Order/search
+
+{
+  "filter": {
+    "conditions": [
+      {
+        "property": "customer.name",
+        "operator": "=",
+        "value": "Shelby Robinson"
+      }
+    ]
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When using the <code>GET</code> method, the JSON filter criterion needs to be transferred via the URL Query parameter <code>filter</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Filter GET Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Order
+            /search
+            ?filter={"conditions":[{"property":"customer.name","operator":"contains","value":"Shelby"}]}</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">URI Encoding</div>
+<div class="paragraph">
+<p>The HTTP URI standard only allows ASCII characters as part of the URI / URL. When using URL Query parameters for the filter definition, the JSON definition has to be URL encoded to match this requirement. This is also true for the <code>value</code> data that normally contains user input.</p>
+</div>
+<div class="paragraph">
+<p>As there is also a practical limit of the URI length that can cause problems for big filter definitions, the <code>POST</code> method for filtering entities should be preferred as those restrictions do not apply.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="load-list-jpql"><a class="anchor" href="#load-list-jpql"></a>Load Entities via JPQL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Another alternative to loading entities from the application is to use predefined JPQL queries. The Entity Query Endpoint <code>/queries/:entityName/:queryName</code> is responsible for providing this capability. Queries can contain a list of parameters, that need to be provided by the client. Additionally, the endpoint contains the same general parameters for pagination, fetch plans, etc.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">When to use JPQL vs. Search Filter?</div>
+<div class="paragraph">
+<p>Jmix provides various ways to load entity data generically. Use pre-defined JPQL queries when the search filter is not advanced enough to express the filter criterion. Also in case, the parameter should be pre-defined and not be adjustable by the API client.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_jpql_query_configuration"><a class="anchor" href="#_jpql_query_configuration"></a>JPQL Query Configuration</h3>
+<div class="paragraph">
+<p>To use the Entity Query endpoint you need to define the accessible queries. This happens via an XML configuration file, normally called <code>rest-queries.xml</code>. You need to create this new file in your Jmix application under <code>src/main/resources</code>. It lists all published queries with information about their parameters.</p>
+</div>
+<div class="listingblock">
+<div class="title">rest-queries.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;queries xmlns="http://jmix.io/schema/rest/queries"&gt;
+    &lt;query name="ordersByDate" entity="sample_Order" fetchPlan="order-with-details"&gt;
+        &lt;jpql&gt;&lt;![CDATA[select e from sample_Order e where e.date = :orderDate]]&gt;&lt;/jpql&gt;
+        &lt;params&gt;
+            &lt;param name="orderDate" type="java.time.LocalDate"/&gt;
+        &lt;/params&gt;
+    &lt;/query&gt;
+    &lt;query name="ordersByCustomerName" entity="sample_Order" fetchPlan="order-with-details"&gt;
+        &lt;jpql&gt;&lt;![CDATA[select e from sample_Order e where e.customer.name = :customerName]]&gt;&lt;/jpql&gt;
+        &lt;params&gt;
+            &lt;param name="customerName" type="java.lang.String"/&gt;
+        &lt;/params&gt;
+    &lt;/query&gt;
+&lt;/queries&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A query needs to have a unique <code>name</code> value as well as an <code>entity</code> reference. The combination of <code>name</code> and <code>entity</code> needs to be unique. Also, a <code>fetchPlan</code> needs to be referenced to indicate which entity attributes are returned.</p>
+</div>
+<div class="paragraph">
+<p>In the <code>&lt;jpql&gt;</code> tag the actual query is configured. The parameters need to be listed within the <code>params</code> tag defining their name and Java type. In the query parameters, you can reference via their name prefixed with a colon like <code>:customerName</code>.</p>
+</div>
+<div class="paragraph">
+<p>After the file has been created, and the queries have been defined, you need to register the <code>rest-queries.xml</code> configuration in the <code>application.properties</code> of your Jmix application:</p>
+</div>
+<div class="listingblock">
+<div class="title">application.properties</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">jmix.rest.queries-config = rest/sample/rest-queries.xml</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can invoke the Entity Query endpoint either by the <code>GET</code> or <code>POST</code> HTTP method. In the case of <code>GET</code>, the parameters are appended as URL query parameters.</p>
+</div>
+<div class="listingblock">
+<div class="title">Query API GET Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+        /queries
+        /sample_Order
+        /ordersByDate
+        ?orderDate=2020-02-02</code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="title">URI Encoding</div>
+<div class="paragraph">
+<p>The URL should only contain ASCII characters. This means the values of the parameters need to be URL encoded, as those values normally represent direct user input and therefore it cannot be ensured that non-ASCII characters are used.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the case of using <code>POST</code>, the query parameters are transferred in the JSON body containing each parameter as a key.</p>
+</div>
+<div class="listingblock">
+<div class="title">Query API POST Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">POST http://localhost:8080/rest/queries/sample_Order/ordersByCustomerName
+
+{
+  "customerName": "Shelby Robinson"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_collection_parameters"><a class="anchor" href="#_collection_parameters"></a>Collection Parameters</h3>
+<div class="paragraph">
+<p>It is also possible to define a parameter as a collection type. In this case, the query definition should contain an <code>[]</code> indicator after the Java type.</p>
+</div>
+<div class="listingblock">
+<div class="title">rest-queries.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0"?&gt;
+&lt;queries xmlns="http://jmix.io/schema/rest/queries"&gt;
+    &lt;query name="ordersByIds" entity="sample_Order" fetchPlan="order-with-details"&gt;
+        &lt;jpql&gt;&lt;![CDATA[select e from sample_Order e where e.id in :ids]]&gt;&lt;/jpql&gt;
+        &lt;params&gt;
+            &lt;param name="ids" type="java.util.UUID[]"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;/params&gt;
+    &lt;/query&gt;
+&lt;/queries&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>ids</code> parameter is marked as collection of <code>UUID</code> type.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When this parameter is used in a query, the corresponding  IDs have to be provided as a JSON array.</p>
+</div>
+<div class="listingblock">
+<div class="title">Query API Collection Parameters Request</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">POST http://localhost:8080/rest/queries/sample_Order/ordersByIds
+
+{
+  "ids": [
+    "41aae331-b46b-85ee-b0bc-2de8cbf1ab86",
+    "21021f78-edac-224b-e6f8-6e71e02a0f0d"
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="empty-values-json"><a class="anchor" href="#empty-values-json"></a>Return Empty Values in JSON</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, Jmix will remove empty values (<code>null</code>) from the JSON response, so that the attribute keys are not present in the JSON document.</p>
+</div>
+<div class="paragraph">
+<p>You can control this behavior by using the URL query parameter <code>returnNulls</code> and set its value to <code>true</code>. With that, Jmix will always add the attribute keys to the response, independent if the value is empty or not.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, a Customer is loaded by its ID and also requesting to contain all empty values:</p>
+</div>
+<div class="listingblock">
+<div class="title">Load Customer with empty values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http request hljs" data-lang="http request">GET http://localhost:8080/rest
+            /entities
+            /sample_Customer
+            /1eab4973-25f9-70d9-5356-6990dd8f79e2
+            ?returnNulls=true</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Response: 200 - OK</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "_entityName": "sample_Customer",
+  "_instanceName": "Sidney Chandler",
+  "id": "0826806e-6074-90fa-f241-564b5c94d018",
+  "createdDate": "2021-06-09T08:42:39.291",
+  "createdBy": "admin",
+  "lastModifiedDate": "2021-06-09T08:42:39.291",
+  "deletedDate": null,
+  "lastModifiedBy": null,
+  "name": "Sidney Chandler",
+  "type": null, <i class="conum" data-value="1"></i><b>(1)</b>
+  "version": 1,
+  "deletedBy": null
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The response contains the key <code>type</code> although it is empty</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Parameter <code>returnNulls</code> is present in all Entity Load APIs: Load by ID, Load List, Search and Load by Query.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../entities-api.html">Entities API</a></span>
+  <span class="next"><a href="create-entities.html">Create Entities</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"
+></script>
+<script>
+  hljs.highlightAll();
+</script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../_/.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../_/../search-index.js"></script>
+  </body>
+</html>

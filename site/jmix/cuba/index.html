@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Migration from CUBA Platform :: Jmix Documentation</title>
+    <link rel="canonical" href="https://docs.jmix.io/jmix/cuba/index.html">
+    <link rel="prev" href="../publish-add-on.html">
+    <meta name="generator" content="Antora 3.0.3">
+<link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"><link rel="stylesheet" href="../../_/css/search.css">
+<link rel="stylesheet" href="../../_/css/overrides.css">
+<link rel="shortcut icon" href="https://www.jmix.io/dark-favicon.ico" />
+<link rel="icon" href="https://www.jmix.io/dark-favicon.ico" /> <script>uiRootPath = '../../_'</script>
+<!-- Google Tag Manager -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH3DTWV');</script>
+-->
+<!-- End Google Tag Manager -->
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.jmix.io">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8205 2.64855L7.33011 9.13895L9.71136 11.5202L16.2018 5.0298C17.7889 3.44265 20.3363 3.41231 21.9764 4.91232L23.9484 6.85824L26.323 4.48334L24.3643 2.52437C21.4098 -0.289033 16.7211 -0.251991 13.8205 2.64855Z"
+                        fill="#FC1264" />
+                    <path
+                        d="M12.1333 18.7388L19.2167 11.6554L26.2444 18.6831L19.161 25.7665L12.1333 18.7388ZM21.5592 28.1651L28.6426 21.0816L29.2917 20.4325C30.2576 19.4666 30.2576 17.9003 29.2917 16.934L28.6426 16.2849L21.6149 9.25723L20.9658 8.60847C19.9999 7.64221 18.4332 7.64221 17.4673 8.60847L16.8182 9.25723L9.73511 16.3407L9.086 16.9898C8.1201 17.9557 8.1201 19.522 9.086 20.4883L9.73511 21.1374L16.7628 28.1651L17.4116 28.8138C18.3778 29.7801 19.9441 29.7801 20.9101 28.8138L21.5592 28.1651Z"
+                        fill="white" />
+                    <path
+                        d="M22.143 32.4252C20.5555 34.0123 18.0081 34.0427 16.3677 32.5423L16.3663 32.5441L14.3748 30.5523L11.9886 32.9388L13.9801 34.9302C16.9342 37.744 21.6234 37.7073 24.5243 34.8064L31.0475 28.2832L28.6662 25.902L22.143 32.4252Z"
+                        fill="#25CDE3" />
+                    <path d="M31.0646 23.5038L31.8584 24.2972L31.0646 23.5038Z" fill="#25CDE3" />
+                    <path d="M4.93164 11.5374L6.12227 12.728L4.93164 11.5374Z" fill="#FC1264" />
+                    <path
+                        d="M5.4746 21.6751C3.88745 20.0883 3.85711 17.5405 5.35713 15.9005L7.32633 13.9316L4.93167 11.5373L2.96282 13.5062L2.96953 13.5129C0.15577 16.467 0.192812 21.1558 3.09335 24.0567L9.58376 30.5468L11.965 28.1655L5.4746 21.6751Z"
+                        fill="#FDB42B" />
+                    <path
+                        d="M35.274 13.3757L28.7836 6.88529L26.4023 9.26654L32.8927 15.7569C34.4799 17.3441 34.5102 19.8915 33.0102 21.5316L31.0647 23.5036L33.4392 25.8781L35.3982 23.9192C38.2116 20.965 38.1745 16.2762 35.274 13.3757Z"
+                        fill="#22D685" />
+                </svg>
+                &nbsp;
+                Jmix Documentation
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <input id="search-input" placeholder="Search docs" onfocusout="this.value=''"
+                        style="font-size: 16px;" />
+                </div>
+            </div>
+            <div class="header-btn">
+                <a class="header-link" href="https://www.jmix.io/" target="_blank">Go to Jmix website</a>
+            </div>
+        </div>
+    </nav>
+</header><div class="body">
+<div class="nav-container" data-component="jmix" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../intro.html">Jmix Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../setup.html">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorial/index.html">Tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/project-setup.html">1. Project Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/simple-crud.html">2. Simple CRUD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/references.html">3. References And Unique Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/customize-ui.html">4. Customizing UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/data-in-ui.html">5. Working With Data in UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/entity-events.html">6. Using Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/ui-from-scratch.html">7. Creating UI From Scratch</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../studio/index.html">Using Studio</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/install.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/update.html">Update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/subscription.html">Subscription</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/project.html">Working with Project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../studio/studio-features.html">Studio Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/welcome.html">Welcome Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/tool-window.html">Jmix Tool Window</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/project-properties.html">Project Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/marketplace.html">Add-ons Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/entity-designer.html">Entity Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/screen-wizard.html">Screen Wizard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/screen-designer.html">Screen Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/fetch-plan-designer.html">Fetch Plan Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/menu-designer.html">Menu Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/role-designer.html">Role Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/bpmn-designer.html">BPMN Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/coding-assistance.html">Coding Assistance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/code-snippets.html">Code Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/reverse-engineering.html">Reverse Engineering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/hot-deploy.html">Hot Deploy</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/plugin-settings.html">Jmix Plugin Settings</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-model/index.html">Data Model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/entities.html">Entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/data-types.html">Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/enumerations.html">Enumerations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/soft-deletion.html">Soft Deletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/metadata.html">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/bean-validation.html">Bean Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/db-migration.html">Database Migration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-access/index.html">Data Access</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/data-manager.html">Using DataManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/entity-manager.html">Using EntityManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/entity-events.html">Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/fetching.html">Fetching Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/transactions.html">Transaction Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/jpql-extensions.html">JPQL Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/screens.html">Screens and Fragments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/screens/screen-controllers.html">Screen Controllers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/annotations.html">Screen Controller Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/methods.html">Screen Controller Methods</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/screen-events.html">Screen Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/screen-fragment-events.html">ScreenFragment Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/descriptors.html">XML Descriptors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/mixins.html">Screen Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/root-screens.html">Root Screens</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/validation.html">Screen Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/opening-screens.html">Opening Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/using-fragments.html">Using Screen Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/data-components.html">Data Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/data/data-containers.html">Data Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/instance-container.html">InstanceContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/collection-container.html">CollectionContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/property-containers.html">Property Containers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/key-value-containers.html">Key-Value Containers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/data/data-loaders.html">Data Loaders</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/data/data-context.html">DataContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/data/data-examples.html">Using Data Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl.html">Visual Components Library</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/components.html">Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/app-menu.html">AppMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/browser-frame.html">BrowserFrame</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/button.html">Button</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/caps-lock-indicator.html">CapsLockIndicator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/calendar.html">Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/check-box.html">CheckBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/check-box-group.html">CheckBoxGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/color-picker.html">ColorPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/combo-box.html">ComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/currency-field.html">CurrencyField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/data-grid.html">DataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/date-field.html">DateField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/date-picker.html">DatePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/entity-combo-box.html">EntityComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/entity-picker.html">EntityPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/entity-suggestion-field.html">EntitySuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/file-multi-upload-field.html">FileMultiUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/file-storage-upload-field.html">FileStorageUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/file-upload-field.html">FileUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/components/filter.html">Filter</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../ui/vcl/components/filter-components.html">Filter Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/group-table.html">GroupTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/image.html">Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/label.html">Label</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/link.html">Link</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/link-button.html">LinkButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/masked-field.html">MaskedField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/multi-select-list.html">MultiSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/password-field.html">PasswordField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/popup-button.html">PopupButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/popup-view.html">PopupView</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/progress-bar.html">ProgressBar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/property-filter.html">PropertyFilter</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/radio-button-group.html">RadioButtonGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/related-entities.html">RelatedEntities</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/resizable-text-area.html">ResizableTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/rich-text-area.html">RichTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/side-menu.html">SideMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/simple-pagination.html">SimplePagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/single-select-list.html">SingleSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/slider.html">Slider</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/source-code-editor.html">SourceCodeEditor</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/suggestion-field.html">SuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/table.html">Table</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tag-field.html">TagField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tag-picker.html">TagPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/text-area.html">TextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/text-field.html">TextField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/time-field.html">TimeField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tree.html">Tree</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tree-data-grid.html">TreeDataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tree-table.html">TreeTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/twin-column.html">TwinColumn</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/value-picker.html">ValuePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/values-picker.html">ValuesPicker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/containers.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/accordion.html">Accordion</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/box-layout.html">BoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/buttons-panel.html">ButtonsPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/css-layout.html">CssLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/drawer.html">Drawer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/grid-layout.html">GridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/group-box-layout.html">GroupBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/html-box-layout.html">HtmlBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/responsive-grid-layout.html">ResponsiveGridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/scroll-box-layout.html">ScrollBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/split-panel.html">SplitPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/tab-sheet.html">TabSheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/miscellaneous.html">Miscellaneous</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/miscellaneous/validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/miscellaneous/formatter.html">Formatter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/vcl/api.html">Components API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/vcl/xml.html">Components XML Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/facets.html">Facets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/clipboard-trigger.html">ClipboardTrigger</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/data-load-coordinator.html">DataLoadCoordinator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/dynamic-attributes-facet.html">DynamicAttributes Facet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/editor-screen-facet.html">EditorScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/input-dialog-facet.html">InputDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/lookup-screen-facet.html">LookupScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/message-dialog-facet.html">MessageDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/notification-facet.html">NotificationFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/option-dialog-facet.html">OptionDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/presentations-facet.html">PresentationsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/screen-facet.html">ScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/screen-settings-facet.html">ScreenSettingsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/timer.html">Timer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/actions.html">Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/actions/declarative-actions.html">Declarative Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/actions/standard-actions.html">Standard Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/add-action.html">AddAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/bulk-edit-action.html">BulkEditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/create-action.html">CreateAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/edit-action.html">EditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-clear-action.html">EntityClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-lookup-action.html">EntityLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-open-action.html">EntityOpenAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-open-composition-action.html">EntityOpenCompositionAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/exclude-action.html">ExcludeAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/refresh-action.html">RefreshAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/related-action.html">RelatedAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/remove-action.html">RemoveAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/tag-lookup-action.html">TagLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/value-clear-action.html">ValueClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/view-action.html">ViewAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/actions/custom-action-type.html">Custom Action Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/actions/base-action.html">BaseAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/dialogs.html">Dialogs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/background-tasks.html">Background Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/notifications.html">Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/exception-handlers.html">Exception Handlers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/exception-handlers/unique-constraint-violation-exception.html">Handling Unique Constraint Violation Exceptions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/themes.html">Themes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/themes/theme_usage.html">Using Existing Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/themes/custom_theme.html">Creating a Custom Theme</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/themes/theme_addon.html">Creating and Using a Theme Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/icons.html">Icons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/icons/icon-sets.html">Icon Sets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/icons/icon-provider.html">Using Icons from Other Font Libraries</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/menu-config.html">MenuConfig</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/url-history-navigation.html">URL History and Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/handling-url-changes.html">Handling URL Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/routing-api.html">Routing API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/url-navigation-api-usage.html">Using URL History and Navigation API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/url-routes-generator.html">URL Routes Generator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/anonymous-access-to-screens.html">Anonymous Access to Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/pluggable-component-factories.html">Pluggable Component Factories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/custom-components.html">Creating Custom Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/composite-components.html">Composite Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/js-component.html">Generic JavaScriptComponent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/custom-widget-sets.html">Creating GWT Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/widgetset-add-on.html">Creating and Using Widgets Add-On</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/app-properties.html">UI Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../rest/index.html">Generic REST</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/getting-started.html">Getting Started with REST</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../rest/entities-api.html">Entities API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/load-entities.html">Load Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/create-entities.html">Create Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/update-entities.html">Update Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/delete-entities.html">Delete Entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/files-api.html">Files API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/messages-api.html">Messages API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/metadata-api.html">Metadata API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/user-session-api.html">User Session API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/business-logic.html">Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../rest/security.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/security/authentication.html">Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/api-docs.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/app-properties.html">REST Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../localization/index.html">Localization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization/message-bundles.html">Message Bundles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization/framework-translations.html">Framework Translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../files/index.html">Managing Files</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/files-in-database.html">Storing Files in Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/file-storage.html">Using File Storage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/downloading-files.html">Downloading and Displaying Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/resource-roles.html">Resource Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/row-level-roles.html">Row-level Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/authorization.html">Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/index.html">Other Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/sequences.html">Sequence Generation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../modularity/index.html">Modularity and Extension</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modularity/creating-add-ons.html">Creating Add-ons</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modularity/extension.html">Extending Functionality</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../deployment/index.html">Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/k8s.html">Kubernetes Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/aws-beanstalk.html">Amazon Web Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/azure.html">Azure App Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/google-cloud-appengine.html">Google Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../add-ons.html">Add-ons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../appsettings/index.html">Application Settings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../audit/index.html">Audit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../audit/entity-log.html">Entity Log</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/index.html">BPM</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/getting-started.html">Getting Started with BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/admin-screens.html">Administration Screens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/modeler.html">Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/proc-definitions.html">Process Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/proc-instances.html">Process Instances</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/user-groups.html">User Groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/user-tasks.html">User Tasks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/forms.html">Process Forms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/input-dialog.html">Input Dialog</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/jmix-screen.html">Jmix Screen</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/custom.html">Custom Form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/tasks.html">Tasks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/user-task.html">User Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/service-task.html">Service Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/script-task.html">Script Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/data-task.html">Entity Data Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/email-task.html">Email Sending Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/sub-process-call-activity.html">Sub-Processes and Call Activities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/listeners.html">Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/dmn.html">DMN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/instance-migration.html">Process Instances Migration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/auto-deployment.html">Automatic Models Deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/api.html">BPM API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../business-calendar/index.html">Business Calendars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../business-calendar/creating.html">Creating Business Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../business-calendar/api.html">Business Calendars API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../charts/index.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../charts/types.html">Charts Types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/angular-gauge-chart.html">AngularGaugeChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/funnel-chart.html">FunnelChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/gantt-chart.html">GanttChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/pie-chart.html">PieChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/radar-chart.html">RadarChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/serial-chart.html">SerialChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/stock-chart-group.html">StockChartGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../charts/types/xy-chart.html">XYChart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/config.html">Configuring Charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/export.html">Charts Export</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/data.html">Connecting Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/events.html">Events</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../charts/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../dashboards/index.html">Dashboards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/user-interface.html">Administration UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/adding-business-logic.html">Adding Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/using-dashboard-in-screen.html">Using Dashboard in Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/dashboard-chart-addon.html">Dashboard Chart Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-tools/index.html">Data Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-tools/entity-inspector.html">Entity Inspector</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-tools/entity-info-action.html">Entity Information Action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../dyn-attr/index.html">Dynamic Attributes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dyn-attr/dynattr-managing.html">Managing Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dyn-attr/dynattr-view.html">Displaying Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dyn-attr/dynattr-api.html">Dynamic Attributes API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../email/index.html">Email Sending</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/getting-started.html">Getting Started with Email</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/api.html">Email Sending API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/email-history.html">Email History</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../email-template/index.html">Email Templates</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email-template/getting-started.html">Getting Started with Email Templates</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email-template/usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email-template/api.html">Email Templates API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../grapes-js/index.html">GrapesJS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grapes-js/components.html">GrapesJS UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grapes-js/html-editor-ui.html">HTML Editor UI</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../grid-export/index.html">Grid Export Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grid-export/exporters.html">Table Exporters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grid-export/actions.html">Export Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grid-export/limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ldap/index.html">LDAP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/getting-started.html">Getting Started with LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/obtaining-user-authorities.html">Obtaining User Authorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/in-memory-user-management.html">In-memory User Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/usage-with-active-directory.html">Usage with Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/global-user-synchronization.html">Global User Synchronization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/properties.html">LDAP Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../maps/index.html">Maps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/getting-started.html">Getting Started with Maps</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/maps-ui.html">Maps UI Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../maps/layers.html">Layers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/raster-layers.html">Raster Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/vector-layers.html">Vector Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/heatmap-layer.html">Heatmap Layer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/canvas-layer.html">Canvas Layer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/additional-options.html">Additional Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/drawing-geometry.html">Drawing Geometry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/map-services.html">Map Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multitenancy/index.html">Multitenancy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../notifications/index.html">Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../notifications/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../notifications/creating-notifications.html">Creating Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../notifications/viewing-notifications.html">Viewing Notifications</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pivot-table/index.html">Pivot Table</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/elements.html">Elements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/export.html">Exporting PivotTable Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/show-pivot-action.html">Using ShowPivotAction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quartz/index.html">Quartz</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../reports/index.html">Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/getting-started.html">Getting Started with Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../reports/create-reports.html">Creating Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/data-structure.html">Report Data Structure</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/templates.html">Report Template</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/parameter-and-format.html">Report Parameters and Field Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/permissions.html">Report Access Rights</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/localization.html">Report Name Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/run-report.html">Running Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/exec-history.html">Report Execution History</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/sample-reports.html">Sample Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/rest-api.html">REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../search/index.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/getting-started.html">Getting Started with Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/index-definitions.html">Index Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/indexing-queue.html">Indexing Queue</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/search-in-ui.html">Using Search in UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/config-options.html">Search Configuration Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/search-api.html">Search API and Internals</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/search-properties.html">Search Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../webdav/index.html">WebDAV</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/ui-components.html">UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendices</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app-properties.html">Application Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text"><a href="https://docs.jmix.io/api/1.3" target="_blank" rel="noopener">Java API Reference</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quartz-setup.html">Quartz Job Scheduler Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../publish-add-on.html">Publishing an Add-on</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="index.html">Migration from CUBA Platform</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jmix Documentation</span>
+    <span class="version">1.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../intro.html">Jmix Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../intro.html">1.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../intro.html">Jmix Documentation</a></li>
+    <li>Appendices</li>
+    <li><a href="index.html">Migration from CUBA Platform</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/cuba/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Migration from CUBA Platform</h1>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jmix framework is a direct successor of CUBA platform. It offers the same rapid application development approach but with modernized infrastructure. You can think of Jmix as a new major version of CUBA, so if your CUBA project is in active development, consider upgrading to Jmix. To facilitate this process, we provide a compatibility module with a set of CUBA APIs and features that were changed or removed in Jmix. Also, Jmix Studio contains an advanced procedure for converting a CUBA project into Jmix one.</p>
+</div>
+<div class="paragraph">
+<p>In this chapter, we describe the main differences between Jmix and CUBA and give you detailed instructions on how to migrate your CUBA project to Jmix.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="differences"><a class="anchor" href="#differences"></a>Differences from CUBA</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="project-structure"><a class="anchor" href="#project-structure"></a>Project Structure</h3>
+<div class="paragraph">
+<p>A CUBA project consists of at least three modules: <code>global</code>, <code>core</code>, <code>web</code>. In Jmix, project has a single module by default.</p>
+</div>
+<div class="paragraph">
+<p>In a CUBA project, source files of all types (Java, Kotlin, XML, properties) are mixed in the same directories under the single source root (one per module). Jmix project follows the standard Maven directory layout when there are separate roots for files of different types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>src/main</code> - sources of production code</p>
+</li>
+<li>
+<p><code>src/test</code> - test sources</p>
+</li>
+<li>
+<p><code>src/main/java</code>, <code>src/test/java</code> - for Java classes</p>
+</li>
+<li>
+<p><code>src/main/kotlin</code>, <code>src/test/kotlin</code> - for Kotlin files</p>
+</li>
+<li>
+<p><code>src/main/resources</code>, <code>src/test/resources</code> - for XML and property files.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deployment-structure"><a class="anchor" href="#deployment-structure"></a>Deployment Structure</h3>
+<div class="paragraph">
+<p>A CUBA application is built into two separate web applications: <code>core</code> and <code>web</code>. Even if you use a "single WAR" or "uber JAR" deployment, these artifacts actually contain the <code>core</code> and <code>web</code> classes isolated in different classloaders and running in separate Spring contexts.</p>
+</div>
+<div class="paragraph">
+<p>A Jmix application is a single web application built as an executable JAR or as a WAR using standard Spring Boot Gradle deployment tasks.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="app-properties"><a class="anchor" href="#app-properties"></a>Application Properties</h3>
+<div class="paragraph">
+<p>Due to the separate deployment of CUBA modules, a CUBA project properties are set in two files: <code>app.properties</code> for the <code>core</code> module and <code>web-app.properties</code> for the <code>web</code> module. These files are located in the base package of the corresponding module.</p>
+</div>
+<div class="paragraph">
+<p>In Jmix, all properties are defined in a single <code>application.properties</code> file located in the <code>src/main/resources</code> root.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="spring-config"><a class="anchor" href="#spring-config"></a>Spring Configuration</h3>
+<div class="paragraph">
+<p>In CUBA, Spring container configuration is defined in <code>spring.xml</code> for the <code>core</code> module and <code>web-spring.xml</code> for the <code>web</code> module.</p>
+</div>
+<div class="paragraph">
+<p>Jmix uses only Java-based container configuration. Spring Boot automatically scans all classes in the base package of the application (where the class annotated with <code>@SpringBootApplcation</code> is located) and packages below it for Spring annotations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-model"><a class="anchor" href="#data-model"></a>Data Model</h3>
+<div class="paragraph">
+<p>CUBA data model entities have to extend one of the base classes (<code>StandardEntity</code>, <code>BaseUuidEntity</code>, <code>BaseGenericIdEntity</code>, etc.) and optionally implement some interfaces (<code>Versioned</code>, <code>Creatable</code>, <code>Updatable</code>, <code>SoftDelete</code>).</p>
+</div>
+<div class="paragraph">
+<p>Jmix doesn&#8217;t force you to inherit your entities from the framework&#8217;s base classes. Instead, you should just annotate your class with <code>@JmixEntity</code> and that&#8217;s it - the framework will enhance the class' bytecode to implement the features previously implemented by the CUBA entity base classes. Optional behavior (see <a href="../data-model/entities.html#traits" class="xref page">traits</a>) is also declared with annotations like <code>@CreatedBy</code>, <code>@CreatedDate</code>, etc. Of course, you can create your own base classes with required characteristics on the project level. The <code>jmix-cuba</code> compatibility module provides a set of base classes equivalent to the CUBA ones, so you don&#8217;t have to rewrite your entities when migrating to Jmix.</p>
+</div>
+<div class="paragraph">
+<p>CUBA JPA entities have to be registered in the <code>persistence.xml</code> file located in the base package of the <code>global</code> module. In Jmix, the <code>persistence.xml</code> file is created automatically  at build time by the Jmix Gradle plugin. The plugin scans the classpath and writes all <code>@JmixEntity</code>-annotated classes into <code>&lt;base-package&gt;/persistence.xml</code> inside the application JAR/WAR file.</p>
+</div>
+<div class="paragraph">
+<p>CUBA non-persistent entities and custom datatypes are registered in the <code>metadata.xml</code> file. There is no such file in Jmix:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../data-model/entities.html#dto" class="xref page">DTO entities</a> are recognized just by the <code>@JmixEntity</code> annotation.</p>
+</li>
+<li>
+<p><a href="../data-model/data-types.html" class="xref page">Custom datatype</a> classes are annotated with <code>@DatatypeDef</code> which makes them Spring beans and allow the framework to find and register them at startup.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-manager"><a class="anchor" href="#data-manager"></a>DataManager</h3>
+<div class="paragraph">
+<p>The <code>io.jmix.core.DataManager</code> bean in Jmix core is very similar to the <code>TransactionalDataManager</code> in CUBA: it joins an existing transaction and has the <code>save()</code> method instead of <code>commit()</code>. But it has a crucial difference in handling security permissions: in Jmix, <code>io.jmix.core.DataManager</code> checks resource and row-level policies by default, and there is separate <code>io.jmix.core.UnconstrainedDataManager</code> that bypasses all access control rules. See details in the <a href="../security/authorization.html#data-access-checks" class="xref page">Authorization</a> section.</p>
+</div>
+<div class="paragraph">
+<p>The <code>jmix-cuba</code> compatibility module provides the <code>com.haulmont.cuba.core.global.DataManager</code> bean that has the same interface and behavior as in CUBA with respect to security: it checks only row-level policies and has the <code>secure()</code> method which returns a <code>DataManager</code> implementation that checks also the resource policies.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="transactions"><a class="anchor" href="#transactions"></a>Transactions</h3>
+<div class="paragraph">
+<p>Unlike CUBA, Jmix doesn&#8217;t provide any specific interfaces for transaction management. You should use either declarative transaction demarcation with the <code>@Transactional</code> annotation on bean methods, or programmatic management with Spring&#8217;s <code>TransactionTemplate</code> class.</p>
+</div>
+<div class="paragraph">
+<p>The <code>jmix-cuba</code> compatibility module provides the <code>com.haulmont.cuba.core.Persistence</code> and <code>com.haulmont.cuba.core.Transaction</code> interfaces that save you from rewriting your business logic working with CUBA APIs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="entity-manager"><a class="anchor" href="#entity-manager"></a>EntityManager</h3>
+<div class="paragraph">
+<p>In Jmix, code working with JPA should use the standard JPA <code>EntityManager</code>, <code>Query</code> and <code>TypedQuery</code> interfaces. The <code>EntityManager</code> is obtained using injection with <code>@PersistenceContext</code> annotation, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PersistenceContext
+private EntityManager entityManager;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With the <code>jmix-cuba</code> compatibility module, you can keep using <code>com.haulmont.cuba.core.EntityManager</code> obtained through <code>com.haulmont.cuba.core.Persistence</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="entity-persisting-event"><a class="anchor" href="#entity-persisting-event"></a>EntityPersistingEvent</h3>
+<div class="paragraph">
+<p>The CUBA&#8217;s <code>EntityPersistingEvent</code> is superseded by <a href="../data-access/entity-events.html#saving-loading-events" class="xref page">EntitySavingEvent</a> which is sent both on persisting new entities and updating existing ones. The old <code>EntityPersistingEvent</code> is provided by the <code>jmix-cuba</code> compatibility module and is sent only when saving new instances as it was in CUBA.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<code>EntitySavingEvent</code> and <code>EntityPersistingEvent</code> are sent only when saving entities using <code>DataManager</code>. If you persist entities using <code>EntityManager</code>, <code>EntityPersistingEvent</code> is not sent, regardless of the presence of the <code>jmix-cuba</code> module.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fetching"><a class="anchor" href="#fetching"></a>Fetch Plans and Lazy Loading</h3>
+<div class="paragraph">
+<p>Jmix supports partial loading of entities by using <em>fetch plans</em>, which are the same as <em>views</em> in CUBA. In addition, Jmix also supports lazy loading of references for JPA entities loaded using <code>DataManager</code>, so use of fetch plans is optional and should be considered as a performance optimization. See details in the <a href="../data-access/fetching.html" class="xref page">Fetching Data</a> section.</p>
+</div>
+<div class="paragraph">
+<p>The <code>jmix-cuba</code> module provides the <code>com.haulmont.cuba.core.global.View</code>, <code>ViewBuilder</code> and <code>ViewRepository</code> classes for backward compatibility.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="security"><a class="anchor" href="#security"></a>Security</h3>
+<div class="paragraph">
+<p>Jmix <a href="../security/resource-roles.html" class="xref page">resource roles</a> and resource policies are very similar to CUBA roles and permissions. The main difference is how they are defined in design time: CUBA roles use classes, Jmix roles use interfaces.</p>
+</div>
+<div class="paragraph">
+<p>Jmix <a href="../security/row-level-roles.html" class="xref page">row-level roles</a> have the same purpose as CUBA access group constraints, but there are significant differences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jmix row-level roles are stored in a plain list instead of a hierarchy;</p>
+</li>
+<li>
+<p>a user can have any number of row-level roles;</p>
+</li>
+<li>
+<p>there is no equivalent for predefined session attributes of access groups.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Studio migration procedure converts CUBA design-time roles into Jmix resource roles automatically. Access groups and constraints have to be converted manually, see <a href="#changed-api">Changed APIs</a> section for details.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The migration procedure will preserve your list of users in the database, but all runtime security configuration (roles, policies, role assignments) will have to be done from scratch.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="session-attributes"><a class="anchor" href="#session-attributes"></a>Session Attributes</h3>
+<div class="paragraph">
+<p>Jmix provides the <a href="../security/authentication.html#session-attributes" class="xref page">SessionData</a> bean for sharing values across multiple requests from the same connected user.</p>
+</div>
+<div class="paragraph">
+<p>For backward compatibility, the <code>jmix-cuba</code> module provides the <code>com.haulmont.cuba.security.global.UserSession</code> class that delegates its <code>getAttribute()</code> / <code>setAttribute()</code> methods to <code>SessionData</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="removed-features"><a class="anchor" href="#removed-features"></a>Features Removed in Jmix</h3>
+<div class="paragraph">
+<p>Below is a list of CUBA features that were removed in Jmix without replacement.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Attribute access control on the <code>DataManager</code> level. Entity attribute permissions are now considered only when displaying data in UI components and returning entities via REST API endpoints. See <a href="../security/authorization.html#data-access-checks" class="xref page">Data Access Checks</a>.</p>
+</li>
+<li>
+<p>State-based entity attribute access control with <code>SetupAttributeAccessHandler</code> and <code>SetupAttributeAccessHandler</code>.</p>
+</li>
+<li>
+<p>Screen component permissions.</p>
+</li>
+<li>
+<p>Session attributes defined in the Access Groups.</p>
+</li>
+<li>
+<p><code>ClusterManagerAPI</code> interface and its implementation.</p>
+</li>
+<li>
+<p>Editor screen opening history and <code>@TrackEditScreenHistory</code> annotation.</p>
+</li>
+<li>
+<p>Support for Microsoft SQL Server 2005 with <code>net.sourceforge.jtds.jdbc.Driver</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changed-api"><a class="anchor" href="#changed-api"></a>Changed APIs</h3>
+<div class="paragraph">
+<p>Below is a list of changed APIs that are not converted by the Studio automatic migration and have no compatibility wrappers in <code>jmix-cuba</code> module. Use this information when fixing your code for compilation.</p>
+</div>
+<div class="sect3">
+<h4 id="changed-api-access-groups"><a class="anchor" href="#changed-api-access-groups"></a>Access groups and constraints</h4>
+<div class="paragraph">
+<p>Convert the annotated class to an interface. The interface methods should return <code>void</code> and are used merely for grouping annotations. See details in the <a href="../security/row-level-roles.html" class="xref page">Row-level Roles</a> section.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>com.haulmont.cuba.security.app.group.annotation.AccessGroup</code> &#8594; <code>io.jmix.security.role.annotation.RowLevelRole</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.security.app.group.annotation.JpqlConstraint</code> &#8594; <code>io.jmix.security.role.annotation.JpqlRowLevelPolicy</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.security.app.group.annotation.Constraint</code> &#8594; <code>io.jmix.security.role.annotation.PredicateRowLevelPolicy</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="changed-api-security-entities"><a class="anchor" href="#changed-api-security-entities"></a>Security configuration entities</h4>
+<div class="paragraph">
+<p>Below are rough equivalents of entities used to configure security at runtime:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>com.haulmont.cuba.security.entity.Role</code> &#8594; <code>io.jmix.securitydata.entity.ResourceRoleEntity</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.security.entity.Group</code> &#8594; <code>io.jmix.securitydata.entity.RowLevelRoleEntity</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.security.entity.UserRole</code> &#8594; <code>io.jmix.securitydata.entity.RoleAssignmentEntity</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.security.entity.Permission</code> &#8594; <code>io.jmix.securitydata.entity.ResourcePolicyEntity</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.security.entity.Constraint</code> &#8594; <code>io.jmix.securitydata.entity.RowLevelPolicyEntity</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="multitenancy"><a class="anchor" href="#multitenancy"></a>Multitenancy</h4>
+<div class="paragraph">
+<p>After running the automatic migration procedure, follow the steps below.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the <code>StandardTenantEntity</code> to your project:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.company.app.entity; // replace with your base package
+
+import com.haulmont.cuba.core.entity.StandardEntity;
+import io.jmix.core.annotation.TenantId;
+import io.jmix.core.metamodel.annotation.JmixEntity;
+
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+@JmixEntity
+public abstract class StandardTenantEntity extends StandardEntity {
+
+    private static final long serialVersionUID = -1215037188627831268L;
+
+    @TenantId
+    @Column(name = "TENANT_ID")
+    protected String tenantId;
+
+    public void setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+    }
+
+    public String getTenantId() {
+        return tenantId;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In all entities extended from the CUBA <code>StandardTenantEntity</code>, replace the import of <code>com.haulmont.addon.sdbmt.entity.StandardTenantEntity</code> to the import of your own <code>StandardTenantEntity</code>.</p>
+</div>
+</li>
+<li>
+<p>In the <code>User</code> entity, implement the <code>AcceptsTenant</code> interface and add the <code>tenant</code> attribute annotated with <code>@TenantId</code> and mapped to the <code>SYS_TENANT_ID</code> column:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class User implements JmixUserDetails, HasTimeZone, AcceptsTenant {
+    // ...
+
+    @TenantId
+    @Column(name = "SYS_TENANT_ID")
+    private String tenant;
+
+    public String getTenant() {
+        return tenant;
+    }
+
+    public void setTenant(String tenant) {
+        this.tenant = tenant;
+    }
+
+    @Override
+    public String getTenantId() {
+        return tenant;
+    }
+}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add <code>tenant</code> attribute to the user browse and edit screens as described in items 3, 4, 5 of the <a href="../multitenancy/index.html#configuring-users" class="xref page">Multitenancy / Configuring Users</a> section.</p>
+</li>
+<li>
+<p>Rename <code>CUBASDBMT_TENANT</code> table to <code>MTEN_TENANT</code> using the following Liquibase changeset (it&#8217;s needed only in Jmix 1.1.0, because <code>jmix-cuba</code> module in Jmix 1.1.1+ contains this changeset):</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;changeSet id="10" author="me"&gt;
+    &lt;preConditions onFail="MARK_RAN"&gt;
+        &lt;tableExists tableName="CUBASDBMT_TENANT"/&gt;
+    &lt;/preConditions&gt;
+
+    &lt;renameTable oldTableName="CUBASDBMT_TENANT" newTableName="MTEN_TENANT"/&gt;
+&lt;/changeSet&gt;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="changed-api-reports"><a class="anchor" href="#changed-api-reports"></a>Reports</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>com.haulmont.reports.app.service.ReportService</code>, <code>com.haulmont.reports.gui.ReportGuiManager</code> &#8594; <code>io.jmix.reports.runner.ReportRunner</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="changed-api-entity-snapshots"><a class="anchor" href="#changed-api-entity-snapshots"></a>Entity snapshots</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>com.haulmont.cuba.core.app.EntitySnapshotService</code> &#8594; <code>io.jmix.audit.snapshot.EntitySnapshotManager</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.gui.app.core.entitydiff.EntityDiffViewer</code> &#8594; <code>io.jmix.auditui.screen.snapshot.SnapshotDiffViewer</code></p>
+</li>
+<li>
+<p><code>&lt;frame id="diffFrame" src="/com/haulmont/cuba/gui/app/core/entitydiff/diff-view.xml"/&gt;</code> &#8594; <code>&lt;fragment id="diffFrame" screen="snapshotDiff"/&gt;</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="changed-api-email"><a class="anchor" href="#changed-api-email"></a>Email sending</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>com.haulmont.cuba.core.app.EmailService</code> &#8594; <code>io.jmix.email.Emailer</code></p>
+</li>
+<li>
+<p><code>com.haulmont.cuba.core.global.EmailInfoBuilder#setCaption</code> &#8594; <code>io.jmix.email.EmailInfoBuilder#setSubject</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="migration"><a class="anchor" href="#migration"></a>How To Migrate</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Jmix Studio provides an automatic procedure for converting a CUBA project into Jmix one. It creates a new project with a standard Jmix template and then copies the source code from your CUBA project into the new structure inside the new Jmix project. While copying, Studio makes a lot of changes in the source files: replaces packages and known framework classes, converts screen XML descriptors to the new schema, configures your database connections, adds dependencies to the new add-ons. After the migration procedure completes, you should fix the remaining problems manually.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The migration procedure keeps your CUBA project untouched, so it&#8217;s safe to run the procedure on any working copy of a project.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There are the following limitations of the automatic migration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Projects using HSQLDB as a main data store may have an invalid connection string. We recommend switching your project to a different database before migration.</p>
+</li>
+<li>
+<p>Test classes are not copied to the Jmix project.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In Jmix Studio v.1.1.4 and below, the migration procedure may fail if your IntelliJ IDEA contains Kotlin plugin of a version newer than 1.5.10. In such a case, downgrade Kotlin plugin to 1.5.10 or below.</p>
+</div>
+<div class="paragraph">
+<p>In Jmix Studio v.1.1.5 and above, the migration does not have a dependency on Kotlin plugin.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="main-migration"><a class="anchor" href="#main-migration"></a>Main Migration</h3>
+<div class="paragraph">
+<p>Follow the steps below to run the automatic migration procedure.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open your CUBA project in Jmix Studio.</p>
+</li>
+<li>
+<p>Wait until the project is imported and fully indexed. Watch the IDE progress bar and wait until it stops displaying new messages.</p>
+</li>
+<li>
+<p>You should see a notification about migrating to Jmix in the bottom right corner. Click <strong>Migrate</strong> or select <strong>File &#8594; New &#8594; Jmix project from this CUBA project</strong> in the main menu of the IDE.</p>
+<div class="paragraph">
+<p>The notification could not appear if the project was opened and imported to the IDE before. In this case, click <strong>Reload All Gradle Projects</strong> button in the <strong>Gradle</strong> tool window.</p>
+</div>
+</li>
+<li>
+<p>Studio starts the <strong>New Jmix project</strong> wizard.</p>
+</li>
+<li>
+<p>Select the latest Jmix version (at least 1.1.0) and the project JDK used in your CUBA project. Click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the next step of the wizard, enter the new Jmix project name and location. Click <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Studio creates a new project with the specified Jmix template and starts the migration process. You will see a notification about it in the bottom right corner of the IDE.</p>
+<div class="paragraph">
+<p>When the migration is finished, Studio creates the <code>MigrationResult.md</code> file and opens it in the editor window. The file describes what has been done automatically and recommendations on what should be done manually.</p>
+</div>
+</li>
+<li>
+<p>Add required dependencies to the <code>build.gradle</code> file. The migration procedure adds only the known Jmix counterparts of the CUBA add-ons.</p>
+</li>
+<li>
+<p>Your next goal is to compile the project. Click <strong>Build &#8594; Build Project</strong> in the IDE main menu.</p>
+<div class="paragraph">
+<p>See compilation errors in the build output panel and fix your code to comply with the new API. Use the information from the <a href="#changed-api">Changed API</a> section above.</p>
+</div>
+</li>
+<li>
+<p>After successful compilation, check the main database connection in the <strong>Data Stores</strong> section of the Jmix tool window.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Jmix Studio will modify the database schema and run some updates automatically. Never use production databases at the development stage!
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>To update an existing CUBA database to be compatible with the new Jmix application, do the following:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Ensure that <code>application.properties</code> file contains the line:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">jmix.liquibase.contexts = cuba</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Click <strong>Update</strong> in the context menu of the <strong>Main Data Store</strong> item. Studio will run Liquibase changelogs that come with <code>jmix-cuba</code> module. If the process is finished successfully, your database is compatible with Jmix modules included in the project.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Now you can run the application using the <strong>Jmix Application</strong> run/debug configuration.</p>
+<div class="paragraph">
+<p>By default, it first checks the database schema and generates a Liquibase changelog if it differs from the application data model. Review the generated changelog carefully and remove from it all potentially dangerous instructions like <code>drop</code> and <code>alter</code>. You can use <strong>Remove and Ignore</strong> command in the <strong>Changelog Preview</strong> window to remove a selected instruction. Then your choice will be remembered in the <code>jmix-studio.xml</code> file of your project, and when you run the application next time, the ignored instructions will not be generated.</p>
+</div>
+</li>
+<li>
+<p>To create a new empty database for your application, do the following:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Change Liquibase context in <code>application.properties</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">jmix.liquibase.contexts = migrated</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Replace all appearances of the users table name in <code>resources/&lt;base-package&gt;/liquibase/changelog/010-init-user.xml</code> to <code>SEC_USER</code>. For example: <code>&lt;createTable tableName="APP_USER"&gt;</code> &#8594; <code>&lt;createTable tableName="SEC_USER"&gt;</code>, etc.</p>
+</li>
+<li>
+<p>Click <strong>Recreate</strong> in the context menu of the <strong>Main Data Store</strong> item. Studio will drop/create the database and run Liquibase changelogs from all Jmix modules.</p>
+</li>
+<li>
+<p>Run the application using the <strong>Jmix Application</strong> run/debug configuration. Studio will generate a Liquibase changelog for entities in your data model. Alternatively, you can create a changelog file manually and add all SQL statements from the CUBA project <code>create-db.sql</code> files using Liquibase <code>sql</code> instructions.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="file-storage-migration"><a class="anchor" href="#file-storage-migration"></a>File Storage</h3>
+<div class="paragraph">
+<p><a href="../files/file-storage.html#local-fs" class="xref page">Local file storage</a> structure in Jmix is the same as in CUBA. You can just move all files from the <code>work/filestorage</code> directory of your CUBA application to the Jmix file storage directory which is <code>{user.dir}/.jmix/work/filestorage</code> by default and can be changed by the <code>jmix.localfs.storageDir</code> property.</p>
+</div>
+<div class="paragraph">
+<p>Make sure that in screen descriptors, upload fields working with <code>FileDescriptor</code> attributes are defined as <code>cuba:cubaUpload</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webdav-migration"><a class="anchor" href="#webdav-migration"></a>WebDAV</h3>
+<div class="paragraph">
+<p>This section describes how to migrate code and data related to the <a href="../webdav/index.html" class="xref page">WebDAV</a> add-on.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the premium repository and add-on dependencies to your <code>build.gradle</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">repositories {
+    // ...
+    maven {
+        url = 'https://global.repo.jmix.io/repository/premium'
+        credentials {
+            username = rootProject['premiumRepoUser']
+            password = rootProject['premiumRepoPass']
+        }
+    }
+}
+
+dependencies {
+    implementation 'io.jmix.webdav:jmix-webdav-starter'
+    implementation 'io.jmix.webdav:jmix-webdav-ui-starter'
+    implementation 'io.jmix.webdav:jmix-webdav-rest-starter'
+    // ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Refresh the project using <strong>Load Gradle Changes</strong> popup at the top right corner of the edit window or using <strong>Reload All Gradle Projects</strong> action of the Gradle tool window.</p>
+</div>
+</li>
+<li>
+<p>Replace CUBA WebDAV packages with Jmix ones throughout your codebase:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>com.haulmont.webdav.entity.</code> &#8594; <code>io.jmix.webdav.entity.</code></p>
+</li>
+<li>
+<p><code>com.haulmont.webdav.annotation.</code> &#8594; <code>io.jmix.webdav.annotation.</code></p>
+</li>
+<li>
+<p><code>com.haulmont.webdav.components.</code> &#8594; <code>io.jmix.webdavui.component.</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Fix WebDAV UI components declaration in your screen XML descriptors.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Replace <code>webdav</code> schema URI : <code>xmlns:webdav="http://schemas.haulmont.com/webdav/ui-component.xsd</code> &#8594; <code>xmlns:webdav="http://jmix.io/schema/webdav/ui</code></p>
+</li>
+<li>
+<p>Replace component XML elements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>document-link</code> &#8594; <code>documentLink</code></p>
+</li>
+<li>
+<p><code>document-version-link</code> &#8594; <code>documentVersionLink</code></p>
+</li>
+<li>
+<p><code>webdav-document-upload</code> &#8594; <code>webdavDocumentUpload</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Jmix WebDAV add-on works only with attributes of <code>WebdavDocument</code> type, so if you have <code>FileDescriptor</code> attributes annotated with <code>@WebdavSupport</code>, you should change the attribute type and migrate data stored in the corresponding column. Let&#8217;s consider this process on an example.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>Suppose you have the following entity with a <code>FileDescriptor</code> attribute supporting WebDAV:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@JmixEntity
+@Table(name = "DEMO_DOC")
+@Entity(name = "demo_Doc")
+public class Doc extends StandardEntity {
+
+    @WebdavSupport
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "FILE_ID")
+    private FileDescriptor file;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>First, replace <code>FileDescriptor</code> type with <code>WebdavDocument</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@JmixEntity
+@Table(name = "DEMO_DOC")
+@Entity(name = "demo_Doc")
+public class Doc extends StandardEntity {
+
+    @WebdavSupport
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "FILE_ID")
+    private WebdavDocument file;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>@WebdavSupport</code> annotation is not required in this case, but it can be used to disable versioning.</p>
+</div>
+<div class="paragraph">
+<p>If there are <code>WebdavDocumentLink</code> components created for this attribute, replace <code>withFileDescriptor()</code> invocations with <code>withWebdavDocument()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Next you need to create a Liquibase changelog updating data of the <code>FILE_ID</code> column. Create an XML file  (choose an appropriate name, for example <code>020-migrate-webdav.xml</code>) in the <code>src/main/resources/&lt;base-package&gt;/liquibase/changelog</code> directory with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd"
+        context="cuba"&gt;
+
+    &lt;changeSet id="1" author="demo"&gt;
+        &lt;dropForeignKeyConstraint baseTableName="DEMO_DOC"
+                                  constraintName="FK_DEMO_DOC_ON_FILE"/&gt;
+        &lt;update tableName="DEMO_DOC"&gt;
+            &lt;column name="FILE_ID" valueComputed="(select wd.id
+from webdav_webdav_document_version wdv, webdav_webdav_document wd
+where wdv.file_descriptor_id = FILE_ID and wdv.webdav_document_id = wd.id)"/&gt;
+        &lt;/update&gt;
+        &lt;addForeignKeyConstraint baseColumnNames="FILE_ID" baseTableName="DEMO_DOC"
+                                 constraintName="FK_DEMO_DOC_ON_FILE" referencedColumnNames="ID"
+                                 referencedTableName="WEBDAV_WEBDAV_DOCUMENT"/&gt;
+    &lt;/changeSet&gt;
+
+&lt;/databaseChangeLog&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In general, you should create such changelogs for each <code>FileDescriptor</code> attribute which you have turned into <code>WebdavDocument</code>. The changelogs should match the following pattern:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;changeSet id="{NUM}" author="sample"&gt;
+    &lt;dropForeignKeyConstraint baseTableName="{ENTITY_TABLE_NAME}"
+                              constraintName="{FK_FOR_DOCUMENT}"/&gt;
+    &lt;update tableName="{ENTITY_TABLE_NAME}"&gt;
+        &lt;column name="{DOCUMENT_COLUMN_NAME}" valueComputed="(select wd.id
+from webdav_webdav_document_version wdv, webdav_webdav_document wd
+where wdv.file_descriptor_id = {DOCUMENT_COLUMN_NAME} and wdv.webdav_document_id = wd.id)"/&gt;
+    &lt;/update&gt;
+    &lt;addForeignKeyConstraint baseColumnNames="{DOCUMENT_COLUMN_NAME}"
+                baseTableName="{ENTITY_TABLE_NAME}"
+                constraintName="{FK_FOR_DOCUMENT}" referencedColumnNames="ID"
+                referencedTableName="WEBDAV_WEBDAV_DOCUMENT"/&gt;
+&lt;/changeSet&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>{NUM}</code> - number of the changelog in the file.</p>
+</li>
+<li>
+<p><code>{ENTITY_TABLE_NAME}</code> - entity table name.</p>
+</li>
+<li>
+<p><code>{FK_FOR_DOCUMENT}</code> - foreign key for referenced <code>FileDescriptor</code>.</p>
+</li>
+<li>
+<p><code>{DOCUMENT_COLUMN_NAME}</code> - name of the <code>FileDescriptor</code> column.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click <strong>Update</strong> in the context menu of the <strong>Main Data Store</strong> item. Studio will run existing Liquibase changelogs.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When you start the application, Studio will generate Liquibase changelogs for the difference between the database schema and your data model. Remove the instruction to drop the <code>FILE_DESCRIPTOR_ID.WEBDAV_WEBDAV_DOCUMENT_VERSION</code> column from the changelog (use <strong>Remove and Ignore</strong> command in the <strong>Changelog Preview</strong> window):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dropColumn columnName="FILE_DESCRIPTOR_ID"
+            tableName="WEBDAV_WEBDAV_DOCUMENT_VERSION"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Keep this column until you complete the migration.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Start the application, go to <strong>Administration &#8594; JMX Console</strong> and open the <code>jmix.cuba:type=MigrationHelper</code> MBean. Execute the <code>convertCubaFileDescriptorsForWebdav()</code> operation.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Set up HTTPS for your application. See the <a href="../webdav/configuration.html#https" class="xref page">Configuring HTTPS</a> guide for how to do it with a self-signed certificate.</p>
+</li>
+<li>
+<p>Move your local file storage content as described <a href="#file-storage-migration">above</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="frontend-migration"><a class="anchor" href="#frontend-migration"></a>Frontend</h3>
+<div class="paragraph">
+<p>If your project has a frontend module created with <a href="https://doc.cuba-platform.com/frontend" target="_blank" rel="noopener">CUBA React client</a>, you can migrate it to Jmix as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Copy <code>public</code>, <code>src</code> directories and all files from the root of <code>modules/front</code> directory of your CUBA project into <code>front</code> directory of your new Jmix project.</p>
+</li>
+<li>
+<p>See <a href="https://docs-frontend.jmix.io/jmix-frontend-docs/0.x/getting-started/migration-cuba-to-jmix.html" target="_blank" rel="noopener">Jmix Frontend UI &#8594; Migration from CUBA</a> guide for further instructions.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../publish-add-on.html">Publishing an Add-on</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"
+></script>
+<script>
+  hljs.highlightAll();
+</script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../_/.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../_/../search-index.js"></script>
+  </body>
+</html>

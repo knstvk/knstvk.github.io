@@ -1,0 +1,2385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Examples :: Jmix Documentation</title>
+    <link rel="canonical" href="https://docs.jmix.io/jmix/charts/examples.html">
+    <link rel="prev" href="events.html">
+    <link rel="next" href="../dashboards/index.html">
+    <meta name="generator" content="Antora 3.0.3">
+<link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"><link rel="stylesheet" href="../../_/css/search.css">
+<link rel="stylesheet" href="../../_/css/overrides.css">
+<link rel="shortcut icon" href="https://www.jmix.io/dark-favicon.ico" />
+<link rel="icon" href="https://www.jmix.io/dark-favicon.ico" /> <script>uiRootPath = '../../_'</script>
+<!-- Google Tag Manager -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH3DTWV');</script>
+-->
+<!-- End Google Tag Manager -->
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.jmix.io">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8205 2.64855L7.33011 9.13895L9.71136 11.5202L16.2018 5.0298C17.7889 3.44265 20.3363 3.41231 21.9764 4.91232L23.9484 6.85824L26.323 4.48334L24.3643 2.52437C21.4098 -0.289033 16.7211 -0.251991 13.8205 2.64855Z"
+                        fill="#FC1264" />
+                    <path
+                        d="M12.1333 18.7388L19.2167 11.6554L26.2444 18.6831L19.161 25.7665L12.1333 18.7388ZM21.5592 28.1651L28.6426 21.0816L29.2917 20.4325C30.2576 19.4666 30.2576 17.9003 29.2917 16.934L28.6426 16.2849L21.6149 9.25723L20.9658 8.60847C19.9999 7.64221 18.4332 7.64221 17.4673 8.60847L16.8182 9.25723L9.73511 16.3407L9.086 16.9898C8.1201 17.9557 8.1201 19.522 9.086 20.4883L9.73511 21.1374L16.7628 28.1651L17.4116 28.8138C18.3778 29.7801 19.9441 29.7801 20.9101 28.8138L21.5592 28.1651Z"
+                        fill="white" />
+                    <path
+                        d="M22.143 32.4252C20.5555 34.0123 18.0081 34.0427 16.3677 32.5423L16.3663 32.5441L14.3748 30.5523L11.9886 32.9388L13.9801 34.9302C16.9342 37.744 21.6234 37.7073 24.5243 34.8064L31.0475 28.2832L28.6662 25.902L22.143 32.4252Z"
+                        fill="#25CDE3" />
+                    <path d="M31.0646 23.5038L31.8584 24.2972L31.0646 23.5038Z" fill="#25CDE3" />
+                    <path d="M4.93164 11.5374L6.12227 12.728L4.93164 11.5374Z" fill="#FC1264" />
+                    <path
+                        d="M5.4746 21.6751C3.88745 20.0883 3.85711 17.5405 5.35713 15.9005L7.32633 13.9316L4.93167 11.5373L2.96282 13.5062L2.96953 13.5129C0.15577 16.467 0.192812 21.1558 3.09335 24.0567L9.58376 30.5468L11.965 28.1655L5.4746 21.6751Z"
+                        fill="#FDB42B" />
+                    <path
+                        d="M35.274 13.3757L28.7836 6.88529L26.4023 9.26654L32.8927 15.7569C34.4799 17.3441 34.5102 19.8915 33.0102 21.5316L31.0647 23.5036L33.4392 25.8781L35.3982 23.9192C38.2116 20.965 38.1745 16.2762 35.274 13.3757Z"
+                        fill="#22D685" />
+                </svg>
+                &nbsp;
+                Jmix Documentation
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <input id="search-input" placeholder="Search docs" onfocusout="this.value=''"
+                        style="font-size: 16px;" />
+                </div>
+            </div>
+            <div class="header-btn">
+                <a class="header-link" href="https://www.jmix.io/" target="_blank">Go to Jmix website</a>
+            </div>
+        </div>
+    </nav>
+</header><div class="body">
+<div class="nav-container" data-component="jmix" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../intro.html">Jmix Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../whats-new/index.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../setup.html">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../tutorial/index.html">Tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/project-setup.html">1. Project Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/simple-crud.html">2. Simple CRUD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/references.html">3. References And Unique Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/customize-ui.html">4. Customizing UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/data-in-ui.html">5. Working With Data in UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/entity-events.html">6. Using Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../tutorial/ui-from-scratch.html">7. Creating UI From Scratch</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../studio/index.html">Using Studio</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/install.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/update.html">Update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/subscription.html">Subscription</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../studio/project.html">Working with Project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../studio/studio-features.html">Studio Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/welcome.html">Welcome Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/tool-window.html">Jmix Tool Window</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/project-properties.html">Project Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/marketplace.html">Add-ons Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/entity-designer.html">Entity Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/screen-wizard.html">Screen Wizard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/screen-designer.html">Screen Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/fetch-plan-designer.html">Fetch Plan Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/menu-designer.html">Menu Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/role-designer.html">Role Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/bpmn-designer.html">BPMN Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/coding-assistance.html">Coding Assistance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/code-snippets.html">Code Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/reverse-engineering.html">Reverse Engineering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/hot-deploy.html">Hot Deploy</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../studio/plugin-settings.html">Jmix Plugin Settings</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-model/index.html">Data Model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/entities.html">Entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/data-types.html">Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/enumerations.html">Enumerations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/soft-deletion.html">Soft Deletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/metadata.html">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/bean-validation.html">Bean Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-model/db-migration.html">Database Migration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-access/index.html">Data Access</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/data-manager.html">Using DataManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/entity-manager.html">Using EntityManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/entity-events.html">Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/fetching.html">Fetching Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/transactions.html">Transaction Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../data-access/jpql-extensions.html">JPQL Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/screens.html">Screens and Fragments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/screens/screen-controllers.html">Screen Controllers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/annotations.html">Screen Controller Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/methods.html">Screen Controller Methods</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/screen-events.html">Screen Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/screens/screen-fragment-events.html">ScreenFragment Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/descriptors.html">XML Descriptors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/mixins.html">Screen Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/root-screens.html">Root Screens</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/screens/validation.html">Screen Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/opening-screens.html">Opening Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/using-fragments.html">Using Screen Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/data-components.html">Data Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/data/data-containers.html">Data Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/instance-container.html">InstanceContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/collection-container.html">CollectionContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/property-containers.html">Property Containers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/data/key-value-containers.html">Key-Value Containers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/data/data-loaders.html">Data Loaders</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/data/data-context.html">DataContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/data/data-examples.html">Using Data Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl.html">Visual Components Library</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/components.html">Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/app-menu.html">AppMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/browser-frame.html">BrowserFrame</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/button.html">Button</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/caps-lock-indicator.html">CapsLockIndicator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/calendar.html">Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/check-box.html">CheckBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/check-box-group.html">CheckBoxGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/color-picker.html">ColorPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/combo-box.html">ComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/currency-field.html">CurrencyField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/data-grid.html">DataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/date-field.html">DateField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/date-picker.html">DatePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/entity-combo-box.html">EntityComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/entity-picker.html">EntityPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/entity-suggestion-field.html">EntitySuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/file-multi-upload-field.html">FileMultiUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/file-storage-upload-field.html">FileStorageUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/file-upload-field.html">FileUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/components/filter.html">Filter</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../ui/vcl/components/filter-components.html">Filter Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/group-table.html">GroupTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/image.html">Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/label.html">Label</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/link.html">Link</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/link-button.html">LinkButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/masked-field.html">MaskedField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/multi-select-list.html">MultiSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/password-field.html">PasswordField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/popup-button.html">PopupButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/popup-view.html">PopupView</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/progress-bar.html">ProgressBar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/property-filter.html">PropertyFilter</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/radio-button-group.html">RadioButtonGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/related-entities.html">RelatedEntities</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/resizable-text-area.html">ResizableTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/rich-text-area.html">RichTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/side-menu.html">SideMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/simple-pagination.html">SimplePagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/single-select-list.html">SingleSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/slider.html">Slider</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/source-code-editor.html">SourceCodeEditor</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/suggestion-field.html">SuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/table.html">Table</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tag-field.html">TagField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tag-picker.html">TagPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/text-area.html">TextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/text-field.html">TextField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/time-field.html">TimeField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tree.html">Tree</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tree-data-grid.html">TreeDataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/tree-table.html">TreeTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/twin-column.html">TwinColumn</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/value-picker.html">ValuePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/components/values-picker.html">ValuesPicker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/containers.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/accordion.html">Accordion</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/box-layout.html">BoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/buttons-panel.html">ButtonsPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/css-layout.html">CssLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/drawer.html">Drawer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/grid-layout.html">GridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/group-box-layout.html">GroupBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/html-box-layout.html">HtmlBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/responsive-grid-layout.html">ResponsiveGridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/scroll-box-layout.html">ScrollBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/split-panel.html">SplitPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/containers/tab-sheet.html">TabSheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/vcl/miscellaneous.html">Miscellaneous</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/miscellaneous/validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/vcl/miscellaneous/formatter.html">Formatter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/vcl/api.html">Components API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/vcl/xml.html">Components XML Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/facets.html">Facets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/clipboard-trigger.html">ClipboardTrigger</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/data-load-coordinator.html">DataLoadCoordinator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/dynamic-attributes-facet.html">DynamicAttributes Facet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/editor-screen-facet.html">EditorScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/input-dialog-facet.html">InputDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/lookup-screen-facet.html">LookupScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/message-dialog-facet.html">MessageDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/notification-facet.html">NotificationFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/option-dialog-facet.html">OptionDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/presentations-facet.html">PresentationsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/screen-facet.html">ScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/screen-settings-facet.html">ScreenSettingsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/facets/timer.html">Timer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/actions.html">Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/actions/declarative-actions.html">Declarative Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/actions/standard-actions.html">Standard Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/add-action.html">AddAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/bulk-edit-action.html">BulkEditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/create-action.html">CreateAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/edit-action.html">EditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-clear-action.html">EntityClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-lookup-action.html">EntityLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-open-action.html">EntityOpenAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/entity-open-composition-action.html">EntityOpenCompositionAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/exclude-action.html">ExcludeAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/refresh-action.html">RefreshAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/related-action.html">RelatedAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/remove-action.html">RemoveAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/tag-lookup-action.html">TagLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/value-clear-action.html">ValueClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../ui/actions/standard-actions/view-action.html">ViewAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/actions/custom-action-type.html">Custom Action Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/actions/base-action.html">BaseAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/dialogs.html">Dialogs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/background-tasks.html">Background Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/notifications.html">Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/exception-handlers.html">Exception Handlers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/exception-handlers/unique-constraint-violation-exception.html">Handling Unique Constraint Violation Exceptions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/themes.html">Themes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/themes/theme_usage.html">Using Existing Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/themes/custom_theme.html">Creating a Custom Theme</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/themes/theme_addon.html">Creating and Using a Theme Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/icons.html">Icons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/icons/icon-sets.html">Icon Sets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/icons/icon-provider.html">Using Icons from Other Font Libraries</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/menu-config.html">MenuConfig</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/url-history-navigation.html">URL History and Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/handling-url-changes.html">Handling URL Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/routing-api.html">Routing API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/url-navigation-api-usage.html">Using URL History and Navigation API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/url-history-navigation/url-routes-generator.html">URL Routes Generator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/anonymous-access-to-screens.html">Anonymous Access to Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/pluggable-component-factories.html">Pluggable Component Factories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ui/custom-components.html">Creating Custom Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/composite-components.html">Composite Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/js-component.html">Generic JavaScriptComponent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/custom-widget-sets.html">Creating GWT Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ui/custom-components/widgetset-add-on.html">Creating and Using Widgets Add-On</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ui/app-properties.html">UI Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../rest/index.html">Generic REST</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/getting-started.html">Getting Started with REST</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../rest/entities-api.html">Entities API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/load-entities.html">Load Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/create-entities.html">Create Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/update-entities.html">Update Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/entities-api/delete-entities.html">Delete Entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/files-api.html">Files API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/messages-api.html">Messages API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/metadata-api.html">Metadata API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/user-session-api.html">User Session API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/business-logic.html">Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../rest/security.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest/security/authentication.html">Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/api-docs.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../rest/app-properties.html">REST Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../localization/index.html">Localization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization/message-bundles.html">Message Bundles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../localization/framework-translations.html">Framework Translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../files/index.html">Managing Files</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/files-in-database.html">Storing Files in Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/file-storage.html">Using File Storage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../files/downloading-files.html">Downloading and Displaying Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../security/index.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/resource-roles.html">Resource Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/row-level-roles.html">Row-level Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/authorization.html">Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/index.html">Other Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/sequences.html">Sequence Generation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../modularity/index.html">Modularity and Extension</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modularity/creating-add-ons.html">Creating Add-ons</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modularity/extension.html">Extending Functionality</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../deployment/index.html">Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/k8s.html">Kubernetes Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/aws-beanstalk.html">Amazon Web Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/azure.html">Azure App Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../deployment/google-cloud-appengine.html">Google Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../add-ons.html">Add-ons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../appsettings/index.html">Application Settings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../audit/index.html">Audit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../audit/entity-log.html">Entity Log</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/index.html">BPM</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/getting-started.html">Getting Started with BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/admin-screens.html">Administration Screens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/modeler.html">Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/proc-definitions.html">Process Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/proc-instances.html">Process Instances</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/user-groups.html">User Groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/user-tasks.html">User Tasks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/forms.html">Process Forms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/input-dialog.html">Input Dialog</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/jmix-screen.html">Jmix Screen</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/custom.html">Custom Form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../bpm/tasks.html">Tasks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/user-task.html">User Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/service-task.html">Service Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/script-task.html">Script Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/data-task.html">Entity Data Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/email-task.html">Email Sending Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../bpm/sub-process-call-activity.html">Sub-Processes and Call Activities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/listeners.html">Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/dmn.html">DMN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/instance-migration.html">Process Instances Migration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/auto-deployment.html">Automatic Models Deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../bpm/api.html">BPM API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../business-calendar/index.html">Business Calendars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../business-calendar/creating.html">Creating Business Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../business-calendar/api.html">Business Calendars API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="types.html">Charts Types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/angular-gauge-chart.html">AngularGaugeChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/funnel-chart.html">FunnelChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/gantt-chart.html">GanttChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/pie-chart.html">PieChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/radar-chart.html">RadarChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/serial-chart.html">SerialChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/stock-chart-group.html">StockChartGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="types/xy-chart.html">XYChart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="config.html">Configuring Charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="export.html">Charts Export</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data.html">Connecting Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="events.html">Events</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../dashboards/index.html">Dashboards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/user-interface.html">Administration UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/adding-business-logic.html">Adding Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/using-dashboard-in-screen.html">Using Dashboard in Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dashboards/dashboard-chart-addon.html">Dashboard Chart Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../data-tools/index.html">Data Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-tools/entity-inspector.html">Entity Inspector</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../data-tools/entity-info-action.html">Entity Information Action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../dyn-attr/index.html">Dynamic Attributes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dyn-attr/dynattr-managing.html">Managing Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dyn-attr/dynattr-view.html">Displaying Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../dyn-attr/dynattr-api.html">Dynamic Attributes API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../email/index.html">Email Sending</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/getting-started.html">Getting Started with Email</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/api.html">Email Sending API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email/email-history.html">Email History</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../email-template/index.html">Email Templates</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email-template/getting-started.html">Getting Started with Email Templates</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email-template/usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../email-template/api.html">Email Templates API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../grapes-js/index.html">GrapesJS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grapes-js/components.html">GrapesJS UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grapes-js/html-editor-ui.html">HTML Editor UI</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../grid-export/index.html">Grid Export Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grid-export/exporters.html">Table Exporters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grid-export/actions.html">Export Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../grid-export/limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ldap/index.html">LDAP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/getting-started.html">Getting Started with LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/obtaining-user-authorities.html">Obtaining User Authorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/in-memory-user-management.html">In-memory User Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/usage-with-active-directory.html">Usage with Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/global-user-synchronization.html">Global User Synchronization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../ldap/properties.html">LDAP Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../maps/index.html">Maps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/getting-started.html">Getting Started with Maps</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/maps-ui.html">Maps UI Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../maps/layers.html">Layers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/raster-layers.html">Raster Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/vector-layers.html">Vector Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/heatmap-layer.html">Heatmap Layer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../maps/canvas-layer.html">Canvas Layer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/additional-options.html">Additional Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/drawing-geometry.html">Drawing Geometry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../maps/map-services.html">Map Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multitenancy/index.html">Multitenancy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../notifications/index.html">Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../notifications/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../notifications/creating-notifications.html">Creating Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../notifications/viewing-notifications.html">Viewing Notifications</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../pivot-table/index.html">Pivot Table</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/elements.html">Elements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/export.html">Exporting PivotTable Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/show-pivot-action.html">Using ShowPivotAction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../pivot-table/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quartz/index.html">Quartz</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../reports/index.html">Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/getting-started.html">Getting Started with Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../reports/create-reports.html">Creating Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/data-structure.html">Report Data Structure</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/templates.html">Report Template</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/parameter-and-format.html">Report Parameters and Field Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/permissions.html">Report Access Rights</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../reports/creation/localization.html">Report Name Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/run-report.html">Running Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/exec-history.html">Report Execution History</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/sample-reports.html">Sample Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/rest-api.html">REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../reports/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../search/index.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/getting-started.html">Getting Started with Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/index-definitions.html">Index Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/indexing-queue.html">Indexing Queue</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/search-in-ui.html">Using Search in UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/config-options.html">Search Configuration Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/search-api.html">Search API and Internals</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../search/search-properties.html">Search Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../webdav/index.html">WebDAV</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/ui-components.html">UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../webdav/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendices</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app-properties.html">Application Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text"><a href="https://docs.jmix.io/api/1.3" target="_blank" rel="noopener">Java API Reference</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../quartz-setup.html">Quartz Job Scheduler Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../publish-add-on.html">Publishing an Add-on</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cuba/index.html">Migration from CUBA Platform</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jmix Documentation</span>
+    <span class="version">1.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../intro.html">Jmix Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../intro.html">1.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../intro.html">Jmix Documentation</a></li>
+    <li><a href="../add-ons.html">Add-ons</a></li>
+    <li><a href="index.html">Charts</a></li>
+    <li><a href="examples.html">Examples</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/charts/pages/examples.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Examples</h1>
+<div class="sect1">
+<h2 id="creating-chart-with-data-from-entity"><a class="anchor" href="#creating-chart-with-data-from-entity"></a>Creating Chart with Data from Entity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this example, we will create a chart similar to <a href="https://www.amcharts.com/demos/3d-stacked-column-chart/" target="_blank" rel="noopener">3D Stacked Column Chart</a> from AmCharts demos. The type of the chart will be <a href="types/serial-chart.html" class="xref page">SerialChart</a>. This chart will retrieve data from a database, so the <code>dataContainer</code> attribute has to be defined.</p>
+</div>
+<div class="sect2">
+<h3 id="from-entity-creating-entity"><a class="anchor" href="#from-entity-creating-entity"></a>Creating Entity</h3>
+<div class="paragraph">
+<p>Let&#8217;s create an entity with the <code>CountryGrowth</code> name and the following attributes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>country</code> of the <code>String</code> type</p>
+</li>
+<li>
+<p><code>year2020</code> of the <code>Double</code> type</p>
+</li>
+<li>
+<p><code>year2021</code> of the <code>Double</code> type</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The source code of the <code>CountryGrowth</code> entity will look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@JmixEntity
+public class CountryGrowth {
+    @JmixProperty(mandatory = true)
+    @JmixId
+    @JmixGeneratedValue
+    protected UUID id;
+
+    @JmixProperty(mandatory = true)
+    @InstanceName
+    protected String country;
+
+    @JmixProperty(mandatory = true)
+    protected Double year2020;
+
+    @JmixProperty(mandatory = true)
+    protected Double year2021;
+
+    public CountryGrowth() {
+        this.id = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setYear2020(Double year2020) {
+        this.year2020 = year2020;
+    }
+
+    public Double getYear2020() {
+        return year2020;
+    }
+
+    public void setYear2021(Double year2021) {
+        this.year2021 = year2021;
+    }
+
+    public Double getYear2021() {
+        return year2021;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This class describes a non-persistent entity. An instance of this class contains the number of the country&#8217;s GDP growth rate for 2020 and 2021 years.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="from-entity-screen-xml-descriptor"><a class="anchor" href="#from-entity-screen-xml-descriptor"></a>Screen XML Descriptor</h3>
+<div class="paragraph">
+<p>Create a new blank screen and replace the code in the XML descriptor with the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;data&gt;
+        &lt;collection id="countryGrowthDc"
+                    class="charts.ex1.entity.CountryGrowth"/&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;/data&gt;
+    &lt;layout&gt;
+        &lt;chart:serialChart id="column3d"
+                           angle="30"
+                           categoryField="country"
+                           dataContainer="countryGrowthDc"
+                           depth3D="60"
+                           height="100%"
+                           plotAreaFillAlphas="0.1"
+                           startDuration="1"
+                           theme="LIGHT"
+                           width="100%"&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+            &lt;chart:categoryAxis gridPosition="START"/&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+            &lt;chart:valueAxes&gt;<i class="conum" data-value="5"></i><b>(5)</b>
+                &lt;chart:axis position="LEFT"
+                            stackType="BOX_3D"
+                            title="GDP growth rate"
+                            unit="%"/&gt;
+            &lt;/chart:valueAxes&gt;
+            &lt;chart:graphs&gt;<i class="conum" data-value="6"></i><b>(6)</b>
+                &lt;chart:graph balloonText="GDP grow in [[category]] (2020): &amp;lt;strong&amp;gt;
+                                         [[value]]&amp;lt;/strong&amp;gt;"
+                             fillAlphas="0.9"
+                             lineAlpha="0.2"
+                             title="2020"
+                             type="COLUMN"
+                             valueField="year2020" id="graph2020"/&gt;
+                &lt;chart:graph balloonText="GDP grow in [[category]] (2021): &amp;lt;strong&amp;gt;
+                                         [[value]]&amp;lt;/strong&amp;gt;"
+                             fillAlphas="09."
+                             lineAlpha="0.2"
+                             title="2021"
+                             type="COLUMN"
+                             valueField="year2021" id="graph2021"/&gt;
+            &lt;/chart:graphs&gt;
+            &lt;chart:export/&gt;<i class="conum" data-value="7"></i><b>(7)</b>
+        &lt;/chart:serialChart&gt;
+    &lt;/layout&gt;
+&lt;/window&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The root <code>window</code> element contains the <code>chart</code> namespace to enable using charts in the screen.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The chart retrieves data from the <code>countryGrowthDc</code> data container defined in the <code>CollectionContainer</code>. Names and values are displayed using the <code>country</code>, <code>year2020</code> and <code>year2021</code> attributes of the <code>CountryGrowth</code> entity.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>chart:serialChart</code> component contains the following attributes:
+<div class="ulist">
+<ul>
+<li>
+<p><code>angle</code> – defines the chart angle. Values can be from <code>0</code> to <code>90</code>.</p>
+</li>
+<li>
+<p><code>balloonText</code> – defines a text for the tooltip that appears when hovering over a column. You can use the following tags: <code>[[value]]</code>, <code>[[title]]</code>, <code>[[persents]]</code>, <code>[[description]]</code>, as well as keys from the <code>DataItem</code> listed in the <code>DataProvider</code> instance, or names of the entity attributes from the data container. To use <code>html</code> tags you should escape them.</p>
+</li>
+<li>
+<p><code>depth3D</code> – chart thickness. When it is used in combination with the <code>angle</code> attribute, it helps to create a 3D effect.</p>
+</li>
+<li>
+<p><code>plotAreaFillAlphas</code> – opacity of the plot area.</p>
+</li>
+<li>
+<p><code>startDuration</code> – duration of the animation in seconds.</p>
+</li>
+<li>
+<p><code>categoryField</code> – a key from the set of pairs contained in the <code>DataItem</code> objects listed in the <code>DataProvider</code> instance. This key is used to determine the labels for the category axis.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><code>chart:categoryAxis</code> – an element of the <code>chart:serialChart</code> component that describes the category axis.
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>gridPosition</code> attribute specifies if a grid line is placed in the center of a cell or at the beginning of a cell.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><code>chart:valueAxes</code> – an element of the <code>chart:serialChart</code> component that defines vertical value axes. In our case, only one vertical axis is used. The axis is described by the <code>chart:axis</code> element.
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>position</code> attribute defines the position of the value axis relative to the chart.</p>
+</li>
+<li>
+<p>Setting <code>stackType</code> to <code>BOX_3D</code> makes the chart display columns one behind the other.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td><code>chart:graphs</code> – an element of the <code>chart:serialChart</code> component  that contains a collection of <code>chart:graph</code> elements. The graph is described by the <code>chart:graph</code> element.
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>type</code> attribute defines the type of the graph and can be: line, column, step line, smoothed line, OHLC, and candlestick.</p>
+</li>
+<li>
+<p>The <code>valueField</code> attribute defines a key from the list of pairs contained in the <code>DataItem</code> objects listed in the <code>DataProvider</code> instance; this key is used to determine the value.</p>
+</li>
+<li>
+<p>The <code>fillAlphas</code> attribute defines the opacity of fill.</p>
+</li>
+<li>
+<p>The <code>lineAlpha</code> attribute defines the opacity of the line (or column border). The value range is <code>0</code> – <code>1</code>.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td><code>chart:export</code> – an optional element that enables chart export.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="from-entity-screen-controller"><a class="anchor" href="#from-entity-screen-controller"></a>Screen Controller</h3>
+<div class="paragraph">
+<p>Open the <code>Column3dChart</code> screen controller and replace its content with the following code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@UiController("sample_Column3dChart")
+@UiDescriptor("column3d-chart.xml")
+public class Column3dChart extends Screen {
+
+    @Autowired
+    private CollectionContainer&lt;CountryGrowth&gt; countryGrowthDc;
+
+    @Subscribe
+    private void onInit(InitEvent event) {
+        List&lt;CountryGrowth&gt; items = new ArrayList&lt;&gt;();
+        items.add(countryGrowth("USA", 3.5, 4.2));
+        items.add(countryGrowth("UK", 1.7, 3.1));
+        items.add(countryGrowth("Canada", 2.8, 2.9));
+        items.add(countryGrowth("Japan", 2.6, 2.3));
+        items.add(countryGrowth("France", 1.4, 2.1));
+        items.add(countryGrowth("Brazil", 2.6, 4.9));
+        items.add(countryGrowth("Russia", 6.4, 7.2));
+        items.add(countryGrowth("India", 8.0, 7.1));
+        items.add(countryGrowth("China", 9.9, 10.1));
+        countryGrowthDc.setItems(items);
+    }
+    private CountryGrowth countryGrowth(String country, double year2020, double year2021) {
+        CountryGrowth cg = new CountryGrowth();
+        cg.setCountry(country);
+        cg.setYear2020(year2020);
+        cg.setYear2021(year2021);
+        return cg;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>onInit</code> method populates the <code>countryGrowthDc</code> data container with the data.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="from-entity-result"><a class="anchor" href="#from-entity-result"></a>Result</h3>
+<div class="paragraph">
+<p>Now let’s see how the created screen looks in the actual application.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/charts/column3d-chart.png" alt="column3d chart">
+</div>
+<div class="title">Column 3D Chart</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="creating-chart-with-data-from-dataprovider"><a class="anchor" href="#creating-chart-with-data-from-dataprovider"></a>Creating Chart with Data from DataProvider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chart retrieves data through the <code>DataProvider</code> created in the controller, so the <code>dataContainer</code> attribute is not defined.</p>
+</div>
+<div class="sect2">
+<h3 id="from-dataprovider-screen-xml-descriptor"><a class="anchor" href="#from-dataprovider-screen-xml-descriptor"></a>Screen XML Descriptor</h3>
+<div class="paragraph">
+<p>Create a new blank screen and replace the code in the XML descriptor with the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;layout&gt;
+        &lt;chart:serialChart id="chart"
+                           categoryField="year"
+                           height="100%"
+                           marginLeft="0"
+                           marginTop="10"
+                           plotAreaBorderAlpha="0"
+                           width="100%"&gt;<i class="conum" data-value="2"></i><b>(2)</b>
+            &lt;chart:chartCursor cursorAlpha="0"/&gt;<i class="conum" data-value="3"></i><b>(3)</b>
+            &lt;chart:legend equalWidths="false"
+                          periodValueText="total: [[value.sum]]"
+                          position="TOP"
+                          valueAlign="LEFT"
+                          valueWidth="100"/&gt;<i class="conum" data-value="4"></i><b>(4)</b>
+            &lt;chart:valueAxes&gt;<i class="conum" data-value="5"></i><b>(5)</b>
+                &lt;chart:axis gridAlpha="0.07"
+                            position="LEFT"
+                            stackType="REGULAR"
+                            title="Traffic incidents"/&gt;
+            &lt;/chart:valueAxes&gt;
+            &lt;chart:graphs&gt;<i class="conum" data-value="6"></i><b>(6)</b>
+                &lt;chart:graph fillAlphas="0.6"
+                             hidden="true"
+                             lineAlpha="0.4"
+                             title="Cars"
+                             valueField="cars"/&gt;
+                &lt;chart:graph fillAlphas="0.6"
+                             lineAlpha="0.4"
+                             title="Motorcycles"
+                             valueField="motorcycles"/&gt;
+                &lt;chart:graph fillAlphas="0.6"
+                             lineAlpha="0.4"
+                             title="Bicycles"
+                             valueField="bicycles"/&gt;
+            &lt;/chart:graphs&gt;
+            &lt;chart:categoryAxis axisColor="#DADADA"
+                                gridAlpha="0.07"
+                                startOnAxis="true"&gt;<i class="conum" data-value="7"></i><b>(7)</b>
+            &lt;/chart:categoryAxis&gt;
+            &lt;chart:export/&gt;<i class="conum" data-value="8"></i><b>(8)</b>
+        &lt;/chart:serialChart&gt;
+    &lt;/layout&gt;
+&lt;/window&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The root <code>window</code> element contains the <code>chart</code> namespace to enable using charts in the screen.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The <code>chart:serialChart</code> component.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><code>chart:chartCursor</code> – an element of the <code>chart:serialChart</code> component that adds a cursor to the chart. The cursor follows the mouse pointer and shows a tooltip with the value of the corresponding point on a chart.
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>cursorAlpha</code> attribute defines the opacity of the cursor line.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><code>chart:legend</code> – an element of the <code>chart:serialChart</code> component that defines the chart legend.
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>position</code> attribute defines the location of the legend relative to the chart.</p>
+</li>
+<li>
+<p>The <code>equalWidths</code> attribute specifies if each legend entry should be equal to the widest entry.</p>
+</li>
+<li>
+<p>The <code>periodValueText</code> attribute defines the text that will be displayed in the value portion of the legend when the user is not hovering above any data point. The tags should be made out of two parts – the name of a field (value / open / close / high / low) and the value of the period you want to be show – open / close / high / low / sum / average / count.</p>
+</li>
+<li>
+<p>The <code>valueAlign</code> attribute defines the alignment of the value text. Possible values are <code>left</code> and <code>right</code>.</p>
+</li>
+<li>
+<p>The <code>valueWidth</code> attribute defines the width of the value text.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><code>chart:valueAxes</code> – an element of the <code>chart:serialChart</code> component that defines vertical value axes. In our case, only one vertical axis is used. The axis is described by the <code>chart:axis</code> element.
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>position</code> attribute defines the position of the value axis relative to the chart.</p>
+</li>
+<li>
+<p>The <code>title</code> attribute defines the title of the value axis.</p>
+</li>
+<li>
+<p>Setting <code>stackType</code> to <code>REGULAR</code> makes the chart display a rolling value. Setting this attribute to <code>none</code> refers to a non-rolling value.</p>
+</li>
+<li>
+<p>The <code>gridAlpha</code> defines the opacity of grid lines.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td><code>chart:graphs</code> – an element of the <code>chart:serialChart</code> component  that contains a collection of <code>chart:graph</code> elements. The graph is described by the <code>chart:graph</code> element.
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>type</code> attribute defines the type of the graph and can be: line, column, step line, smoothed line, OHLC, and candlestick.</p>
+</li>
+<li>
+<p>The <code>valueField</code> attribute defines a key from the list of pairs contained in the <code>DataItem</code> objects listed in the <code>DataProvider</code> instance; this key is used to determine the value.</p>
+</li>
+<li>
+<p>The <code>fillAlphas</code> attribute defines the opacity of fill.</p>
+</li>
+<li>
+<p>The <code>lineAlpha</code> attribute defines the opacity of the line (or column border). The value range is <code>0</code> – <code>1</code>.</p>
+</li>
+<li>
+<p>The <code>hidden</code> attribute specifies whether the graph is hidden.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td><code>chart:categoryAxis</code> – an element of the <code>chart:serialChart</code> component that describes the category axis.
+<div class="ulist">
+<ul>
+<li>
+<p>Setting <code>startOnAxis</code> to <code>true</code> causes drawing the chart right from the value axis. The default value for this attribute is <code>false</code>. In this case, there will be a small gap between the value axis and the chart.</p>
+</li>
+<li>
+<p>The <code>gridAlpha</code> attribute defines the opacity of grid lines.</p>
+</li>
+<li>
+<p>The <code>axisColor</code> attribute defines axis color.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td><code>chart:export</code> – an optional element that enables chart export.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="from-dataprovider-screen-controller"><a class="anchor" href="#from-dataprovider-screen-controller"></a>Screen Controller</h3>
+<div class="paragraph">
+<p>Open the <code>StackedareaChart</code> screen controller and replace its content with the following code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@UiController("sample_StackedareaChart")
+@UiDescriptor("stackedarea-chart.xml")
+public class StackedareaChart extends Screen {
+    @Autowired
+    private SerialChart chart;
+
+    @Subscribe
+    private void onInit(InitEvent event) {
+        ListDataProvider dataProvider = new ListDataProvider();
+        dataProvider.addItem(transportCount(2003, 1587, 650, 121));
+        dataProvider.addItem(transportCount(2004, 1567, 683, 146));
+        dataProvider.addItem(transportCount(2005, 1617, 691, 138));
+        dataProvider.addItem(transportCount(2006, 1630, 642, 127));
+        dataProvider.addItem(transportCount(2007, 1660, 699, 105));
+        dataProvider.addItem(transportCount(2008, 1683, 721, 109));
+        dataProvider.addItem(transportCount(2009, 1691, 737, 112));
+        dataProvider.addItem(transportCount(2010, 1298, 680, 101));
+        dataProvider.addItem(transportCount(2011, 1275, 664, 97));
+        dataProvider.addItem(transportCount(2012, 1246, 648, 93));
+        dataProvider.addItem(transportCount(2013, 1318, 697, 111));
+        dataProvider.addItem(transportCount(2014, 1213, 633, 87));
+        dataProvider.addItem(transportCount(2015, 1199, 621, 79));
+        dataProvider.addItem(transportCount(2016, 1110, 210, 81));
+        dataProvider.addItem(transportCount(2017, 1165, 232, 75));
+        dataProvider.addItem(transportCount(2018, 1145, 219, 88));
+        dataProvider.addItem(transportCount(2019, 1163, 201, 82));
+        dataProvider.addItem(transportCount(2020, 1180, 285, 87));
+        dataProvider.addItem(transportCount(2021, 1159, 277, 71));
+
+        chart.setDataProvider(dataProvider);
+    }
+
+    private DataItem transportCount(int year, int cars, int motorcycles, int bicycles) {
+        MapDataItem item = new MapDataItem();
+        item.add("year", year);
+        item.add("cars", cars);
+        item.add("motorcycles", motorcycles);
+        item.add("bicycles", bicycles);
+        return item;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>onInit</code> method submits data to the chart as a rolling value. This type of chart shows the ratio of separate parts to their total value.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="from-dataprovider-result"><a class="anchor" href="#from-dataprovider-result"></a>Result</h3>
+<div class="paragraph">
+<p>Now let’s see how the created screen looks in the actual application.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/charts/stackedarea-chart.png" alt="stackedarea chart">
+</div>
+<div class="title">Stacked Area Chart</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="creating-chart-with-incremental-data-update"><a class="anchor" href="#creating-chart-with-incremental-data-update"></a>Creating Chart with Incremental Data Update</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chart will retrieve data from a data container, and this data will be updated automatically. The chart is not refreshed completely when new data is added to the data container: data points are added on the fly every 2 seconds. This approach will be useful, for example, for creating dynamically updated dashboards.</p>
+</div>
+<div class="paragraph">
+<p>In this example, we will show the dynamic of new orders amounts based on the <code>Order</code> entity.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Let&#8217;s create the <code>Order</code> entity with the following attributes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>date</code> of the <code>Date</code> type</p>
+</li>
+<li>
+<p><code>amount</code> of the <code>BigDecimal</code> type</p>
+</li>
+<li>
+<p><code>description</code> of the <code>String</code> type</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Then create a new screen and call it <code>orders-history</code>.</p>
+</li>
+<li>
+<p>Replace the code in the XML descriptor with the following:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"&gt;<i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;data&gt;
+        &lt;collection id="ordersDc" class="charts.ex1.entity.Order"/&gt;<i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;/data&gt;
+    &lt;facets&gt;
+        &lt;timer id="updateChartTimer" delay="2000" repeating="true" autostart="true"/&gt;<i class="conum" data-value="3"></i><b>(3)</b>
+    &lt;/facets&gt;
+    &lt;layout&gt;
+        &lt;chart:serialChart id="orderHistoryChart"
+                           categoryField="date"
+                           dataContainer="ordersDc"
+                           width="100%"&gt;<i class="conum" data-value="4"></i><b>(4)</b>
+            &lt;chart:graphs&gt;
+                &lt;chart:graph valueField="amount"/&gt;<i class="conum" data-value="5"></i><b>(5)</b>
+            &lt;/chart:graphs&gt;
+        &lt;/chart:serialChart&gt;
+    &lt;/layout&gt;
+&lt;/window&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The root <code>window</code> element contains the <code>chart</code> namespace to enable using charts in the screen.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>We will not load the data from the container in this example. Instead, the sample data will be generated on the fly, so you don’t need to create a loader.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We will update the chart on the fly using a <code>timer</code> – a facet that will send HTTP requests to the server side. Set the following properties:
+<div class="ulist">
+<ul>
+<li>
+<p>The timer <code>id</code>.</p>
+</li>
+<li>
+<p>The data should be updated every 2 seconds, so set <code>delay</code> to <code>2000</code> milliseconds.</p>
+</li>
+<li>
+<p>Select repeating and autostart checkboxes.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The <code>serialChart</code> component has a data container bound to it. Set the <code>date</code> property for the category axis.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Set the <code>amount</code> property for the value axis.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Switch to the <code>OrdersHistory</code> controller. Its code looks like this:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@UiController("sample_OrdersHistory")
+@UiDescriptor("orders-history.xml")
+public class OrdersHistory extends Screen {
+
+    @Autowired
+    private Metadata metadata; <i class="conum" data-value="1"></i><b>(1)</b>
+    @Autowired
+    private TimeSource timeSource;
+    @Autowired
+    private CollectionContainer&lt;Order&gt; ordersDc;
+
+    private final Random random = new Random(42);
+
+    @Subscribe
+    private void onInit(InitEvent event) { <i class="conum" data-value="2"></i><b>(2)</b>
+        Order initialValue = metadata.create(Order.class);
+        initialValue.setAmount(new BigDecimal(random.nextInt(1000) + 100));
+        initialValue.setDate(timeSource.currentTimestamp());
+
+        ordersDc.getMutableItems().add(initialValue); <i class="conum" data-value="3"></i><b>(3)</b>
+    }
+
+    @Subscribe("updateChartTimer")
+    private void onTimerTick(Timer.TimerActionEvent event) { <i class="conum" data-value="4"></i><b>(4)</b>
+        Order orderHistory = metadata.create(Order.class);
+        orderHistory.setAmount(new BigDecimal(random.nextInt(1000) + 100));
+        orderHistory.setDate(timeSource.currentTimestamp());
+        ordersDc.getMutableItems().add(orderHistory);
+        System.out.println("get");
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Inject necessary dependencies: <code>metadata</code>, <code>timeSource</code>, and the data container for the <code>Order</code> entity.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Initializes the chart in the <code>onInit()</code> method. We will generate a new <code>Order</code> instance with a random amount value.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The new instance is added to the collection data container using the <code>getMutableItems().add()</code> method.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Subscribes to <code>TimerActionEvent</code>. Using the same logic for creating a random Order instance, we will generate a new Order instance each time the timer event is fired.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>At this stage, the chart is already functional, but the data container size will increase rapidly, so we need to limit the number of items to be displayed. Let&#8217;s add some code to the controller:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a Queue of orders.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private Queue&lt;Order&gt; itemsQueue = new LinkedList&lt;&gt;();</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Add the following code to the end of the <code>onTimerTick</code> method:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">itemsQueue.add(orderHistory); <i class="conum" data-value="1"></i><b>(1)</b>
+
+if (itemsQueue.size() &gt; 10) { <i class="conum" data-value="2"></i><b>(2)</b>
+    ordersDc.getMutableItems().remove(0);
+    System.out.println("in");
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Each time the timer event is fired, the generated item is added to the top of the <code>itemsQueue</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>When the queue size exceeds 10 items, the oldest item is excluded.</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="data-update-result"><a class="anchor" href="#data-update-result"></a>Result</h3>
+<div class="paragraph">
+<p>All the data is sent to the browser incrementally. If you open the Chrome developer console on the <strong>Network</strong> tab, you will see that every 2 seconds, our web page sends an HTTP request to the backend, and in response to that, the backend sends a small JSON message. The JSON contains one <code>add</code> and one <code>remove</code> operation for the <code>amount</code> value. Thus, we do not re-send all the data.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/charts/update-data.gif" alt="update data">
+</div>
+<div class="title">The chart shows only 10 records at a time</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using-events"><a class="anchor" href="#using-events"></a>Using Events</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let’s consider the use of events. We will add handling of a graph item click to the screen created in the <a href="#creating-chart-with-data-from-entity">example</a> above. Add the following code to the screen controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private SerialChart column3d; <i class="conum" data-value="1"></i><b>(1)</b>
+
+@Autowired
+private Notifications notifications; <i class="conum" data-value="2"></i><b>(2)</b>
+
+@Subscribe
+private void onInit(InitEvent event) {
+    column3d.addGraphItemClickListener(graphItemClickEvent -&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+            notifications.create()
+                    .withCaption(itemClickEventInfo(graphItemClickEvent))
+                    .withContentMode(ContentMode.HTML)
+                    .show());
+    // ...
+}
+private String itemClickEventInfo(Chart.GraphItemClickEvent event) { <i class="conum" data-value="4"></i><b>(4)</b>
+    CountryGrowth countryGrowth = (CountryGrowth) event.getEntityNN(); <i class="conum" data-value="5"></i><b>(5)</b>
+    return String.format("GDP grow in %s (%s): %.1f%%",
+            countryGrowth.getCountry(),
+            event.getGraphId().substring(5),
+            "graph2020".equals(event.getGraphId()) ? countryGrowth.getYear2020() : countryGrowth.getYear2021());
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Injects the chart.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Injects <code>Notifications</code> in order to show messages.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Adds a listener at the bottom of the <code>onInit</code> method.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>A method for getting the information about the element of the chart.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The <code>SerialChart</code> component is bound to the data container, so the <code>getEntityNN()</code> method gets the item clicked.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To see the results, open the screen and click one of the columns.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/charts/using-events.png" alt="using events">
+</div>
+<div class="title">Chart that handles graph item click event</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration-using-json"><a class="anchor" href="#configuration-using-json"></a>Configuration using JSON</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to configure a chart, in addition to assigning XML attributes, you can use a custom JSON described in the <a href="http://docs.amcharts.com/3/javascriptcharts" target="_blank" rel="noopener">AmCharts documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>For example, we have a <code>serialChart</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts"&gt;
+    &lt;layout&gt;
+        &lt;chart:serialChart id="serialChart"&gt;
+            &lt;chart:valueAxes&gt;
+                &lt;chart:axis axisAlpha="0" position="LEFT" title="Incidents"/&gt;
+            &lt;/chart:valueAxes&gt;
+            &lt;chart:graphs&gt;
+                &lt;chart:graph id="g1" bullet="ROUND" type="COLUMN" valueField="value"/&gt;
+            &lt;/chart:graphs&gt;
+            &lt;chart:categoryAxis position="TOP" title="Time" labelsEnabled="false"/&gt;
+        &lt;/chart:serialChart&gt;
+    &lt;/layout&gt;
+&lt;/window&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This chart has some data:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@UiController("sample_SerialChartJsonTitle")
+@UiDescriptor("serial-chart-json-title.xml")
+public class SerialChartJsonTitle extends Screen {
+    @Autowired
+    private SerialChart serialChart;
+
+    @Subscribe
+    private void onInit(InitEvent event) {
+        ListDataProvider serialChartDataProvider = new ListDataProvider();
+        int[] serialChartData = {5, 7, 6, 9, 7, 8, 5, 6, 4, 6, 5, 7, 4, 5, 3, 4, 2, 0};
+
+        for (int i = 0; i &lt; serialChartData.length; i++) {
+            serialChartDataProvider.addItem(graphData(serialChartData[i]));
+        }
+
+        serialChart.setDataProvider(serialChartDataProvider);
+    }
+
+    private DataItem graphData(int value) {
+        MapDataItem item = new MapDataItem();
+        item.add("value", value);
+        return item;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And now we can change the chart’s configuration. As an example, let’s add a title. Add the following code at the end of the <code>onInit</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">serialChart.setNativeJson("{\n" +
+        " \"titles\": [\n" +
+        " {\n" +
+        " \"size\": 15,\n" +
+        " \"text\": \"Chart Title\"\n" +
+        " }\n" +
+        " ]\n" +
+        "}");</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/charts/json-title.png" alt="json title">
+</div>
+<div class="title">Serial chart with JSON title</div>
+</div>
+<div class="paragraph">
+<p>You can also set JSON configuration in the XML descriptor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;chart:serialChart id="serialChart"&gt;
+     &lt;chart:nativeJson&gt;
+         &lt;![CDATA[
+{
+    "titles": [
+        {
+            "size": 15,
+            "text": "Chart Title"
+        }
+    ]
+}
+]]&gt;
+     &lt;/chart:nativeJson&gt;
+     &lt;chart:valueAxes&gt;
+         &lt;chart:axis axisAlpha="0" position="LEFT" title="Incidents"/&gt;
+     &lt;/chart:valueAxes&gt;
+     &lt;chart:graphs&gt;
+         &lt;chart:graph id="g1" bullet="ROUND" type="COLUMN" valueField="value"/&gt;
+     &lt;/chart:graphs&gt;
+     &lt;chart:categoryAxis position="TOP" title="Time" labelsEnabled="false"/&gt;
+ &lt;/chart:serialChart&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="events.html">Events</a></span>
+  <span class="next"><a href="../dashboards/index.html">Dashboards</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"
+></script>
+<script>
+  hljs.highlightAll();
+</script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../_/.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../_/../search-index.js"></script>
+  </body>
+</html>

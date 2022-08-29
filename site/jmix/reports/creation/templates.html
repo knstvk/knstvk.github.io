@@ -1,0 +1,2783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Report Template :: Jmix Documentation</title>
+    <link rel="canonical" href="https://docs.jmix.io/jmix/reports/creation/templates.html">
+    <link rel="prev" href="data-structure.html">
+    <link rel="next" href="parameter-and-format.html">
+    <meta name="generator" content="Antora 3.0.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"><link rel="stylesheet" href="../../../_/css/search.css">
+<link rel="stylesheet" href="../../../_/css/overrides.css">
+<link rel="shortcut icon" href="https://www.jmix.io/dark-favicon.ico" />
+<link rel="icon" href="https://www.jmix.io/dark-favicon.ico" /> <script>uiRootPath = '../../../_'</script>
+<!-- Google Tag Manager -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH3DTWV');</script>
+-->
+<!-- End Google Tag Manager -->
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.jmix.io">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8205 2.64855L7.33011 9.13895L9.71136 11.5202L16.2018 5.0298C17.7889 3.44265 20.3363 3.41231 21.9764 4.91232L23.9484 6.85824L26.323 4.48334L24.3643 2.52437C21.4098 -0.289033 16.7211 -0.251991 13.8205 2.64855Z"
+                        fill="#FC1264" />
+                    <path
+                        d="M12.1333 18.7388L19.2167 11.6554L26.2444 18.6831L19.161 25.7665L12.1333 18.7388ZM21.5592 28.1651L28.6426 21.0816L29.2917 20.4325C30.2576 19.4666 30.2576 17.9003 29.2917 16.934L28.6426 16.2849L21.6149 9.25723L20.9658 8.60847C19.9999 7.64221 18.4332 7.64221 17.4673 8.60847L16.8182 9.25723L9.73511 16.3407L9.086 16.9898C8.1201 17.9557 8.1201 19.522 9.086 20.4883L9.73511 21.1374L16.7628 28.1651L17.4116 28.8138C18.3778 29.7801 19.9441 29.7801 20.9101 28.8138L21.5592 28.1651Z"
+                        fill="white" />
+                    <path
+                        d="M22.143 32.4252C20.5555 34.0123 18.0081 34.0427 16.3677 32.5423L16.3663 32.5441L14.3748 30.5523L11.9886 32.9388L13.9801 34.9302C16.9342 37.744 21.6234 37.7073 24.5243 34.8064L31.0475 28.2832L28.6662 25.902L22.143 32.4252Z"
+                        fill="#25CDE3" />
+                    <path d="M31.0646 23.5038L31.8584 24.2972L31.0646 23.5038Z" fill="#25CDE3" />
+                    <path d="M4.93164 11.5374L6.12227 12.728L4.93164 11.5374Z" fill="#FC1264" />
+                    <path
+                        d="M5.4746 21.6751C3.88745 20.0883 3.85711 17.5405 5.35713 15.9005L7.32633 13.9316L4.93167 11.5373L2.96282 13.5062L2.96953 13.5129C0.15577 16.467 0.192812 21.1558 3.09335 24.0567L9.58376 30.5468L11.965 28.1655L5.4746 21.6751Z"
+                        fill="#FDB42B" />
+                    <path
+                        d="M35.274 13.3757L28.7836 6.88529L26.4023 9.26654L32.8927 15.7569C34.4799 17.3441 34.5102 19.8915 33.0102 21.5316L31.0647 23.5036L33.4392 25.8781L35.3982 23.9192C38.2116 20.965 38.1745 16.2762 35.274 13.3757Z"
+                        fill="#22D685" />
+                </svg>
+                &nbsp;
+                Jmix Documentation
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <input id="search-input" placeholder="Search docs" onfocusout="this.value=''"
+                        style="font-size: 16px;" />
+                </div>
+            </div>
+            <div class="header-btn">
+                <a class="header-link" href="https://www.jmix.io/" target="_blank">Go to Jmix website</a>
+            </div>
+        </div>
+    </nav>
+</header><div class="body">
+<div class="nav-container" data-component="jmix" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../intro.html">Jmix Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../whats-new/index.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../setup.html">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../tutorial/index.html">Tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/project-setup.html">1. Project Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/simple-crud.html">2. Simple CRUD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/references.html">3. References And Unique Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/customize-ui.html">4. Customizing UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/data-in-ui.html">5. Working With Data in UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/entity-events.html">6. Using Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorial/ui-from-scratch.html">7. Creating UI From Scratch</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../studio/index.html">Using Studio</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/install.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/update.html">Update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/subscription.html">Subscription</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../studio/project.html">Working with Project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../studio/studio-features.html">Studio Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/welcome.html">Welcome Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/tool-window.html">Jmix Tool Window</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/project-properties.html">Project Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/marketplace.html">Add-ons Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/entity-designer.html">Entity Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/screen-wizard.html">Screen Wizard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/screen-designer.html">Screen Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/fetch-plan-designer.html">Fetch Plan Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/menu-designer.html">Menu Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/role-designer.html">Role Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/bpmn-designer.html">BPMN Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/coding-assistance.html">Coding Assistance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/code-snippets.html">Code Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/reverse-engineering.html">Reverse Engineering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/hot-deploy.html">Hot Deploy</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../studio/plugin-settings.html">Jmix Plugin Settings</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-model/index.html">Data Model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/entities.html">Entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/data-types.html">Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/enumerations.html">Enumerations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/soft-deletion.html">Soft Deletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/metadata.html">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/bean-validation.html">Bean Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-model/db-migration.html">Database Migration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-access/index.html">Data Access</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/data-manager.html">Using DataManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/entity-manager.html">Using EntityManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/entity-events.html">Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/fetching.html">Fetching Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/transactions.html">Transaction Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../data-access/jpql-extensions.html">JPQL Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/screens.html">Screens and Fragments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/screens/screen-controllers.html">Screen Controllers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/annotations.html">Screen Controller Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/methods.html">Screen Controller Methods</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/screen-events.html">Screen Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/screens/screen-fragment-events.html">ScreenFragment Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/descriptors.html">XML Descriptors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/mixins.html">Screen Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/root-screens.html">Root Screens</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/screens/validation.html">Screen Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/opening-screens.html">Opening Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/using-fragments.html">Using Screen Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/data-components.html">Data Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/data/data-containers.html">Data Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/instance-container.html">InstanceContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/collection-container.html">CollectionContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/property-containers.html">Property Containers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/data/key-value-containers.html">Key-Value Containers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/data/data-loaders.html">Data Loaders</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/data/data-context.html">DataContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/data/data-examples.html">Using Data Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl.html">Visual Components Library</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/components.html">Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/app-menu.html">AppMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/browser-frame.html">BrowserFrame</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/button.html">Button</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/caps-lock-indicator.html">CapsLockIndicator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/calendar.html">Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/check-box.html">CheckBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/check-box-group.html">CheckBoxGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/color-picker.html">ColorPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/combo-box.html">ComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/currency-field.html">CurrencyField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/data-grid.html">DataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/date-field.html">DateField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/date-picker.html">DatePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/entity-combo-box.html">EntityComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/entity-picker.html">EntityPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/entity-suggestion-field.html">EntitySuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/file-multi-upload-field.html">FileMultiUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/file-storage-upload-field.html">FileStorageUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/file-upload-field.html">FileUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/components/filter.html">Filter</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../ui/vcl/components/filter-components.html">Filter Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/group-table.html">GroupTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/image.html">Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/label.html">Label</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/link.html">Link</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/link-button.html">LinkButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/masked-field.html">MaskedField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/multi-select-list.html">MultiSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/password-field.html">PasswordField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/popup-button.html">PopupButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/popup-view.html">PopupView</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/progress-bar.html">ProgressBar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/property-filter.html">PropertyFilter</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/radio-button-group.html">RadioButtonGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/related-entities.html">RelatedEntities</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/resizable-text-area.html">ResizableTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/rich-text-area.html">RichTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/side-menu.html">SideMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/simple-pagination.html">SimplePagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/single-select-list.html">SingleSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/slider.html">Slider</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/source-code-editor.html">SourceCodeEditor</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/suggestion-field.html">SuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/table.html">Table</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tag-field.html">TagField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tag-picker.html">TagPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/text-area.html">TextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/text-field.html">TextField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/time-field.html">TimeField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tree.html">Tree</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tree-data-grid.html">TreeDataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/tree-table.html">TreeTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/twin-column.html">TwinColumn</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/value-picker.html">ValuePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/components/values-picker.html">ValuesPicker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/containers.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/accordion.html">Accordion</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/box-layout.html">BoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/buttons-panel.html">ButtonsPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/css-layout.html">CssLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/drawer.html">Drawer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/grid-layout.html">GridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/group-box-layout.html">GroupBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/html-box-layout.html">HtmlBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/responsive-grid-layout.html">ResponsiveGridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/scroll-box-layout.html">ScrollBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/split-panel.html">SplitPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/containers/tab-sheet.html">TabSheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/vcl/miscellaneous.html">Miscellaneous</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/miscellaneous/validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/vcl/miscellaneous/formatter.html">Formatter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/vcl/api.html">Components API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/vcl/xml.html">Components XML Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/facets.html">Facets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/clipboard-trigger.html">ClipboardTrigger</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/data-load-coordinator.html">DataLoadCoordinator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/dynamic-attributes-facet.html">DynamicAttributes Facet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/editor-screen-facet.html">EditorScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/input-dialog-facet.html">InputDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/lookup-screen-facet.html">LookupScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/message-dialog-facet.html">MessageDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/notification-facet.html">NotificationFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/option-dialog-facet.html">OptionDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/presentations-facet.html">PresentationsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/screen-facet.html">ScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/screen-settings-facet.html">ScreenSettingsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/facets/timer.html">Timer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/actions.html">Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/actions/declarative-actions.html">Declarative Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/actions/standard-actions.html">Standard Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/add-action.html">AddAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/bulk-edit-action.html">BulkEditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/create-action.html">CreateAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/edit-action.html">EditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-clear-action.html">EntityClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-lookup-action.html">EntityLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-open-action.html">EntityOpenAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/entity-open-composition-action.html">EntityOpenCompositionAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/exclude-action.html">ExcludeAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/refresh-action.html">RefreshAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/related-action.html">RelatedAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/remove-action.html">RemoveAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/tag-lookup-action.html">TagLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/value-clear-action.html">ValueClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../ui/actions/standard-actions/view-action.html">ViewAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/actions/custom-action-type.html">Custom Action Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/actions/base-action.html">BaseAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/dialogs.html">Dialogs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/background-tasks.html">Background Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/notifications.html">Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/exception-handlers.html">Exception Handlers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/exception-handlers/unique-constraint-violation-exception.html">Handling Unique Constraint Violation Exceptions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/themes.html">Themes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/themes/theme_usage.html">Using Existing Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/themes/custom_theme.html">Creating a Custom Theme</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/themes/theme_addon.html">Creating and Using a Theme Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/icons.html">Icons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/icons/icon-sets.html">Icon Sets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/icons/icon-provider.html">Using Icons from Other Font Libraries</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/menu-config.html">MenuConfig</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/url-history-navigation.html">URL History and Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/handling-url-changes.html">Handling URL Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/routing-api.html">Routing API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/url-navigation-api-usage.html">Using URL History and Navigation API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/url-history-navigation/url-routes-generator.html">URL Routes Generator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/anonymous-access-to-screens.html">Anonymous Access to Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/pluggable-component-factories.html">Pluggable Component Factories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ui/custom-components.html">Creating Custom Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/composite-components.html">Composite Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/js-component.html">Generic JavaScriptComponent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/custom-widget-sets.html">Creating GWT Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ui/custom-components/widgetset-add-on.html">Creating and Using Widgets Add-On</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ui/app-properties.html">UI Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../rest/index.html">Generic REST</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/getting-started.html">Getting Started with REST</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../rest/entities-api.html">Entities API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../rest/entities-api/load-entities.html">Load Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../rest/entities-api/create-entities.html">Create Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../rest/entities-api/update-entities.html">Update Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../rest/entities-api/delete-entities.html">Delete Entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/files-api.html">Files API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/messages-api.html">Messages API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/metadata-api.html">Metadata API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/user-session-api.html">User Session API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/business-logic.html">Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../rest/security.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../rest/security/authentication.html">Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/api-docs.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../rest/app-properties.html">REST Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../localization/index.html">Localization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../localization/message-bundles.html">Message Bundles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../localization/framework-translations.html">Framework Translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../files/index.html">Managing Files</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/files-in-database.html">Storing Files in Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/file-storage.html">Using File Storage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../files/downloading-files.html">Downloading and Displaying Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../security/index.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/resource-roles.html">Resource Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/row-level-roles.html">Row-level Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../security/authorization.html">Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/index.html">Other Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../features/sequences.html">Sequence Generation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../modularity/index.html">Modularity and Extension</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modularity/creating-add-ons.html">Creating Add-ons</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modularity/extension.html">Extending Functionality</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../deployment/index.html">Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/k8s.html">Kubernetes Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/aws-beanstalk.html">Amazon Web Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/azure.html">Azure App Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../deployment/google-cloud-appengine.html">Google Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../add-ons.html">Add-ons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../appsettings/index.html">Application Settings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../audit/index.html">Audit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../audit/entity-log.html">Entity Log</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/index.html">BPM</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/getting-started.html">Getting Started with BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/admin-screens.html">Administration Screens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/modeler.html">Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/proc-definitions.html">Process Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/proc-instances.html">Process Instances</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/user-groups.html">User Groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/user-tasks.html">User Tasks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/forms.html">Process Forms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/input-dialog.html">Input Dialog</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/jmix-screen.html">Jmix Screen</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/custom.html">Custom Form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../bpm/tasks.html">Tasks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/user-task.html">User Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/service-task.html">Service Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/script-task.html">Script Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/data-task.html">Entity Data Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/email-task.html">Email Sending Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../bpm/sub-process-call-activity.html">Sub-Processes and Call Activities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/listeners.html">Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/dmn.html">DMN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/instance-migration.html">Process Instances Migration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/auto-deployment.html">Automatic Models Deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../bpm/api.html">BPM API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../business-calendar/index.html">Business Calendars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../business-calendar/creating.html">Creating Business Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../business-calendar/api.html">Business Calendars API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../charts/index.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../charts/types.html">Charts Types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/angular-gauge-chart.html">AngularGaugeChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/funnel-chart.html">FunnelChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/gantt-chart.html">GanttChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/pie-chart.html">PieChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/radar-chart.html">RadarChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/serial-chart.html">SerialChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/stock-chart-group.html">StockChartGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../charts/types/xy-chart.html">XYChart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/config.html">Configuring Charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/export.html">Charts Export</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/data.html">Connecting Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/events.html">Events</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../charts/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../dashboards/index.html">Dashboards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/user-interface.html">Administration UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/adding-business-logic.html">Adding Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/using-dashboard-in-screen.html">Using Dashboard in Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dashboards/dashboard-chart-addon.html">Dashboard Chart Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-tools/index.html">Data Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data-tools/entity-inspector.html">Entity Inspector</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data-tools/entity-info-action.html">Entity Information Action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../dyn-attr/index.html">Dynamic Attributes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dyn-attr/dynattr-managing.html">Managing Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dyn-attr/dynattr-view.html">Displaying Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../dyn-attr/dynattr-api.html">Dynamic Attributes API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../email/index.html">Email Sending</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/getting-started.html">Getting Started with Email</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/api.html">Email Sending API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email/email-history.html">Email History</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../email-template/index.html">Email Templates</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email-template/getting-started.html">Getting Started with Email Templates</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email-template/usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../email-template/api.html">Email Templates API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../grapes-js/index.html">GrapesJS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grapes-js/components.html">GrapesJS UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grapes-js/html-editor-ui.html">HTML Editor UI</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../grid-export/index.html">Grid Export Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grid-export/exporters.html">Table Exporters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grid-export/actions.html">Export Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../grid-export/limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ldap/index.html">LDAP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/getting-started.html">Getting Started with LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/obtaining-user-authorities.html">Obtaining User Authorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/in-memory-user-management.html">In-memory User Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/usage-with-active-directory.html">Usage with Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/global-user-synchronization.html">Global User Synchronization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../ldap/properties.html">LDAP Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../maps/index.html">Maps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/getting-started.html">Getting Started with Maps</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/maps-ui.html">Maps UI Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../maps/layers.html">Layers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/raster-layers.html">Raster Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/vector-layers.html">Vector Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/heatmap-layer.html">Heatmap Layer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../maps/canvas-layer.html">Canvas Layer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/additional-options.html">Additional Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/drawing-geometry.html">Drawing Geometry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../maps/map-services.html">Map Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multitenancy/index.html">Multitenancy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../notifications/index.html">Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../notifications/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../notifications/creating-notifications.html">Creating Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../notifications/viewing-notifications.html">Viewing Notifications</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../pivot-table/index.html">Pivot Table</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/elements.html">Elements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/export.html">Exporting PivotTable Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/show-pivot-action.html">Using ShowPivotAction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../pivot-table/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quartz/index.html">Quartz</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../index.html">Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../getting-started.html">Getting Started with Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../create-reports.html">Creating Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="data-structure.html">Report Data Structure</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="templates.html">Report Template</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="parameter-and-format.html">Report Parameters and Field Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="permissions.html">Report Access Rights</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="localization.html">Report Name Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../run-report.html">Running Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exec-history.html">Report Execution History</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../sample-reports.html">Sample Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../rest-api.html">REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../search/index.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/getting-started.html">Getting Started with Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/index-definitions.html">Index Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/indexing-queue.html">Indexing Queue</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/search-in-ui.html">Using Search in UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/config-options.html">Search Configuration Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/search-api.html">Search API and Internals</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../search/search-properties.html">Search Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../webdav/index.html">WebDAV</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/ui-components.html">UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../webdav/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendices</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../app-properties.html">Application Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text"><a href="https://docs.jmix.io/api/1.3" target="_blank" rel="noopener">Java API Reference</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../quartz-setup.html">Quartz Job Scheduler Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../publish-add-on.html">Publishing an Add-on</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cuba/index.html">Migration from CUBA Platform</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jmix Documentation</span>
+    <span class="version">1.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../intro.html">Jmix Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../intro.html">1.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../intro.html">Jmix Documentation</a></li>
+    <li><a href="../../add-ons.html">Add-ons</a></li>
+    <li><a href="../index.html">Reports</a></li>
+    <li><a href="../create-reports.html">Creating Reports</a></li>
+    <li><a href="templates.html">Report Template</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/reports/pages/creation/templates.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Report Template</h1>
+<div class="sect1">
+<h2 id="add_template"><a class="anchor" href="#add_template"></a>Adding Template</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can add report templates in the report editor screen. Create or edit an existing report in the reports browser and switch to the <strong>Templates</strong> tab:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/template_list.png" alt="template list">
+</div>
+<div class="title">Figure 1. Templates tab</div>
+</div>
+<div class="paragraph">
+<p>One report can have multiple templates but one of the templates must be selected as default in the <strong>Report structure</strong> tab.</p>
+</div>
+<div class="paragraph">
+<p>Below is the form to add a template:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/template_editor.png" alt="template editor">
+</div>
+<div class="title">Figure 2. Template editor form</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Template code</strong> – identification code for a template.</p>
+</li>
+<li>
+<p><strong>Template file</strong> – loaded from the file system and saved to the database along with the report structure description.</p>
+</li>
+<li>
+<p><strong>Output type</strong> – report output type. It should be consistent with the template file type according to the rules described in <a href="#output_format_compliance">output format compliance</a>.</p>
+</li>
+<li>
+<p><strong>Output name pattern</strong> – optional file name pattern, which will be used to generate the file name for the produced report. It can either be a constant string or contain a report parameter as a variable, for example, <code>${header.authorName}.xlsx</code>. More sophisticated patterns with several parameters and string concatenation can also be created as a script in any band of report structure, for example, <code>${Root.title}.xlsx</code>, where <code>title</code> is a result of the script:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">[['title' : ('Report for '+params['author'].firstName+' '+params['author'].lastName)]]</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Is custom</strong> – the flag to use custom formatting logic not covered by any provided formatter. When it is checked, you need to define two additional fields:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Defined by</strong> – the way the custom template is defined: by <a href="#template_custom">class</a>, script or <a href="#exec_external_report">URL</a>.</p>
+</li>
+<li>
+<p><strong>Custom definition</strong> – the fully qualified name of the Java class, Groovy script content, or the URL used to create the template. If you select <strong>Script</strong>, then in the Groovy script, the parameters below can be used:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><code>params</code> – parameters map is available by alias <code>params</code>.</p>
+</li>
+<li>
+<p><code>rootBand</code> – an object of the <code>com.haulmont.yarg.structure.BandData</code> type that provide access to band datasets.</p>
+</li>
+<li>
+<p><code>applicationContext</code> – an object of the <code>org.springframework.context.ApplicationContext</code> type that provides access to managed beans.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Is alterable output</strong> – the flag to let the user choose the output type of a report at runtime in a dialog window.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>If the flag is on, a dialog with output type selection will be shown when running a report. If the report has more than one template, the template selection dropdown will be shown as well.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/report_template_alterable.png" alt="report template alterable">
+</div>
+<div class="title">Figure 3. Alterable Output</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="template_types"><a class="anchor" href="#template_types"></a>Template Types</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="template_xls"><a class="anchor" href="#template_xls"></a>XLS(X) Templates</h3>
+<div class="paragraph">
+<p>You can create XLS(X) templates using <strong>Microsoft Office</strong> or <strong>LibreOffice</strong>.</p>
+</div>
+<div id="template_xls_regions" class="paragraph">
+<p>Each <a href="data-structure.html#report_bands" class="xref page">report band</a> must have a corresponding region in the template, which is named the same as the band. For instance, a report has two bands – Header and Data. This means that the template should also have Header and Data named ranges. To create named regions, select the desired cell ranges and enter the name in the field in the application&#8217;s top left corner. To edit existing named regions, use the <strong>Formulas</strong> &#8594; <strong>Name Manager</strong> menu command in Microsoft Office, and the <strong>Insert</strong> &#8594; <strong>Names</strong> &#8594; <strong>Manage</strong> command in LibreOffice. Vice versa, each part of the sheet you want to show should have a band in a report (at least an empty band).</p>
+</div>
+<div class="paragraph">
+<p>The bands are output in the order specified in the <a href="data-structure.html" class="xref page">report structure</a>.</p>
+</div>
+<div class="paragraph">
+<p>Bands can be horizontally and vertically oriented. If the band is horizontal, the suitable named region will grow downward, vertical will grow rightward. Horizontal bands may be organized in a tree-like structure and contain sub-bands (nested or children bands). Therefore, for sub-bands, you need to create named regions directly under the regions that correspond to the parent bands.</p>
+</div>
+<div class="paragraph">
+<p>XLSX formatter will render children bands using the following algorithm:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Write the first row of parent band &#8594;</p>
+</li>
+<li>
+<p>Write all first row&#8217;s children rows &#8594;</p>
+</li>
+<li>
+<p>Write the next row of parent band.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The band dataset fields are placed in the template using strings in <code>${field_name}</code> format, where <code>field_name</code> is the corresponding band field name. For example:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/report_template_xls.png" alt="report template xls">
+</div>
+<div class="title">Figure 4. XLS File Template</div>
+</div>
+<div class="paragraph">
+<p>You can add variables to the reporting template. Variables should be inserted into sheet names or the header/footer of XLSX template having <code>${&lt;BandName&gt;.&lt;variableName&gt;}</code> format.</p>
+</div>
+<div class="paragraph">
+<p>Cells may contain formatting as well as multiple fields inside. To output images or formulas, you need to place them entirely into the corresponding named region linked with the band.</p>
+</div>
+<div class="paragraph">
+<p>Formulas can reference the cells of the same band or another band. To be processed by the formatter, the formulas should use either range of cells in the band, or direct cells coordinates, for example, <code>(A1*B1)</code> or <code>($B:$B)</code>.</p>
+</div>
+<div class="paragraph">
+<p>To process the data as an Excel chart, create an empty band in the report structure and a named region with the same name in the template. Then create a chart inside this named region and refer to related bands using the <strong>Select data</strong> button in the chart context menu. If your chart data is in a continuous range of cells, select any cell in that range. Your chart will include all the data in the range. If your data isn&#8217;t in a continuous range, select nonadjacent cells or ranges.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Converting XLSX to PDF and CSV</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>XLSX reports can be automatically converted to CSV and PDF format. <a href="../configuration.html#libre_office" class="xref page">LibreOffice</a> should be installed for PDF conversion.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/csv_output.png" alt="csv output">
+</div>
+<div class="title">Figure 5. CSV Output</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template_csv"><a class="anchor" href="#template_csv"></a>CSV Templates</h3>
+<div class="paragraph">
+<p>You can create CSV templates using <strong>Microsoft Office</strong> or <strong>LibreOffice</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Bands in the CSV template should only be horizontally oriented, so the suitably named region will grow downward. Also, bands should belong to the first level of data, that is, be the children of the Root band. In all other respects, the same principles as for <a href="#template_xls">XLS(X) templates</a> should be used.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/csv_template.png" alt="csv template">
+</div>
+<div class="title">Figure 6. CSV Template Example</div>
+</div>
+<div class="paragraph">
+<p><strong>Inline editor</strong></p>
+</div>
+<div class="paragraph">
+<p>CSV templates support inline editing. You can edit the template directly in the <strong>Template editor</strong> window and see the changes without having to re-upload the template file.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/csv_report_editor.png" alt="csv report editor">
+</div>
+<div class="title">Figure 7. CSV Inline Editor</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template_doc"><a class="anchor" href="#template_doc"></a>DOC(X) Templates</h3>
+<div class="paragraph">
+<p>You can create DOC(X) templates using <strong>Microsoft Office</strong> or <strong>LibreOffice</strong>.</p>
+</div>
+<div class="paragraph">
+<p>A template of DOC(X) type can include document text and optionally one or more tables. The document text outputs the data from the first rows of arbitrary bands. While in a table, you can output an arbitrary number of band rows.</p>
+</div>
+<div class="paragraph">
+<p>To place a field in the document text, you should use a string having <code>${band_name.field_name}</code> format, where <code>band_name</code> is the band name, <code>field_name</code> – name of a band&#8217;s field.</p>
+</div>
+<div class="paragraph">
+<p>To output data into a table, you should link it to a band. This is done by specifying <code>##band=band_name</code> in the table&#8217;s first cell, where <code>band_name</code> is the band name. The table fields are placed using <code>${field_name}</code> format, where <code>field_name</code> is the field name of the band associated with the table. You can use the band name prefix to access fields of other bands, same as in the document text fields. You can output several fields in a single table cell.</p>
+</div>
+<div class="paragraph">
+<p>Horizontal bands in DOC(X) cannot contain sub-bands. If you need sub-bands, use XLS(X) format.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The table must contain either one or two rows. If the table has two rows, then the corresponding band fields must be in the second row. The first row should contain the marker with the corresponding band name and, if necessary, a static text or other band fields.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Below is an example of a template which outputs a report consisting of two bands, <code>Book</code> and <code>Authors</code>. The first band outputs a book name and genre, and the second outputs a list of authors of this book.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/report_template_doc.png" alt="report template doc">
+</div>
+<div class="title">Figure 8. DOCX Template</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Cells data format is not supported in DOC(X) templates. To avoid numbers or dates formatting problems due to the user&#8217;s locale, such as unnecessary numeric separators, try to cast your data to string.
+For example,</p>
+</div>
+<div class="paragraph">
+<p>wrap</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">select e.year as "year"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>into</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">select cast(e.year as varchar(4)) as "year"</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template_html"><a class="anchor" href="#template_html"></a>HTML Template</h3>
+<div class="paragraph">
+<p>An HTML template is defined in an <code>.html</code> file (<code>UTF-8</code> encoding without <code>BOM</code>). You can use HTML/CSS features of <a href="https://github.com/flyingsaucerproject/flyingsaucer" target="_blank" rel="noopener">Flying Saucer</a> library. Its main guide is available at <a href="http://flyingsaucerproject.github.io/flyingsaucer/r8/guide/users-guide-R8.html" target="_blank" rel="noopener">Github page</a>.</p>
+</div>
+<div class="paragraph">
+<p>To control page size, page headers and footers, use special CSS rules and properties. You can find an example of a report with repeatable header and footer blocks in the <a href="../sample-reports.html#example_html" class="xref page">HTML Sample Reports</a> section.</p>
+</div>
+<div class="paragraph">
+<p>There are two ways to place data in a template:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using FreeMarker tags.</p>
+</li>
+<li>
+<p>Using Groovy templating engine.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By default, the Report wizard generates an HTML template with FreeMarker tags.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Template type</strong> radio button in the template editor to switch between the methods.</p>
+</div>
+<div class="paragraph">
+<p>HTML templates support inline editing. You can edit the template directly in the <strong>Template editor</strong> window and see the changes without having to re-upload the template file.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/html_template_editor.png" alt="html template editor">
+</div>
+<div class="title">Figure 9. HTML Template Editor</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Groovy templating engine</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>You can preprocess the HTML report template as a Groovy template. It will be processed by <a href="http://docs.groovy-lang.org/latest/html/api/groovy/text/GStringTemplateEngine.html" target="_blank" rel="noopener">GStringTemplateEngine</a>.</p>
+</div>
+<div class="paragraph">
+<p>The template engine uses JSP style <code>&lt;% %&gt;</code> script and <code>&lt;%= %&gt;</code> expression syntax or <code>GString</code> style expressions. The variable <code>out</code> is bound to the writer that the template is being written to. Thus, the template can use any code on Groovy if it is properly defined. <code>GStringTemplateEngine</code> has access to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>external parameters: <code>BandName.fields.ParamName</code>;</p>
+</li>
+<li>
+<p>bands: <code>BandName.bands.ChildBandName</code>;</p>
+</li>
+<li>
+<p>fields: <code>BandName.fields.FieldName</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You may use variables for convenience, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;% def headerRow = Root.bands.HeaderRow %&gt;
+&lt;p&gt;Date: ${headerRow.fields.reportDate}&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is an example of a template that outputs a report for a single user.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru"&gt;
+&lt;head&gt;
+    &lt;title&gt; Report User &lt;/title&gt;
+    &lt;style type="text/css"&gt;
+        body {font-family: 'Charis SIL', sans-serif;} tbody tr {height:20px; min-height:20px}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;% def user = Root.bands.User %&gt;
+    &lt;p&gt;Login: ${user.fields.login.first()}&lt;/p&gt;
+    &lt;p&gt;Active: ${user.fields.active.first()}&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can find an example of a report with Groovy templating in the <a href="../sample-reports.html#example_html_groovy_template" class="xref page">Groovy Sample Reports</a> section.</p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">FreeMarker</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>FreeMarker documentation is available at <a href="https://freemarker.apache.org/docs/" target="_blank" rel="noopener">freemarker.apache.org</a>.</p>
+</div>
+<div class="paragraph">
+<p>The FreeMarker document model has the following structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">Band {
+      bands [ bandName : [ band, .. ], .. ]
+      fields [ fieldName : fieldValue, .. ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example, you should use the following expression to access the <code>name</code> field in a row having index 0 of the <code>band</code> band:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">Root.bands.band[0].fields.name</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You may use variables for convenience, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;#assign headerRow = Root.bands.Header[0]&gt;
+&lt;p&gt;Date: ${headerRow.fields.reportDate}&lt;/p&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also use such functions as <code>getMessage()</code> and <code>getMainMessage()</code> to get localized values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getMessage()</code> accept one or two arguments. If only one argument provided, it will get localized enum values. If two arguments provided, it will get <a href="../../localization/message-bundles.html" class="xref page">localized messages</a> from message bundle by using the arguments as message <a href="../../localization/message-bundles.html#group-and-key" class="xref page">group and key</a>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">${getMessage(order.status)}</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>getMainMessage()</code>, in turn, takes one string parameter <code>key</code> and returns the value from the message bundle:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">${getMessage(outOfStockMessage)}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Below is an example of a template that outputs a report consisting of two bands, <code>Book</code> and <code>Authors</code>. The first band outputs a book name and genre, and the second outputs a list of authors of this book.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;#assign book = Root.bands.Book[0] /&gt;
+    &lt;#assign authors = Root.bands.Authors /&gt;
+    &lt;p&gt;Name: ${book.fields.name}&lt;/p&gt;
+    &lt;p&gt;Genre: ${book.fields.literatureType.name}&lt;/p&gt;
+    &lt;table border="1" cellpadding="5" cellspacing="0" width="200"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;td&gt;First name&lt;/td&gt;
+                &lt;td&gt;Last name&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;#list authors as author&gt;
+        &lt;tr&gt;
+            &lt;td&gt;${author.fields.firstName}&lt;/td&gt;
+            &lt;td&gt;${author.fields.lastName}&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/#list&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is a more complex example. Let&#8217;s assume we have the following bands structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">Root {
+    HeaderBand {
+        query = return [[ "name" : "Column1" ],[ "name" : "Column2" ]]
+    }
+    Band1 {
+        query = return [
+                ["field1" : "Value 11", "field2" : "Value 12"],
+                ["field1" : "Value 21" , "field2" : "Value 22"]
+        ]
+    }
+    Band2 {
+        query = return [[ "header" : "Header1" ], [ "header" : "Header2" ]]
+        SubBand1 {
+            query = return [["header" : 'SubHeader1'] , [ "header" : 'SubHeader2' ]]
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Inserting a field:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; Simple template &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;#assign Tree1 = Root.bands.Band2&gt;
+        &lt;h1&gt; Header &lt;/h1&gt;
+        &lt;p&gt;
+            ${Tree1[1].bands.SubBand1[0].fields.header}
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Inserting a list:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; List &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;#assign Table1Header = Root.bands.HeaderBand&gt;
+
+        &lt;#if Table1Header?has_content&gt;
+            &lt;ol&gt;
+                &lt;#list Table1Header as header&gt;
+                    &lt;li&gt; ${header.fields.name} &lt;/li&gt;
+                &lt;/#list&gt;
+            &lt;/ol&gt;
+        &lt;/#if&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Inserting a table:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt; Table &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;#assign Table1Header = Root.bands.HeaderBand&gt;
+    &lt;#assign Table1 = Root.bands.Band1&gt;
+        &lt;table border="1" cellpadding="5" cellspacing="0" width="200"&gt;
+            &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;#list Table1Header as header&gt;
+                    &lt;td&gt; ${header.fields.name} &lt;/td&gt;
+                &lt;/#list&gt;
+            &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+            &lt;#list Table1 as row&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        ${row.fields.field1}
+                    &lt;/td&gt;
+                    &lt;td&gt;
+                        ${row.fields.field2}
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/#list&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Inserting a multi-level list:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt; Multi-level list &lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;#assign Tree1 = Root.bands.Band2&gt;
+    &lt;ul&gt;
+        &lt;#list Tree1 as item&gt;
+            &lt;li&gt;
+                &lt;h2&gt; ${item.fields.header} &lt;/h2&gt;
+                &lt;#if item.bands.SubBand1?has_content&gt;
+                    &lt;ul&gt;
+                        &lt;#list item.bands.SubBand1 as subitem&gt;
+                            &lt;li&gt;
+                                &lt;h3&gt; ${subitem.fields.header} &lt;/h3&gt;
+                            &lt;/li&gt;
+                        &lt;/#list&gt;
+                    &lt;/ul&gt;
+                &lt;/#if&gt;
+            &lt;/li&gt;
+        &lt;/#list&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Embedded pictures</dt>
+<dd>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>At the moment, Jmix Reporting add-on does not provide means of inserting images into HTML reports similarly to DOCX/XLSX reports. Images still can be embedded with the <code>img</code> tag and the link to the picture in the <code>src</code> attribute. You can add images to the HTML report in one of the following ways.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>by URL</p>
+<div class="paragraph">
+<p>An image can be hosted on the Tomcat server or any external hosting up to the local file reference. For example, the image hosted in the <code>tomcat\webapps\ROOT\images</code> folder can be inserted like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;img src="http://localhost:8080/images/SomeImage.jpg"
+     height="68"
+     width="199"
+     border="0"
+     align="right"/&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>by Bitmap</p>
+<div class="paragraph">
+<p>An image is added as a byte array within the <code>src</code> attribute. This approach allows you to use variables for the <code>FileDescriptor</code> attributes of the entities. The byte array can even be added directly to the template, even though this approach is not recommended:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;img alt="SomePicture.png"
+     src="data:image/png;base64,iVBORw0K ..... AcEP9PwxD0hNKK1FCAAAAAElFTkSuQmCC"/&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>by custom prefixes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can use the <code>resource://</code> prefixes to refer image files from the <code>conf</code> directory or classpath. This only works for HTML templates to output the PDF format. For example, the image <code>abc.jpg</code> hosted in the <code>resource\com\company\app\images</code> folder can be inserted like:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;img src="resource://com/company/app/images/abc.jpg"
+    height="68"
+    width="199"
+    border="0"
+    align="right"/&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>fs://</code> prefix allows inserting an image by specifying <code>FileDescriptor</code> ID. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;img src="fs://fede432a-4f5d-3bab-71a0-b98133759b0f"
+    height="68"
+    width="199"
+    border="0"
+    align="right"/&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div id="html_to_pdf" class="dlist">
+<dl>
+<dt class="hdlist1">Converting HTML to PDF</dt>
+<dd>
+<p>Reports which have a template in HTML format and the PDF output format do not always properly display fonts. To resolve this, add <code>jmix/fonts</code> subdirectory with required <code>.ttf</code> fonts to the Jmix configuration directory(<code>${user.dir}/.jmix/conf/</code> by default). Additionally, you can use existing operating system fonts by specifying their path in the <a href="../configuration.html#jmix.reports.pdf-fonts-directory" class="xref page">jmix.reports.pdf-fonts-directory</a> application property.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>In order to resolve the fonts issue on a Ubuntu server, you should do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install the <code>ttf-mscorefonts-installer</code> package:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ sudo apt-get install ttf-mscorefonts-installer</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Set the <a href="../configuration.html#jmix.reports.pdf-fonts-directory" class="xref page">jmix.reports.pdf-fonts-directory</a> application property:</p>
+<div class="listingblock">
+<div class="content">
+<pre>jmix.reports.pdf-fonts-directory = /usr/share/fonts/truetype/msttcorefonts</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Explicitly specify fonts in HTML templates, for example:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;html&gt;
+&lt;head&gt;
+    &lt;style type="text/css"&gt;
+        * {
+            font-family: Times New Roman;
+        }
+    &lt;/style&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Another thing to mention is parsing of special characters. To avoid errors when converting HTML to PDF, it is recommended to wrap your fields in <code>&lt;![CDATA[ ]]&gt;</code> construction in your HTML template file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;tr&gt;
+	&lt;td&gt; &lt;![CDATA[${(row.fields('book_name'))!?string!}]]&gt; &lt;/td&gt;
+	&lt;td&gt; &lt;![CDATA[${(row.fields('author'))!?string!}]]&gt; &lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template_jasper"><a class="anchor" href="#template_jasper"></a>JasperReports Template</h3>
+<div class="paragraph">
+<p>JasperReports formatter allows you to use JasperReports templates to output the information extracted by Jmix reporting. The template will be processed by the report engine, providing an output of the defined type, see <a href="#output_format_compliance">Output Format Compliance Matrix</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can create JRXML templates using JasperReports tools (for example, Jaspersoft Studio) or in a simple text editor. Each <a href="data-structure.html#report_bands" class="xref page">report band</a> defined in the report structure must have a corresponding <code>band</code> element in the template which is, in turn, placed within one of the standard JasperReports report sections (which are also named as the bands in JasperReports terms): <code>title</code>, <code>pageHeader</code>, <code>columnHeader</code>, <code>detail</code>, etc.</p>
+</div>
+<div class="paragraph">
+<p>The report engine puts all report band data in one datasource: <code>JRBandDataDataSource</code>, which contains data as a tree with the <code>Root</code> band as the root, and passes the <code>CubaJRFunction</code> instance to the template as the main data source that can be addressed using the <code>REPORTING</code> parameter. Declaring this parameter in the report template is not mandatory, it will be added automatically if omitted, but if you want to compile the template in JasperReports IDE, you need to declare this parameter explicitly.</p>
+</div>
+<div class="paragraph">
+<p>The <code>REPORTING</code> parameter supports two functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>dataset</code> –  gets the sub-datasource from the main data source that can be used, for example, in tables or in subreports as subDataset. This method searches among the children of the root band for the band with specified name and creates a new data source with this band data as a new root. For example:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;subDataset name="Product"&gt;
+	&lt;field name="name" class="java.lang.String"/&gt;
+	&lt;field name="price" class="java.lang.Long"/&gt;
+&lt;/subDataset&gt;
+...
+&lt;dataSourceExpression&gt;&lt;![CDATA[$P{REPORTING}.dataset("Product")]]&gt;&lt;/dataSourceExpression&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><code>bitmap</code> – transforms the given byte array into <code>ByteArrayInputStream</code> and can be used for embedding images into the report. For example:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;field name="Main.image" class="java.lang.Object"/&gt; //image from DB as byte array
+...
+&lt;imageExpression&gt;&lt;![CDATA[$P{REPORTING}.bitmap($F{Main.image})]]&gt;&lt;/imageExpression&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each <a href="data-structure.html#report_bands" class="xref page">report band</a> can be used in the template only once, so if you need to represent the same data in different forms within one report (for example, as a table and a chart), you need to create as many bands as the <code>band</code> elements in the template. Nested bands are not supported, all bands should be direct children of the <strong>Root</strong> band.</p>
+</div>
+<div class="paragraph">
+<p>The data can be retrieved from the datasource using the following syntax: <code>$F{&lt;field name&gt;}</code>. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;textField&gt;
+    &lt;textFieldExpression&gt;&lt;![CDATA[$F{library_department_name}]]&gt;&lt;/textFieldExpression&gt;
+&lt;/textField&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can find an example of a report with JasperReports template in the <a href="../sample-reports.html#example_jasper" class="xref page">Sample Jasper Reports</a> section.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template_custom"><a class="anchor" href="#template_custom"></a>Class-Defined Template</h3>
+<div class="paragraph">
+<p>Class-defined templates are used when it is too difficult or impossible to select data using SQL, JPQL, or Groovy. They are used, for example, when the report is a result of combining several other reports.</p>
+</div>
+<div class="paragraph">
+<p>Create a class and implement the <code>com.haulmont.yarg.formatters.CustomReport</code> interface. Define the <code>createReport()</code> method, which returns an array of bytes and takes the following input parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>report</code> – report descriptor of the <code>com.haulmont.yarg.structure.Report</code> type.</p>
+</li>
+<li>
+<p><code>rootBand</code> – root band data of the <code>com.haulmont.yarg.structure.BandData</code> type.</p>
+</li>
+<li>
+<p><code>params</code> – a map of external report parameters.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Below is an example of a simple class-defined template. It creates an HTML document showing the name of a book selected as a report parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package reports.ex2.reports;
+
+import com.haulmont.yarg.formatters.CustomReport;
+import com.haulmont.yarg.structure.BandData;
+import com.haulmont.yarg.structure.Report;
+import reports.ex2.entity.Book;
+
+import java.util.Map;
+
+public class BookReport implements CustomReport {
+    @Override
+    public byte[] createReport(Report report, BandData rootBand, Map&lt;String, Object&gt; params) {
+        Book book = (Book) params.get("book");
+        String html = "&lt;html&gt;&lt;body&gt;";
+        html += "&lt;p&gt;Name: " + book.getName() + "&lt;/p&gt;";
+        html += "&lt;/body&gt;&lt;/html&gt;";
+        return html.getBytes();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the template editor check the <strong>Is custom</strong> checkbox, select <strong>Class</strong> in the <strong>Defined by</strong> field and set the fully qualified name of the Java class as the custom definition:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/class_defined_template.png" alt="class defined template">
+</div>
+<div class="title">Figure 10. Class-Defined Template</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="template_chart"><a class="anchor" href="#template_chart"></a>Chart Template</h3>
+<div class="paragraph">
+<p>Chart output type is available if the application project <a href="../index.html#installation" class="xref page">installed</a> the <a href="../../charts/index.html" class="xref page">Charts add-on</a>. Resulting chart is displayed in the <strong>Reports</strong> &#8594; <strong>Show Charts</strong> screen of your web application.</p>
+</div>
+<div class="paragraph">
+<p>Two types of diagrams are supported: Pie chart and Serial chart. Each type has its own set of parameters.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Pie chart</dt>
+<dd>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/chart_template_pie.png" alt="chart template pie">
+</div>
+<div class="title">Figure 11. Pie Chart Template</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Band name</strong> – a band providing data for the chart.</p>
+</li>
+<li>
+<p><strong>Title field</strong> – a band field for displaying segment names.</p>
+</li>
+<li>
+<p><strong>Value field</strong> – a band field for displaying segment values.</p>
+</li>
+<li>
+<p><strong>Color field</strong> – a band field for displaying segment colors. The color value should be specified in the <a href="https://en.wikipedia.org/wiki/Web_colors" target="_blank" rel="noopener">web</a> format. If not defined, colors will be chosen automatically.</p>
+</li>
+<li>
+<p><strong>Units</strong> – this text will be added to legend values.</p>
+</li>
+<li>
+<p><strong>Show legend</strong> - to show legend in the chart.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div id="json_configuration" class="paragraph">
+<p><strong>JSON configuration</strong>:</p>
+</div>
+<div class="paragraph">
+<p>In the addiontional field <strong>JSON configuration</strong>, you can set an JSON configuration for a chart. This configuration will override the automatically generated chart configuration.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-JSON hljs" data-lang="JSON">{
+    "theme": "dark",
+    "backgroundAlpha": 1,
+    "backgroundColor": "black",
+    "depth3D": 20,
+    "angle": 40,
+    "colors": [
+        "#0dffdc",
+        "#00c6eb",
+        "#0091ff",
+        "#0c4ae8",
+        "#1111fa"
+    ]
+}</code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Serial chart</dt>
+<dd>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/chart_template_serial.png" alt="chart template serial">
+</div>
+<div class="title">Figure 12. Serial Chart Template</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Band name</strong> – a band providing data for the chart.</p>
+</li>
+<li>
+<p><strong>Category field</strong> – a band field for displaying category names.</p>
+</li>
+<li>
+<p><strong>Category axis caption</strong> – a caption for the horizontal axis.</p>
+</li>
+<li>
+<p><strong>Value axis caption</strong> – a caption for the vertical axis.</p>
+</li>
+<li>
+<p><strong>Value axis units</strong> – this text will be added to values.</p>
+</li>
+<li>
+<p><strong>Show legend</strong> - to show legend in the chart.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>At least one row definition must be added for the serial chart:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Value field</strong> – a band field as the row values.</p>
+</li>
+<li>
+<p><strong>Type</strong> – row display type.</p>
+</li>
+<li>
+<p><strong>Color field</strong> – a band field for displaying segment colors. The color value should be specified in the <a href="https://en.wikipedia.org/wiki/Web_colors" target="_blank" rel="noopener">web</a> format. If not defined, colors will be chosen automatically.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The serial chart type also supports <a href="#json_configuration">JSON configuration</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="table_output"><a class="anchor" href="#table_output"></a>Table Formatter</h3>
+<div class="paragraph">
+<p>When you select table output in the wizard, the system automatically creates a template. When running the report, data will be displayed on a special screen of the application.</p>
+</div>
+<div class="paragraph">
+<p>You can also create a template manually for an existing report. To do this, select <strong>Table</strong> as the output type in the report template editor.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/report_table_define.png" alt="report table define">
+</div>
+<div class="title">Figure 13. Table Formatter</div>
+</div>
+<div class="paragraph">
+<p>In the <strong>Band</strong> column, add the names of the bands that you want to display in the resulting table. For each band, set a key-value map, where the key is the name of a dataset property, and the value is its localized caption.</p>
+</div>
+<div class="paragraph">
+<p>The Reports add-on will get the band data and draw a sortable table for each band from the first level of the hierarchy.</p>
+</div>
+<div class="paragraph">
+<p>The table displays columns for all properties for SQL and JPQL datasets. If the Entity/List of Entities dataset is used, the table will display only the columns for selected attributes.</p>
+</div>
+<div class="paragraph">
+<p>The resulting table is displayed in the <strong>Reports &#8594; Show Report Table</strong> screen of your web application. The <strong>Excel</strong> button enables you to download the displayed table as an Excel file.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/show_report_table.png" alt="show report table">
+</div>
+<div class="title">Figure 14. Show Report Table</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="pivotTable_output"><a class="anchor" href="#pivotTable_output"></a>Pivot Table Formatter</h3>
+<div class="paragraph">
+<p>Pivot Table output type is available if the application project <a href="../index.html#installation" class="xref page">installed</a> the <strong>Pivot Table</strong> add-on.</p>
+</div>
+<div class="paragraph">
+<p>Pivot Table output can only be used as an additional report output, that&#8217;s why it is not available in the report <a href="../getting-started.html" class="xref page">wizard</a>. To use the pivot table formatter, switch to the <strong>Templates</strong> tab in the report editor, click <strong>Create</strong> and select <strong>Pivot Table</strong> as the output type of the new template. After that, configure the template settings as described below.</p>
+</div>
+<div class="paragraph">
+<p>The resulting table is displayed in the <strong>Reports</strong> &#8594; <strong>Show Pivot Tables</strong> screen of your web application.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/pivot_template_result.png" alt="pivot template result">
+</div>
+<div class="title">Figure 15. Pivot Table Formatter</div>
+</div>
+<div class="paragraph">
+<p>The Reports add-on will get the band data and draw a table with drag-and-drop functionality, aggregation, and summary. Only one band can be used in the pivot report, nested bands are not supported.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Renderer options</dt>
+<dd>
+<p>This tab enables defining the collection of rendering functions that should be displayed in the list of available renderers in the UI and setting the default one.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/pivot_template_renderer.png" alt="pivot template renderer">
+</div>
+<div class="title">Figure 16. Renderer Options</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Aggregation options</dt>
+<dd>
+<p>The <strong>Aggregation options</strong> tab allows you to define the list of table aggregators. Aggregation attributes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Mode</strong> enables setting one of the predefined aggregation functions,</p>
+</li>
+<li>
+<p><strong>Caption</strong> is a localized value to be displayed in the UI,</p>
+</li>
+<li>
+<p><strong>Custom function</strong> – if not empty, the mode value is ignored in favor of the custom JavaScript code.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/pivot_template_aggregation.png" alt="pivot template aggregation">
+</div>
+<div class="title">Figure 17. Aggregation Options</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Properties options</dt>
+<dd>
+<p>The pivot table displays all properties for all types of <a href="data-structure.html" class="xref page">datasets</a>. To be processed correctly, the aliases of reference attributes in SQL, JPQL and Groovy datasets should not contain periods, for example, <code>select u.name as "userName"</code>. The selected properties should be set as the pivot table&#8217;s properties on the <strong>Properties options</strong> tab of the template editor:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Row</strong>, <strong>Column</strong> – a key-value map with the set of properties to be used in the pivot table columns and rows, where the key is the name of a dataset property and the value is its localized caption.</p>
+</li>
+<li>
+<p><strong>Aggregation</strong> – the properties that will be aggregated in each cell,</p>
+</li>
+<li>
+<p><strong>Derived property</strong> – can be used to add new attributes to the original data set, derived from the existing ones. This element is a key-value map, where the key is the name of a generated attribute, and the value is a JavaScript function that generates this attribute.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/pivot_template_properties.png" alt="pivot template properties">
+</div>
+<div class="title">Figure 18. Properties Options</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Custom options</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Filter function</strong> – JavaScript function that will be used for filtering.</p>
+</li>
+<li>
+<p><strong>Sorters function</strong> – JavaScript function that will be used for rows and columns captions sorting.</p>
+</li>
+<li>
+<p>Renderer options, depending on the selected renderer, enable setting a JavaScript function that will be used to customize the renderer&#8217;s appearance. Actually, only two renderer types can be customized:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>all kinds of <code>heatmap</code>: the cell colors can be set by the Javascript code,</p>
+</li>
+<li>
+<p>all kinds of charts: options can be used to set the chart’s size.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/pivot_template_custom_properties.png" alt="pivot template custom properties">
+</div>
+<div class="title">Figure 19. Custom Options</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exec_external_report"><a class="anchor" href="#exec_external_report"></a>Executing External Reports</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Reports add-on allows you to run a report of an external service, such as Microsoft Reporting Services, and download its output. To define an external report, follow these steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the template editor check the <strong>Is custom</strong> checkbox.</p>
+</li>
+<li>
+<p>Select <strong>URL</strong> in the <strong>Defined by</strong> field.</p>
+</li>
+<li>
+<p>In the <strong>Custom definition</strong> field, specify the URL of the external report. Report parameters can be passed to the URL as <code>${param Alias}</code>.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/exec_external_report.png" alt="exec external report">
+</div>
+<div class="title">Figure 20. Template editor</div>
+</div>
+</li>
+<li>
+<p>Configure <a href="../configuration.html#jmix.reports.curl-path" class="xref page">jmix.reports.curl-path</a> application property, set it the path to the command line <strong>curl</strong> tool.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="output_format_compliance"><a class="anchor" href="#output_format_compliance"></a>Output Format Compliance Matrix</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The table below shows the relationship between input template format and output format, for example, an input XLSX template can output XLSX, CSV, PDF, and HTML formats.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1111%;">
+<col style="width: 11.1112%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Template / Output</th>
+<th class="tableblock halign-left valign-top">XLSX</th>
+<th class="tableblock halign-left valign-top">XLS</th>
+<th class="tableblock halign-left valign-top">CSV</th>
+<th class="tableblock halign-left valign-top">DOCX</th>
+<th class="tableblock halign-left valign-top">DOC</th>
+<th class="tableblock halign-left valign-top">PDF</th>
+<th class="tableblock halign-left valign-top">HTML</th>
+<th class="tableblock halign-left valign-top">Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XLSX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XLS</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSV</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOCX</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ <sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ <sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOC</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+ <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chart</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JRXML</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><sup>1</sup> - LibreOffice must be <a href="../configuration.html#libre_office" class="xref page">installed</a> for output.</p>
+</div>
+<div class="paragraph">
+<p><sup>2</sup> - depending on the <a href="../configuration.html#jmix.reports.use-office-for-document-conversion" class="xref page">jmix.reports.use-office-for-document-conversion</a> application property, the output can be performed with or without LibreOffice. In the latter case, you need to provide required fonts, as described in <a href="#html_to_pdf">HTML to PDF</a>.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="data-structure.html">Report Data Structure</a></span>
+  <span class="next"><a href="parameter-and-format.html">Report Parameters and Field Formatters</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"
+></script>
+<script>
+  hljs.highlightAll();
+</script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../_/.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../_/../search-index.js"></script>
+  </body>
+</html>

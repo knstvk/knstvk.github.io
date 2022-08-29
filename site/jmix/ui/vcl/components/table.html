@@ -1,0 +1,3315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Table :: Jmix Documentation</title>
+    <link rel="canonical" href="https://docs.jmix.io/jmix/ui/vcl/components/table.html">
+    <link rel="prev" href="suggestion-field.html">
+    <link rel="next" href="tag-field.html">
+    <meta name="generator" content="Antora 3.0.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"><link rel="stylesheet" href="../../../../_/css/search.css">
+<link rel="stylesheet" href="../../../../_/css/overrides.css">
+<link rel="shortcut icon" href="https://www.jmix.io/dark-favicon.ico" />
+<link rel="icon" href="https://www.jmix.io/dark-favicon.ico" /> <script>uiRootPath = '../../../../_'</script>
+<!-- Google Tag Manager -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MH3DTWV');</script>
+-->
+<!-- End Google Tag Manager -->
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.jmix.io">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.8205 2.64855L7.33011 9.13895L9.71136 11.5202L16.2018 5.0298C17.7889 3.44265 20.3363 3.41231 21.9764 4.91232L23.9484 6.85824L26.323 4.48334L24.3643 2.52437C21.4098 -0.289033 16.7211 -0.251991 13.8205 2.64855Z"
+                        fill="#FC1264" />
+                    <path
+                        d="M12.1333 18.7388L19.2167 11.6554L26.2444 18.6831L19.161 25.7665L12.1333 18.7388ZM21.5592 28.1651L28.6426 21.0816L29.2917 20.4325C30.2576 19.4666 30.2576 17.9003 29.2917 16.934L28.6426 16.2849L21.6149 9.25723L20.9658 8.60847C19.9999 7.64221 18.4332 7.64221 17.4673 8.60847L16.8182 9.25723L9.73511 16.3407L9.086 16.9898C8.1201 17.9557 8.1201 19.522 9.086 20.4883L9.73511 21.1374L16.7628 28.1651L17.4116 28.8138C18.3778 29.7801 19.9441 29.7801 20.9101 28.8138L21.5592 28.1651Z"
+                        fill="white" />
+                    <path
+                        d="M22.143 32.4252C20.5555 34.0123 18.0081 34.0427 16.3677 32.5423L16.3663 32.5441L14.3748 30.5523L11.9886 32.9388L13.9801 34.9302C16.9342 37.744 21.6234 37.7073 24.5243 34.8064L31.0475 28.2832L28.6662 25.902L22.143 32.4252Z"
+                        fill="#25CDE3" />
+                    <path d="M31.0646 23.5038L31.8584 24.2972L31.0646 23.5038Z" fill="#25CDE3" />
+                    <path d="M4.93164 11.5374L6.12227 12.728L4.93164 11.5374Z" fill="#FC1264" />
+                    <path
+                        d="M5.4746 21.6751C3.88745 20.0883 3.85711 17.5405 5.35713 15.9005L7.32633 13.9316L4.93167 11.5373L2.96282 13.5062L2.96953 13.5129C0.15577 16.467 0.192812 21.1558 3.09335 24.0567L9.58376 30.5468L11.965 28.1655L5.4746 21.6751Z"
+                        fill="#FDB42B" />
+                    <path
+                        d="M35.274 13.3757L28.7836 6.88529L26.4023 9.26654L32.8927 15.7569C34.4799 17.3441 34.5102 19.8915 33.0102 21.5316L31.0647 23.5036L33.4392 25.8781L35.3982 23.9192C38.2116 20.965 38.1745 16.2762 35.274 13.3757Z"
+                        fill="#22D685" />
+                </svg>
+                &nbsp;
+                Jmix Documentation
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <input id="search-input" placeholder="Search docs" onfocusout="this.value=''"
+                        style="font-size: 16px;" />
+                </div>
+            </div>
+            <div class="header-btn">
+                <a class="header-link" href="https://www.jmix.io/" target="_blank">Go to Jmix website</a>
+            </div>
+        </div>
+    </nav>
+</header><div class="body">
+<div class="nav-container" data-component="jmix" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../intro.html">Jmix Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../whats-new/index.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../setup.html">Setup</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../tutorial/index.html">Tutorial</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/project-setup.html">1. Project Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/simple-crud.html">2. Simple CRUD</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/references.html">3. References And Unique Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/customize-ui.html">4. Customizing UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/data-in-ui.html">5. Working With Data in UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/entity-events.html">6. Using Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../tutorial/ui-from-scratch.html">7. Creating UI From Scratch</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../studio/index.html">Using Studio</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/install.html">Installation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/update.html">Update</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/subscription.html">Subscription</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../studio/project.html">Working with Project</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../studio/studio-features.html">Studio Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/welcome.html">Welcome Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/tool-window.html">Jmix Tool Window</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/project-properties.html">Project Properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/marketplace.html">Add-ons Marketplace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/entity-designer.html">Entity Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/screen-wizard.html">Screen Wizard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/screen-designer.html">Screen Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/fetch-plan-designer.html">Fetch Plan Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/menu-designer.html">Menu Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/role-designer.html">Role Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/bpmn-designer.html">BPMN Designer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/coding-assistance.html">Coding Assistance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/code-snippets.html">Code Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/reverse-engineering.html">Reverse Engineering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/hot-deploy.html">Hot Deploy</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../studio/plugin-settings.html">Jmix Plugin Settings</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../data-model/index.html">Data Model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/entities.html">Entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/data-stores.html">Data Stores</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/data-types.html">Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/enumerations.html">Enumerations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/soft-deletion.html">Soft Deletion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/metadata.html">Metadata</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/bean-validation.html">Bean Validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-model/db-migration.html">Database Migration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../data-access/index.html">Data Access</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/data-manager.html">Using DataManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/entity-manager.html">Using EntityManager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/entity-events.html">Entity Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/fetching.html">Fetching Data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/transactions.html">Transaction Management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../data-access/jpql-extensions.html">JPQL Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../index.html">User Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../screens.html">Screens and Fragments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../screens/screen-controllers.html">Screen Controllers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/annotations.html">Screen Controller Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/methods.html">Screen Controller Methods</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/screen-events.html">Screen Events</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../screens/screen-fragment-events.html">ScreenFragment Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/descriptors.html">XML Descriptors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/mixins.html">Screen Mixins</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/root-screens.html">Root Screens</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../screens/validation.html">Screen Validation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../opening-screens.html">Opening Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../using-fragments.html">Using Screen Fragments</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data-components.html">Data Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../data/data-containers.html">Data Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/instance-container.html">InstanceContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/collection-container.html">CollectionContainer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/property-containers.html">Property Containers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../data/key-value-containers.html">Key-Value Containers</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data/data-loaders.html">Data Loaders</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data/data-context.html">DataContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../data/data-examples.html">Using Data Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../vcl.html">Visual Components Library</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../components.html">Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="app-menu.html">AppMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="browser-frame.html">BrowserFrame</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="button.html">Button</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="caps-lock-indicator.html">CapsLockIndicator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="calendar.html">Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="check-box.html">CheckBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="check-box-group.html">CheckBoxGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="color-picker.html">ColorPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="combo-box.html">ComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="currency-field.html">CurrencyField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="data-grid.html">DataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="date-field.html">DateField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="date-picker.html">DatePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="entity-combo-box.html">EntityComboBox</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="entity-picker.html">EntityPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="entity-suggestion-field.html">EntitySuggestionField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="file-multi-upload-field.html">FileMultiUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="file-storage-upload-field.html">FileStorageUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="file-upload-field.html">FileUploadField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="filter.html">Filter</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="filter-components.html">Filter Components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="group-table.html">GroupTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="image.html">Image</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="label.html">Label</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="link.html">Link</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="link-button.html">LinkButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="masked-field.html">MaskedField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="multi-select-list.html">MultiSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="pagination.html">Pagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="password-field.html">PasswordField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="popup-button.html">PopupButton</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="popup-view.html">PopupView</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="progress-bar.html">ProgressBar</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="property-filter.html">PropertyFilter</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="radio-button-group.html">RadioButtonGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="related-entities.html">RelatedEntities</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="resizable-text-area.html">ResizableTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="rich-text-area.html">RichTextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="side-menu.html">SideMenu</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="simple-pagination.html">SimplePagination</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="single-select-list.html">SingleSelectList</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="slider.html">Slider</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="source-code-editor.html">SourceCodeEditor</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="suggestion-field.html">SuggestionField</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="table.html">Table</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tag-field.html">TagField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tag-picker.html">TagPicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-area.html">TextArea</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="text-field.html">TextField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="time-field.html">TimeField</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tree.html">Tree</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tree-data-grid.html">TreeDataGrid</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="tree-table.html">TreeTable</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="twin-column.html">TwinColumn</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="value-picker.html">ValuePicker</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="values-picker.html">ValuesPicker</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../containers.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/accordion.html">Accordion</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/box-layout.html">BoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/buttons-panel.html">ButtonsPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/css-layout.html">CssLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/drawer.html">Drawer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/grid-layout.html">GridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/group-box-layout.html">GroupBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/html-box-layout.html">HtmlBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/responsive-grid-layout.html">ResponsiveGridLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/scroll-box-layout.html">ScrollBoxLayout</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/split-panel.html">SplitPanel</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../containers/tab-sheet.html">TabSheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../miscellaneous.html">Miscellaneous</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../miscellaneous/validator.html">Validator</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../miscellaneous/formatter.html">Formatter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../api.html">Components API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../xml.html">Components XML Attributes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../facets.html">Facets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/clipboard-trigger.html">ClipboardTrigger</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/data-load-coordinator.html">DataLoadCoordinator</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/dynamic-attributes-facet.html">DynamicAttributes Facet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/editor-screen-facet.html">EditorScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/input-dialog-facet.html">InputDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/lookup-screen-facet.html">LookupScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/message-dialog-facet.html">MessageDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/notification-facet.html">NotificationFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/option-dialog-facet.html">OptionDialogFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/presentations-facet.html">PresentationsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/screen-facet.html">ScreenFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/screen-settings-facet.html">ScreenSettingsFacet</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../facets/timer.html">Timer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../actions.html">Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../actions/declarative-actions.html">Declarative Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../actions/standard-actions.html">Standard Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/add-action.html">AddAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/bulk-edit-action.html">BulkEditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/create-action.html">CreateAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/edit-action.html">EditAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-clear-action.html">EntityClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-lookup-action.html">EntityLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-open-action.html">EntityOpenAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/entity-open-composition-action.html">EntityOpenCompositionAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/exclude-action.html">ExcludeAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/refresh-action.html">RefreshAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/related-action.html">RelatedAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/remove-action.html">RemoveAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/tag-lookup-action.html">TagLookupAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/value-clear-action.html">ValueClearAction</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../actions/standard-actions/view-action.html">ViewAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../actions/custom-action-type.html">Custom Action Types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../actions/base-action.html">BaseAction</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../dialogs.html">Dialogs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../background-tasks.html">Background Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../notifications.html">Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../exception-handlers.html">Exception Handlers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../exception-handlers/unique-constraint-violation-exception.html">Handling Unique Constraint Violation Exceptions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../themes.html">Themes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../themes/theme_usage.html">Using Existing Themes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../themes/custom_theme.html">Creating a Custom Theme</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../themes/theme_addon.html">Creating and Using a Theme Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../icons.html">Icons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../icons/icon-sets.html">Icon Sets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../icons/icon-provider.html">Using Icons from Other Font Libraries</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../menu-config.html">MenuConfig</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../url-history-navigation.html">URL History and Navigation</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/handling-url-changes.html">Handling URL Changes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/routing-api.html">Routing API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/url-navigation-api-usage.html">Using URL History and Navigation API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../url-history-navigation/url-routes-generator.html">URL Routes Generator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../anonymous-access-to-screens.html">Anonymous Access to Screens</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../pluggable-component-factories.html">Pluggable Component Factories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../custom-components.html">Creating Custom Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/composite-components.html">Composite Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/js-component.html">Generic JavaScriptComponent</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/custom-widget-sets.html">Creating GWT Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../custom-components/widgetset-add-on.html">Creating and Using Widgets Add-On</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../app-properties.html">UI Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../rest/index.html">Generic REST</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/getting-started.html">Getting Started with REST</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../rest/entities-api.html">Entities API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/load-entities.html">Load Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/create-entities.html">Create Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/update-entities.html">Update Entities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/entities-api/delete-entities.html">Delete Entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/files-api.html">Files API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/messages-api.html">Messages API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/metadata-api.html">Metadata API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/user-session-api.html">User Session API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/business-logic.html">Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../rest/security.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../rest/security/authentication.html">Authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/api-docs.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../rest/app-properties.html">REST Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../localization/index.html">Localization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../localization/message-bundles.html">Message Bundles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../localization/framework-translations.html">Framework Translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../files/index.html">Managing Files</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/files-in-database.html">Storing Files in Database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/file-storage.html">Using File Storage</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/uploading-files.html">Uploading Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../files/downloading-files.html">Downloading and Displaying Files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../security/index.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/users.html">Users</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/resource-roles.html">Resource Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/row-level-roles.html">Row-level Roles</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../security/authorization.html">Authorization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../features/index.html">Other Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../features/sequences.html">Sequence Generation</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../modularity/index.html">Modularity and Extension</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../modularity/creating-add-ons.html">Creating Add-ons</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../modularity/extension.html">Extending Functionality</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../deployment/index.html">Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/k8s.html">Kubernetes Cluster</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/aws-beanstalk.html">Amazon Web Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/azure.html">Azure App Services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../deployment/google-cloud-appengine.html">Google Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../add-ons.html">Add-ons</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../appsettings/index.html">Application Settings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../audit/index.html">Audit</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../audit/entity-log.html">Entity Log</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/index.html">BPM</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/getting-started.html">Getting Started with BPM</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/admin-screens.html">Administration Screens</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/modeler.html">Modeler</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/proc-definitions.html">Process Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/proc-instances.html">Process Instances</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/user-groups.html">User Groups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/user-tasks.html">User Tasks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/forms.html">Process Forms</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/input-dialog.html">Input Dialog</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/jmix-screen.html">Jmix Screen</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/custom.html">Custom Form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../bpm/tasks.html">Tasks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/user-task.html">User Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/service-task.html">Service Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/script-task.html">Script Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/data-task.html">Entity Data Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/email-task.html">Email Sending Task</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../bpm/sub-process-call-activity.html">Sub-Processes and Call Activities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/listeners.html">Event Listeners</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/dmn.html">DMN</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/instance-migration.html">Process Instances Migration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/auto-deployment.html">Automatic Models Deployment</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../bpm/api.html">BPM API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../business-calendar/index.html">Business Calendars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../business-calendar/creating.html">Creating Business Calendar</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../business-calendar/api.html">Business Calendars API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../charts/index.html">Charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../charts/types.html">Charts Types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/angular-gauge-chart.html">AngularGaugeChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/funnel-chart.html">FunnelChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/gantt-chart.html">GanttChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/pie-chart.html">PieChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/radar-chart.html">RadarChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/serial-chart.html">SerialChart</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/stock-chart-group.html">StockChartGroup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../charts/types/xy-chart.html">XYChart</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/config.html">Configuring Charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/export.html">Charts Export</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/data.html">Connecting Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/events.html">Events</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../charts/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../dashboards/index.html">Dashboards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/user-interface.html">Administration UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/adding-business-logic.html">Adding Business Logic</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/using-dashboard-in-screen.html">Using Dashboard in Screen</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dashboards/dashboard-chart-addon.html">Dashboard Chart Add-on</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../data-tools/index.html">Data Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../data-tools/entity-inspector.html">Entity Inspector</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../data-tools/entity-info-action.html">Entity Information Action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../dyn-attr/index.html">Dynamic Attributes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dyn-attr/dynattr-managing.html">Managing Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dyn-attr/dynattr-view.html">Displaying Dynamic Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../dyn-attr/dynattr-api.html">Dynamic Attributes API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../email/index.html">Email Sending</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/getting-started.html">Getting Started with Email</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/api.html">Email Sending API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email/email-history.html">Email History</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../email-template/index.html">Email Templates</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email-template/getting-started.html">Getting Started with Email Templates</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email-template/usage.html">Usage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../email-template/api.html">Email Templates API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../grapes-js/index.html">GrapesJS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grapes-js/components.html">GrapesJS UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grapes-js/html-editor-ui.html">HTML Editor UI</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../grid-export/index.html">Grid Export Actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grid-export/exporters.html">Table Exporters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grid-export/actions.html">Export Actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../grid-export/limitations.html">Limitations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../ldap/index.html">LDAP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/getting-started.html">Getting Started with LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/obtaining-user-authorities.html">Obtaining User Authorities</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/in-memory-user-management.html">In-memory User Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/usage-with-active-directory.html">Usage with Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/global-user-synchronization.html">Global User Synchronization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../ldap/properties.html">LDAP Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../maps/index.html">Maps</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/getting-started.html">Getting Started with Maps</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/maps-ui.html">Maps UI Component</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../maps/layers.html">Layers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/raster-layers.html">Raster Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/vector-layers.html">Vector Layers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/heatmap-layer.html">Heatmap Layer</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../maps/canvas-layer.html">Canvas Layer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/additional-options.html">Additional Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/drawing-geometry.html">Drawing Geometry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../maps/map-services.html">Map Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../multitenancy/index.html">Multitenancy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../notifications/index.html">Notifications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../notifications/configuration.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../notifications/creating-notifications.html">Creating Notifications</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../notifications/viewing-notifications.html">Viewing Notifications</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../pivot-table/index.html">Pivot Table</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/elements.html">Elements</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/export.html">Exporting PivotTable Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/show-pivot-action.html">Using ShowPivotAction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../pivot-table/examples.html">Examples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../quartz/index.html">Quartz</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../reports/index.html">Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/getting-started.html">Getting Started with Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../reports/create-reports.html">Creating Reports</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/data-structure.html">Report Data Structure</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/templates.html">Report Template</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/parameter-and-format.html">Report Parameters and Field Formatters</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/permissions.html">Report Access Rights</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../../reports/creation/localization.html">Report Name Localization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/run-report.html">Running Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/exec-history.html">Report Execution History</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/sample-reports.html">Sample Reports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/rest-api.html">REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../reports/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../search/index.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/getting-started.html">Getting Started with Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/index-definitions.html">Index Definitions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/indexing-queue.html">Indexing Queue</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/search-in-ui.html">Using Search in UI</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/config-options.html">Search Configuration Options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/search-api.html">Search API and Internals</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../search/search-properties.html">Search Properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../../webdav/index.html">WebDAV</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/ui-components.html">UI Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/services.html">Services</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../../webdav/configuration.html">Configuration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Appendices</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../app-properties.html">Application Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text"><a href="https://docs.jmix.io/api/1.3" target="_blank" rel="noopener">Java API Reference</a></span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../quartz-setup.html">Quartz Job Scheduler Setup</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../publish-add-on.html">Publishing an Add-on</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../cuba/index.html">Migration from CUBA Platform</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Jmix Documentation</span>
+    <span class="version">1.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../../intro.html">Jmix Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../intro.html">1.3</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../intro.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../intro.html">Jmix Documentation</a></li>
+    <li><a href="../../index.html">User Interface</a></li>
+    <li><a href="../../vcl.html">Visual Components Library</a></li>
+    <li><a href="../components.html">Components</a></li>
+    <li><a href="table.html">Table</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/ui/pages/vcl/components/table.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Table</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="jmix-ui-live-demo-container">
+    <a href="https://demo.jmix.io/sampler/#main/sample?id=table-simple" class="live-demo-btn" target="_blank">LIVE DEMO</a>
+</div>
+<div class="paragraph">
+<p>The <code>Table</code> component presents information in a table view, sorts data, manages table columns and headers, and invokes actions for selected rows.</p>
+</div>
+<div class="paragraph">
+<p>Component’s XML-name: <code>table</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="basics"><a class="anchor" href="#basics"></a>Basics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A typical table is shown below:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-anatomy.png" alt="table anatomy">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Header row</p>
+</li>
+<li>
+<p>Rows</p>
+</li>
+<li>
+<p>Column control button</p>
+</li>
+<li>
+<p>Pagination</p>
+</li>
+<li>
+<p>Sort button</p>
+</li>
+<li>
+<p>Buttons panel</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>An example of table declaration in the XML screen descriptor is shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    &lt;collection id="customersDc" class="ui.ex1.entity.Customer"&gt;
+        &lt;fetchPlan extends="_base"/&gt;
+        &lt;loader id="customersDl"&gt;
+            &lt;query&gt;
+                &lt;![CDATA[select e from uiex1_Customer e]]&gt;
+            &lt;/query&gt;
+        &lt;/loader&gt;
+    &lt;/collection&gt;
+&lt;/data&gt;
+&lt;layout&gt;
+    &lt;table id="customersTable"
+           width="100%"
+           dataContainer="customersDc"&gt;
+        &lt;actions&gt;
+            &lt;action id="create" type="create"/&gt;
+            &lt;action id="edit" type="edit"/&gt;
+            &lt;action id="remove" type="remove"/&gt;
+            &lt;action id="sendByEmail" type="sendByEmail"&gt;
+                &lt;properties&gt;
+                    &lt;property name="recipientAddress" value="peter@example.com"/&gt;
+                &lt;/properties&gt;
+            &lt;/action&gt;
+        &lt;/actions&gt;
+        &lt;columns&gt;
+            &lt;column id="level"/&gt;
+            &lt;column id="age"/&gt;
+            &lt;column id="hobby"/&gt;
+            &lt;column id="firstName"/&gt;
+            &lt;column id="lastName"/&gt;
+            &lt;column id="rewardPoints"/&gt;
+        &lt;/columns&gt;
+        &lt;simplePagination/&gt;
+        &lt;buttonsPanel id="buttonsPanel" alwaysVisible="true"&gt;
+            &lt;button id="createBtn" action="customersTable.create"/&gt;
+            &lt;button id="editBtn" action="customersTable.edit"/&gt;
+            &lt;button id="removeBtn" action="customersTable.remove"/&gt;
+            &lt;button id="sendBtn" action="customersTable.sendByEmail"/&gt;
+        &lt;/buttonsPanel&gt;
+    &lt;/table&gt;
+&lt;/layout&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the example, there is a <a href="../../data/collection-container.html" class="xref page">collection container</a> for the <code>Customer</code> entity. The table is bound to the container using the <code>dataContainer</code> attribute, while its <code>columns</code> element defines which entity attributes are shown in the table columns.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="data-binding"><a class="anchor" href="#data-binding"></a>Data Binding</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="declarative-binding"><a class="anchor" href="#declarative-binding"></a>Declarative Binding</h3>
+<div class="paragraph">
+<p>Usually, you bind the <code>table</code> component to data declaratively in the screen XML descriptor using the <code>dataContainer</code> attribute. It should refer to a <a href="../../data/collection-container.html" class="xref page">collection container</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-key-value-containers"><a class="anchor" href="#using-key-value-containers"></a>Using Key-Value Containers</h3>
+<div class="paragraph">
+<p>You can bind the table to a <a href="../../data/key-value-containers.html" class="xref page">key-value container</a> to display the results of a query that returns scalar values and/or aggregates. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    &lt;keyValueCollection id="salesDc"&gt;
+        &lt;loader id="salesLoader"&gt;
+            &lt;query&gt;
+                &lt;![CDATA[select o.customer, o.customer.firstName,
+                sum(o.amount) from uiex1_Order o group by o.customer]]&gt;
+            &lt;/query&gt;
+        &lt;/loader&gt;
+        &lt;properties&gt;
+            &lt;property class="ui.ex1.entity.Customer" name="customerEntity"/&gt;
+            &lt;property datatype="string" name="customerName"/&gt;
+            &lt;property datatype="decimal" name="sum"/&gt;
+        &lt;/properties&gt;
+    &lt;/keyValueCollection&gt;
+&lt;/data&gt;
+&lt;layout&gt;
+    &lt;table id="keyValueTable" width="100%" dataContainer="salesDc"&gt;
+        &lt;columns&gt;
+            &lt;column id="customerName" caption="Customer"/&gt;
+            &lt;column id="sum" caption="Summary amount" align="RIGHT"/&gt;
+        &lt;/columns&gt;
+    &lt;/table&gt;
+&lt;/layout&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="meta-class"><a class="anchor" href="#meta-class"></a>Programmatic Binding</h3>
+<div class="paragraph">
+<p>If you need to define a data container programmatically in the screen controller, set the <a href="../xml.html#meta-class" class="xref page">metaClass</a> attribute instead of <a href="../xml.html#data-container" class="xref page">dataContainer</a> in XML descriptor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="customersTable1" width="100%" metaClass="uiex1_Customer"&gt;
+    &lt;columns&gt;
+        &lt;column id="firstName"/&gt;
+        &lt;column id="lastName"/&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the screen controller, use <code>ContainerTableItems</code> class to bind the table to a data container:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">customersTable1.setItems(new ContainerTableItems&lt;&gt;(customersDc));</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="columns"><a class="anchor" href="#columns"></a>Columns</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The set of columns for a table is defined in the <code>columns</code> element. If it is not specified, columns will be automatically determined by the <a href="../../../data-access/fetching.html#fetch-plan" class="xref page">fetch plan</a> defined in <code>dataContainer</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>columns</code> element can have the following attributes:</p>
+</div>
+<div id="include-all" class="ulist">
+<ul>
+<li>
+<p><code>includeAll</code> includes all the attributes from <code>fetchPlan</code> that is defined in <code>dataContainer</code>.</p>
+<div class="paragraph">
+<p>In the example below, we will show all the attributes from the fetch plan used in <code>customersDc</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="customersTableIncludeAll"
+       width="100%"
+       dataContainer="customersDc"&gt;
+    &lt;columns includeAll="true"/&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the entity fetch plan contains a reference attribute, this attribute will be displayed according to its <a href="../../../data-model/entities.html#instance-name" class="xref page">instance name</a>. If you want to show a specific nested attribute, define it in the fetch plan as well as in the <code>column</code> element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    &lt;collection id="customersDc1" class="ui.ex1.entity.Customer"&gt;
+        &lt;fetchPlan extends="_base"&gt;
+            &lt;property name="city" fetchPlan="_base"&gt;
+                &lt;property name="country" fetchPlan="_base"/&gt;
+            &lt;/property&gt;
+        &lt;/fetchPlan&gt;
+        &lt;loader id="customersDl1"&gt;
+            &lt;query&gt;
+                &lt;![CDATA[select e from uiex1_Customer e]]&gt;
+            &lt;/query&gt;
+        &lt;/loader&gt;
+    &lt;/collection&gt;
+&lt;/data&gt;
+&lt;layout&gt;
+    &lt;table id="tableIncludeAllReference"
+           width="100%"
+           dataContainer="customersDc1"&gt;
+        &lt;columns includeAll="true"&gt;
+            &lt;column id="city.country.name"/&gt;
+        &lt;/columns&gt;
+    &lt;/table&gt;
+&lt;/layout&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="exclude" class="ulist">
+<ul>
+<li>
+<p><code>exclude</code> contains a comma-separated list of attributes that should not be loaded to the table.</p>
+<div class="paragraph">
+<p>In the example below, we will show all the attributes excluding <code>id</code>, <code>maritalStatus</code>, and <code>email</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tableExclude"
+       width="100%"
+       dataContainer="customersDc1"&gt;
+    &lt;columns includeAll="true"
+             exclude="id,maritalStatus,email"/&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="column"><a class="anchor" href="#column"></a>Column</h3>
+<div class="paragraph">
+<p>Each column is described in a nested <code>column</code> element.</p>
+</div>
+<div id="column-id" class="paragraph">
+<p><code>id</code> is a mandatory attribute that specifies the name of an entity attribute displayed in the column. It can be either an attribute of the entity from the data container or a linked entity (use dot notation to traverse the object graph). For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;columns&gt;
+    &lt;column id="firstName"/&gt;
+    &lt;column id="lastName"/&gt;
+    &lt;column id="city.name"/&gt;
+    &lt;column id="city.country.name"/&gt;
+&lt;/columns&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-alignment"><a class="anchor" href="#column-alignment"></a>Column Alignment</h3>
+<div class="paragraph">
+<p>Three different column alignments are supported: <code>LEFT</code> (default), <code>CENTER</code>, and <code>RIGHT</code>.</p>
+</div>
+<div class="paragraph">
+<p>Usually, it makes sense to right-align numbers and left-align all the other content. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="keyValueTable" width="100%" dataContainer="salesDc"&gt;
+    &lt;columns&gt;
+        &lt;column id="customerName" caption="Customer"/&gt;
+        &lt;column id="sum" caption="Summary amount" align="RIGHT"/&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-column-align.png" alt="table column align">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-caption-options"><a class="anchor" href="#column-caption-options"></a>Column Caption</h3>
+<div id="column-caption" class="paragraph">
+<p><code>caption</code> - an optional attribute containing the column caption. If not specified, a <a href="../../../localization/message-bundles.html#localizing-data-model" class="xref page">localized name</a> of the entity attribute is used.</p>
+</div>
+<div id="column-caption-as-html" class="paragraph">
+<p><code>captionAsHtml</code> - an optional attribute defining whether HTML tags can be used in the column caption. The default value is <code>false</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;column id="firstName"
+        captionAsHtml="true"
+        caption="msg://firstName"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;column id="lastName"/&gt; <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Column&#8217;s caption has HTML tags:
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">ui.ex1.screen.component.table/firstName=&lt;em&gt;First Name&lt;/em&gt;</code></pre>
+</div>
+</div></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>A column with the default caption</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-captions.png" alt="table captions">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-visibility"><a class="anchor" href="#column-visibility"></a>Column Visibility</h3>
+<div id="column-collapsed" class="paragraph">
+<p><code>collapsed</code> - an optional attribute; hides the column by default when set to <code>true</code>. Users can control the column’s visibility using the menu available via the <span class="image"><img src="../../_images/vcl/components/table-column-control-button.png" alt="table column control button"></span> button in the top right part of the table when the table’s <code>columnControlVisible</code> attribute is not <code>false</code>. By default, <code>collapsed</code> is <code>false</code>.</p>
+</div>
+<div id="column-visible" class="paragraph">
+<p>The <code>visible</code> attribute sets the visibility of the column. Possible values - <code>true</code>, <code>false</code>. By default, all columns are visible.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s consider the difference between the <code>collapsed</code> and <code>visible</code> attributes in the following example.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;columns&gt;
+    &lt;column id="firstName"
+            collapsed="true"/&gt;
+    &lt;column id="lastName"
+            visible="false"/&gt;
+    &lt;column id="city"/&gt;
+&lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-columns-visibility.gif" alt="table columns visibility">
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see, the <code>firstName</code> column is collapsed by default, but users can expand it from the drop-down menu of the <span class="image"><img src="../../_images/vcl/components/table-column-control-button.png" alt="table column control button"></span> button.</p>
+</div>
+<div class="paragraph">
+<p>At the same time, the <code>lastName</code> column cannot be made visible using user actions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-width"><a class="anchor" href="#column-width"></a>Column Width</h3>
+<div class="paragraph">
+<p><code>width</code> - an optional attribute, controlling default column width. It may contain only numeric values in pixels.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;columns&gt;
+    &lt;column id="firstName" width="100"/&gt;
+    &lt;column id="lastName" width="150"/&gt;
+    &lt;column id="city" width="100"/&gt;
+&lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-column-width.png" alt="table column width">
+</div>
+</div>
+<div id="column-expand-ratio" class="paragraph">
+<p><code>expandRatio</code> - an optional attribute that specifies the expand ratio for each column. The ratio must be greater than or equal to 0. If some value is set for at least one column, all implicit values are ignored, and only explicitly assigned values are considered. If you set <code>width</code> and <code>expandRatio</code> attributes simultaneously, it will cause an error in the application.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;columns&gt;
+    &lt;column id="firstName" expandRatio="1"/&gt;
+    &lt;column id="lastName" expandRatio="1.5"/&gt;
+    &lt;column id="city" expandRatio="1"/&gt;
+&lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-column-expand-ratio.png" alt="table column expand ratio">
+</div>
+</div>
+<div class="paragraph">
+<p>Users can resize table columns:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-columns-resize.gif" alt="table columns resize">
+</div>
+</div>
+<div class="paragraph">
+<p>The column width remains fixed only when the <code>enable</code> attribute is set to <code>false</code> for the entire table.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reordering-allowed"><a class="anchor" href="#reordering-allowed"></a>Column Reordering</h3>
+<div class="paragraph">
+<p><code>Table</code> provides the drag-and-drop functionality allowing users to change the order in which columns are displayed within the table.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-columns-reordering.gif" alt="table columns reordering">
+</div>
+</div>
+<div class="paragraph">
+<p>The column reordering functionality is enabled by default. To disable it, set the <code>reorderingAllowed</code> attribute to <code>false</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="link-to-edit-screen"><a class="anchor" href="#link-to-edit-screen"></a>Link To Edit Screen</h3>
+<div id="column-link" class="paragraph">
+<p>If the <code>link</code> attribute is set to <code>true</code>, the column&#8217;s content is displayed as a link to an entity editor screen. This approach may be used to simplify navigation: the users will be able to open entity editors by a single click on some key attribute, for example, on the customer&#8217;s name.</p>
+</div>
+<div id="column-link-screen-id" class="paragraph">
+<p>The <code>linkScreenId</code> attribute contains the identifier of the screen that is must be opened by clicking the link. If it&#8217;s not set, the framework opens a screen with <code>{entity_name}.edit</code> id.</p>
+</div>
+<div id="column-link-screen-open-mode" class="paragraph">
+<p>The <code>linkScreenOpenMode</code> attribute sets the screen opening mode (<code>THIS_TAB</code>, <code>NEW_TAB</code>, <code>NEW_WINDOW</code>, or <code>DIALOG</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;column id="firstName"
+        link="true"
+        linkScreenOpenMode="DIALOG"/&gt;
+&lt;column id="lastName"/&gt;
+&lt;column id="city"/&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-columns-link.gif" alt="table columns link">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-max-text-length"><a class="anchor" href="#column-max-text-length"></a>Maximum Text Length</h3>
+<div class="paragraph">
+<p><code>maxTextLength</code> - an optional attribute, allowing to limit the number of characters in a cell. Extra characters are replaced by an ellipsis. To see the entire record, users need to click on its visible part.</p>
+</div>
+<div class="paragraph">
+<p>If the difference between the actual and the maximum allowed number of characters does not exceed the 10 character threshold, the "extra" characters remain visible.</p>
+</div>
+<div class="paragraph">
+<p>In the example below, some cells contain values longer than <code>maxTextLength+10</code> and become trimmed.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;columns&gt;
+    &lt;column id="firstName"/&gt;
+    &lt;column id="lastName"/&gt;
+    &lt;column id="email" maxTextLength="15"/&gt;
+    &lt;column id="city"/&gt;
+&lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-max-text-length.png" alt="table max text length">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-formatter"><a class="anchor" href="#column-formatter"></a>Text Formatting</h3>
+<div class="paragraph">
+<p>The <code>column</code> element may contain a nested <a href="../miscellaneous/formatter.html" class="xref page">formatter</a> element that allows you to represent the attribute value in a format different from the standard for this <code>Datatype</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tableColumnFormatter"
+       width="100%"
+       dataContainer="ordersDc"&gt;
+    &lt;columns&gt;
+        &lt;column id="customer"/&gt;
+        &lt;column id="amount"/&gt;
+        &lt;column id="deliveryTime"&gt;
+            &lt;formatter&gt;
+                &lt;date format="h:mm a"/&gt;
+            &lt;/formatter&gt;
+        &lt;/column&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="caption-property"><a class="anchor" href="#caption-property"></a>CaptionProperty</h3>
+<div class="paragraph">
+<p>The <code>captionProperty</code> attribute can be used to show in the column the value of an entity attribute different from the one specified by <code>id</code>. For example, if you have a reference to the <code>City</code> entity with the <code>name</code> and <code>id</code> attributes, you can define the following column:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;column id="city"
+        caption="City ID"
+        captionProperty="id"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The column will display the city <code>id</code>, but the sorting of the column will be done by the city <code>name</code>.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-captions.png" alt="table captions">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="multi-line-cells"><a class="anchor" href="#multi-line-cells"></a>Multi-Line Cells</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Setting the <code>multiLineCells</code> table attribute to <code>true</code> enables a multi-line display for cells containing several lines of text. In this mode, the web browser will load all the rows of the current table page at once instead of lazy-loading the visible part of the table. It is required for proper scrolling and may affect performance. The default value is <code>false</code>.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-multi-line-cell.png" alt="table multi line cell">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="selection"><a class="anchor" href="#selection"></a>Selection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>Table</code> component allows users to select single or multiple rows.</p>
+</div>
+<div class="sect2">
+<h3 id="single-selection"><a class="anchor" href="#single-selection"></a>Single Selection Mode</h3>
+<div class="paragraph">
+<p>In a single selection mode, the user can select exactly one row. Single selection mode is enabled by default.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="multiselect"><a class="anchor" href="#multiselect"></a>Multi Selection Mode</h3>
+<div class="paragraph">
+<p>The <code>multiselect</code> attribute enables setting multiple selection mode for table rows. If <code>multiselect</code> is <code>true</code>, users can select multiple rows in the table using a keyboard or mouse and holding <strong>Ctrl</strong> or <strong>Shift</strong> keys. By default, multiple selection mode is switched off.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="show-selection"><a class="anchor" href="#show-selection"></a>Show Selection</h3>
+<div class="paragraph">
+<p>If the <code>showSelection</code> attribute is set to <code>false</code>, a current row is not highlighted.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="text-selection-enabled"><a class="anchor" href="#text-selection-enabled"></a>Text Selection</h3>
+<div class="paragraph">
+<p>The <code>textSelectionEnabled</code> attribute defines if text selection is enabled in table cells. The default value is <code>false</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_placeholder"><a class="anchor" href="#_placeholder"></a>Placeholder</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The table allows you to set a placeholder message and/or link, which are shown when the data container is empty or not set at all.</p>
+</div>
+<div id="empty-state-message" class="paragraph">
+<p>The placeholder message is defined using the <code>emptyStateMessage</code> attribute. It should contain information about why the table is empty.</p>
+</div>
+<div id="empty-state-link-message" class="paragraph">
+<p>The placeholder link is defined using the <code>emptyStateLinkMessage</code> attribute. It should describe the action that needs to be performed to fill the table.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tablePlaceholder"
+       width="100%"
+       height="200"
+       metaClass="uiex1_Customer"
+       emptyStateMessage="No customers added."
+       emptyStateLinkMessage="Add customer"&gt;
+    &lt;columns&gt;
+        &lt;column id="firstName"/&gt;
+        &lt;column id="lastName"/&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-placeholder.png" alt="table placeholder">
+</div>
+</div>
+<div id="empty-state-click-event" class="paragraph">
+<p>Generate <code>emptyStateLinkClickHandler</code> to handle clicks on the link:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "tablePlaceholder", subject = "emptyStateLinkClickHandler")
+private void tablePlaceholderEmptyStateLinkClickHandler(
+        Table.EmptyStateClickEvent&lt;Customer&gt; emptyStateClickEvent) {
+    screenBuilders.editor(emptyStateClickEvent.getSource())
+            .newEntity()
+            .show();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To register the click handler programmatically, use the <code>setEmptyStateLinkClickHandler()</code> component method.</p>
+</div>
+<div class="paragraph">
+<p>Both <code>emptyStateMessage</code> and <code>emptyStateLinkMessage</code> can load messages from the <a href="../../../localization/message-bundles.html#using-messages-in-ui" class="xref page">message bundle</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="column-header-visible"><a class="anchor" href="#column-header-visible"></a>Header Visibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>columnHeaderVisible</code> attribute sets whether the table header is displayed. By default, the header is visible.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="column-control-visible"><a class="anchor" href="#column-control-visible"></a>Column Control Visibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Users can select which columns are visible using the column control button <span class="image"><img src="../../_images/vcl/components/table-column-control-button.png" alt="table column control button"></span> in the right part of the table header.</p>
+</div>
+<div class="paragraph">
+<p>Currently displayed columns are marked in the menu. There are additional menu items:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Select all</code> - shows all table columns;</p>
+</li>
+<li>
+<p><code>Deselect all</code> - hides all columns that are possible except the first one. The first column always remains visible to display the table correctly.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-column-control-using.png" alt="table column control using">
+</div>
+</div>
+<div class="paragraph">
+<p>If the <code>columnControlVisible</code> attribute is set to <code>false</code>, users cannot hide columns.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="aggregatable"><a class="anchor" href="#aggregatable"></a>Aggregating</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>Table</code> supports aggregation of values in rows.</p>
+</div>
+<div class="paragraph">
+<p>The following operations are supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SUM</code> - calculate the sum;</p>
+</li>
+<li>
+<p><code>AVG</code> - calculate the average value;</p>
+</li>
+<li>
+<p><code>COUNT</code> - calculate the total number;</p>
+</li>
+<li>
+<p><code>MIN</code> - find the minimum value;</p>
+</li>
+<li>
+<p><code>MAX</code> - find the maximum value.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To enable aggregation for a table, you should:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set the <code>aggregatable</code> attribute to <code>true</code>.</p>
+</li>
+<li>
+<p>Set the <code>aggregation</code> element for aggregated table columns.</p>
+</li>
+<li>
+<p>Set the <code>type</code> attribute for the <code>aggregation</code> element, which defines the aggregation function.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The aggregated values are shown in an additional row.</p>
+</div>
+<div id="aggregation-style" class="paragraph">
+<p>The <code>aggregationStyle</code> attribute allows you to specify the location of the aggregation row: <code>TOP</code> or <code>BOTTOM</code>. <code>TOP</code> is used by default.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>By default, only numeric data types are supported in aggregated columns, such as <code>Integer</code>, <code>Double</code>, <code>Long</code>, and <code>BigDecimal</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>An example of an aggregated table description:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tableAggregation"
+       width="100%"
+       aggregatable="true"
+       dataContainer="customersDc1"&gt;
+    &lt;columns&gt;
+        &lt;column id="firstName"/&gt;
+        &lt;column id="lastName"/&gt;
+        &lt;column id="rewardPoints"/&gt;
+        &lt;column id="age"&gt;
+            &lt;aggregation type="AVG"/&gt;
+        &lt;/column&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-aggregation.png" alt="table aggregation">
+</div>
+</div>
+<div id="aggregation-value-description" class="paragraph">
+<p>The <code>valueDescription</code> attribute defines a hint displayed in a popup when a user hovers the mouse cursor on the aggregated value. For the operations listed above (<code>SUM</code>, <code>AVG</code>, <code>COUNT</code>, <code>MIN</code>, <code>MAX</code>), popup hints are already available by default.</p>
+</div>
+<div id="aggregation-editable" class="paragraph">
+<p>The <code>aggregation</code> element can contain the <code>editable</code> attribute. Setting the attribute to <code>true</code> in conjunction with using the <a href="#aggregation-distribution-provider">AggregationDistributionProvider</a> allows developers to implement algorithms to distribute data between the rows of the table.</p>
+</div>
+<div id="aggregation-formatter" class="paragraph">
+<p>You can specify <a href="../miscellaneous/formatter.html" class="xref page">formatter</a> to display the aggregated value in the format other than the standard for this <code>Datatype</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;column id="amount"&gt;
+    &lt;aggregation type="SUM"&gt;
+        &lt;formatter&gt;
+            &lt;number format="#,##0.00"/&gt;
+        &lt;/formatter&gt;
+    &lt;/aggregation&gt;
+&lt;/column&gt;</code></pre>
+</div>
+</div>
+<div id="aggregation-strategy-class" class="paragraph">
+<p>The <code>aggregation</code> element can also contain the <code>strategyClass</code> attribute specifying a class implementing the <code>AggregationStrategy</code> interface.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class TableCustomerHobbyAggregation implements AggregationStrategy&lt;Hobby, String&gt; {
+    @Override
+    public String aggregate(Collection&lt;Hobby&gt; propertyValues) {
+        Hobby mostFrequent = null;
+        long max = 0;
+        if (CollectionUtils.isNotEmpty(propertyValues)) {
+            for (Hobby hobby : Hobby.values()) {
+                long current = propertyValues.stream()
+                        .filter(customerHobby -&gt; customerHobby.equals(hobby))
+                        .count();
+
+                if (current &gt; max) {
+                    mostFrequent = hobby;
+                    max = current;
+                }
+            }
+        }
+
+        if (mostFrequent != null) {
+            return String.format("%s: %d/%d", mostFrequent.name(), max, propertyValues.size());
+        }
+
+        return null;
+    }
+
+    @Override
+    public Class&lt;String&gt; getResultClass() {
+        return String.class;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tableAggregationStrategy"
+       width="100%"
+       aggregatable="true"
+       dataContainer="customersDc"&gt;
+    &lt;columns&gt;
+        &lt;column id="firstName"/&gt;
+        &lt;column id="lastName"/&gt;
+        &lt;column id="hobby"&gt;
+            &lt;aggregation
+                    strategyClass="ui.ex1.screen.component.table.TableCustomerHobbyAggregation"/&gt;
+        &lt;/column&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sorting"><a class="anchor" href="#_sorting"></a>Sorting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>Table</code> allows users to sort column data. Sorting functionality is enabled by default.</p>
+</div>
+<div id="table-sorting" class="paragraph">
+<p>The <code>sortable</code> attribute enables sorting data in the table. By default, it is set to <code>true</code>. If sorting is allowed, clicking a column header will show a <span class="image"><img src="../../_images/vcl/components/table-sortable-down.png" alt="table sortable down"></span>/<span class="image"><img src="../../_images/vcl/components/table-sortable-up.png" alt="table sortable up"></span> icon to the right of the column name.</p>
+</div>
+<div id="column-sortable" class="paragraph">
+<p>You can disable sorting for a particular <a href="#column">column</a> by using its <code>sortable</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>In the example below, we disable sorting by the <code>lastName</code> column:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;columns&gt;
+    &lt;column id="firstName"/&gt;
+    &lt;column id="lastName" sortable="false"/&gt;
+    &lt;column id="city"/&gt;
+&lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div id="column-sort" class="paragraph">
+<p>The <code>sort</code> attribute of the <code>column</code> element allows you to set the initial sorting direction of the table by this <code>column</code>. Possible values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ASCENDING</code> - ascending order (0 &#8594; 9 &#8594; A &#8594; Z).</p>
+</li>
+<li>
+<p><code>DESCENDING</code> - descending order (Z &#8594; A &#8594; 9 &#8594; 0).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;columns&gt;
+    &lt;column id="firstName" sort="DESCENDING"/&gt;
+    &lt;column id="lastName"/&gt;
+    &lt;column id="city"/&gt;
+&lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The table can be sorted only by one column at a time. If you set the <code>sort</code> attribute for multiple columns or set <code>sort</code> and <code>sortable="false"</code> attributes simultaneously, the screen will fail.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="paging"><a class="anchor" href="#paging"></a>Paging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="simple-pagination.html" class="xref page">SimplePagination</a> component can be used inside <code>table</code> to provide pagination:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tablePaging"
+       width="100%"
+       dataContainer="customersDc"&gt;
+    &lt;columns&gt;
+        &lt;column id="firstName"/&gt;
+        &lt;column id="lastName"/&gt;
+        &lt;column id="hobby"/&gt;
+        &lt;column id="age"/&gt;
+    &lt;/columns&gt;
+    &lt;simplePagination
+            itemsPerPageVisible="true"
+            itemsPerPageOptions="2, 4, 6"/&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-pagination.png" alt="table pagination">
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can use the standalone <a href="pagination.html" class="xref page">Pagination</a> component.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="actions"><a class="anchor" href="#actions"></a>Table Actions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>Table</code> component implements the <code>ActionsHolder</code> interface and can contain custom actions, as well as <a href="../../actions/standard-actions.html#list-actions" class="xref page">standard list actions</a>.</p>
+</div>
+<div class="paragraph">
+<p>Table actions are defined in the nested <code>actions</code> element.</p>
+</div>
+<div class="paragraph">
+<p>If an action has a caption, it is displayed as an item of the table <a href="#context-menu-enabled">context menu</a>. Additionally, a table action can be assigned to a button located anywhere on the screen.</p>
+</div>
+<div id="buttons-panel" class="paragraph">
+<p>You can use the <a href="../containers/buttons-panel.html" class="xref page">ButtonsPanel</a> container to show action buttons above the table.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tableWithActions"
+       width="100%"
+       dataContainer="customersDc"&gt;
+    &lt;actions&gt;
+        &lt;action id="create" type="create"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;action id="edit" type="edit"/&gt;
+        &lt;action id="remove" type="remove"/&gt;
+        &lt;action id="about" caption="Get info"/&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;/actions&gt;
+    &lt;columns&gt;
+        &lt;column id="age"/&gt;
+        &lt;column id="firstName"/&gt;
+        &lt;column id="lastName"/&gt;
+    &lt;/columns&gt;
+    &lt;buttonsPanel id="buttonsActionsPanel" alwaysVisible="true"&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+        &lt;button id="create" action="tableWithActions.create"/&gt;
+        &lt;button id="edit" action="tableWithActions.edit"/&gt;
+        &lt;button id="remove" action="tableWithActions.remove"/&gt;
+        &lt;button id="about" action="tableWithActions.about"/&gt;
+    &lt;/buttonsPanel&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Define the <code>create</code> standard action.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Define the <code>about</code> custom action.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Define a <code>ButtonsPanel</code> container inside a table.</td>
+</tr>
+</table>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-actions.png" alt="table actions">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="table-column-generation"><a class="anchor" href="#table-column-generation"></a>Column Generation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>columnGenerator</code> handler allows you to define a custom representation of data in a column.</p>
+</div>
+<div class="paragraph">
+<p>The handler is invoked by the framework for each cell when rendering the table. The handler receives an entity instance corresponding to the rendered row and should return a visual component that will be displayed in the cell.</p>
+</div>
+<div class="paragraph">
+<p>You can create the <code>columnGenerator</code> handler for a table column using Studio (see <a href="#handlers">below</a>) and implement it as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "tableGeneratedColumn.hasEmail", subject = "columnGenerator")
+private Component tableGeneratedColumnIsEmailColumnGenerator(Customer customer) {
+    CheckBox hasEmail = uiComponents.create(CheckBox.class);
+    hasEmail.setValue(customer.getEmail() != null);
+    return hasEmail;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to display just dynamic text, use a special class <code>Table.PlainTextCell</code> instead of the <a href="label.html" class="xref page">Label</a> component. It will simplify rendering and make the table faster.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "tableGeneratedColumn.fullName", subject = "columnGenerator")
+private Component tableGeneratedColumnFullNameColumnGenerator(Customer customer) {
+    return new Table.PlainTextCell(customer.getFirstName() + " " + customer.getLastName());
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tableGeneratedColumn"
+       width="100%"
+       dataContainer="customersDc"&gt;
+    &lt;columns&gt;
+        &lt;column id="age"/&gt;
+        &lt;column id="firstName"/&gt;
+        &lt;column id="lastName"/&gt;
+        &lt;column id="fullName" caption="Full name"/&gt;
+        &lt;column id="email"/&gt;
+        &lt;column id="hasEmail" caption="Has email"/&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>fullName</code> and <code>isEmail</code> are generated columns.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-generated-columns.png" alt="table generated columns">
+</div>
+</div>
+<div class="paragraph">
+<p>If the column <code>id</code> specifies a related entity&#8217;s attribute (that is contains dots), the <code>columnGeneration</code> handler should be defined as in the following example.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A column associated with a related entity&#8217;s attribute:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;column id="city.country.name"/&gt;</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The corresponding <code>columnGenerator</code> handler:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "countryTable.[city.country.name]", subject = "columnGenerator")
+private Component countryTableCityCountryNameColumnGenerator(Customer customer) {
+    return new Table.PlainTextCell(customer.getCity().getCountry().getName());
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To register the column generator handler programmatically, use the <code>addGeneratedColumn()</code> method of the <code>Table</code> component. It takes two parameters: identifier of the column and implementation of the <code>Table.ColumnGenerator</code> interface. An identifier can match one of the identifiers set for table columns in XML descriptor – in this case, the new column replaces the one defined in XML. If the identifier does not match any columns, a new column is added to the right.</p>
+</div>
+<div class="paragraph">
+<p>The <code>generateCell()</code> method of the <code>Table.ColumnGenerator</code> interface is an equivalent of the <code>columnGenerator</code> handler explained above: it accepts an entity instance corresponding to the rendered row and should return a visual component that will be displayed in the cell.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exporting-column-values"><a class="anchor" href="#exporting-column-values"></a>Exporting Column Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To export contents of the <code>Table</code> component as a file in one of the supported formats, use the <a href="../../../grid-export/index.html" class="xref page">Grid Export Actions</a> add-on.</p>
+</div>
+<div class="paragraph">
+<p>After installing the add-on, you can define the <a href="../../../grid-export/actions.html#excel-export-action" class="xref page">excelExport</a> or <a href="../../../grid-export/actions.html#json-export-action" class="xref page">jsonExport</a> action for the table, or use <a href="../../../grid-export/exporters.html" class="xref page">Table exporters</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you use custom generated columns, their content is not exported by default. See the example in the <a href="../../../grid-export/limitations.html#exporting-tables-with-generated-columns" class="xref page">Exporting Tables with Generated Columns</a>.</p>
+</div>
+<div class="paragraph">
+<p>Below is an example of setting a custom presentation of the data within a column when exporting to an XLS file via the <code>excelExport</code> action.</p>
+</div>
+<div class="paragraph">
+<p>Screen descriptor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="printableTable"
+       width="100%"
+       dataContainer="customersDc1"&gt;
+    &lt;actions&gt;
+        &lt;action id="excelExport" type="excelExport"/&gt;
+    &lt;/actions&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Screen controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Named("printableTable.excelExport")
+protected ExcelExportAction printableTableExcelExport;
+
+@Subscribe
+public void onInit(InitEvent event) {
+    printableTableExcelExport.addColumnValueProvider("firstName", context -&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+        Customer customer = context.getEntity();
+        return "Name: " + customer.getFirstName();
+    });
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The method accepts the column identifier and a function to get value from the column.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_values"><a class="anchor" href="#_editing_values"></a>Editing Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Table can be configured to allow inline editing.</p>
+</div>
+<div id="editable" class="paragraph">
+<p>Use the <code>editable</code> attribute to switch the table to the editing mode.</p>
+</div>
+<div id="column-editable" class="paragraph">
+<p>In this mode, the columns with <code>editable = true</code> attribute show components to edit the attributes of the corresponding entity. Changing this attribute at runtime is not supported.</p>
+</div>
+<div class="paragraph">
+<p>The component type for each editable column is selected automatically based on the type of the corresponding entity attribute. For example, for string and numeric attributes, the application will use <a href="text-field.html" class="xref page">TextField</a>, for <code>Date</code> - <a href="date-field.html" class="xref page">DateField</a>, for enumerations - <a href="combo-box.html" class="xref page">ComboBox</a>, for links to other entities - <a href="entity-picker.html" class="xref page">EntityPicker</a>.</p>
+</div>
+<div id="column-date-format-resolution" class="paragraph">
+<p>For a <code>Date</code> type editable column, you can additionally define the <a href="date-field.html#date-format" class="xref page">dateFormat</a> or <a href="date-field.html#resolution" class="xref page">resolution</a> attributes similar to the ones described for the <code>DateField</code>.</p>
+</div>
+<div id="column-options-container" class="paragraph">
+<p>You can define the <a href="../xml.html#options-container" class="xref page">optionsContainer</a> and <a href="../xml.html#caption-property" class="xref page">captionProperty</a> attributes for an editable column showing a linked entity. If <code>optionsContainer</code> is set, the application will use <code>ComboBox</code> instead of <code>EntityPicker</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="context-menu-enabled"><a class="anchor" href="#context-menu-enabled"></a>Context Menu</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The context menu is activated by right-clicking within the table.</p>
+</div>
+<div class="paragraph">
+<p>The <code>contextMenuEnabled</code> attribute enables the context menu. By default, this attribute is set to <code>true</code>. The context menu shows <a href="#actions">table actions</a> (if any).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-context-menu.png" alt="table context menu">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="stylename"><a class="anchor" href="#stylename"></a>Styling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can set predefined styles to the <code>Table</code> component using the <code>stylename</code> attribute either in the XML descriptor or in the screen controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="tableBorderless"
+       caption="Table with borderless style"
+       width="100%"
+       stylename="borderless"
+       dataContainer="customersDc1"&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">tableBorderless.setStyleName(ThemeClassNames.TABLE_BORDERLESS);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Predefined styles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>borderless</code> - removes the outer border of the table;</p>
+</li>
+<li>
+<p><code>no-header</code> - hides the table column headers;</p>
+</li>
+<li>
+<p><code>no-horizontal-lines</code> - removes the horizontal divider lines between the table rows;</p>
+</li>
+<li>
+<p><code>no-vertical-lines</code> - remove the vertical divider lines between the table columns.</p>
+</li>
+<li>
+<p><code>no-stripes</code> - removes the alternating row colors.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The appearance of the <code>Table</code> component can be customized using SCSS variables with the <code>$jmix-table-*</code> prefix. You can change these variables in the visual editor after creating a <a href="../../themes/custom_theme.html" class="xref page">custom theme</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="methods"><a class="anchor" href="#methods"></a>Methods of Table Interface</h2>
+<div class="sectionbody">
+<div id="methods-get-selected" class="ulist">
+<ul>
+<li>
+<p><code>getSelected()</code>, <code>getSingleSelected()</code> return instances of the entities corresponding to the selected rows of the table. A collection can be obtained by invoking <code>getSelected()</code>. If nothing is selected, the application returns an empty set. If <code>multiselect</code> is disabled, it is more convenient to use <code>getSingleSelected()</code> method returning one selected entity or <code>null</code> if nothing is selected.</p>
+</li>
+</ul>
+</div>
+<div id="methods-request-focus" class="ulist">
+<ul>
+<li>
+<p>The <code>requestFocus()</code> method allows you to set focus on the concrete editable field of a certain row. It takes two parameters: an entity instance that identifies the row and the column identifier. Example of requesting a focus:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">table.requestFocus(item, "count");</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="methods-scroll-to" class="ulist">
+<ul>
+<li>
+<p>The <code>scrollTo()</code> method allows you to scroll the table to the concrete row. It takes one parameter: an entity instance identifying the row.</p>
+<div class="paragraph">
+<p>Example of scrolling:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">table.scrollTo(item);</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="methods-set-item-click-action" class="ulist">
+<ul>
+<li>
+<p>The <code>setItemClickAction()</code> method allows you to define an <a href="../../actions.html" class="xref page">action</a> performed when a table row is double-clicked. If such action is not defined, the table will attempt to find an appropriate one in the list of its actions in the following order:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The action assigned to the <strong>Enter</strong> key by the <code>shortcut</code> property;</p>
+</li>
+<li>
+<p>The <a href="../../actions/standard-actions/edit-action.html" class="xref page">edit</a> action;</p>
+</li>
+<li>
+<p>The <a href="../../actions/standard-actions/view-action.html" class="xref page">view</a> action;</p>
+<div class="paragraph">
+<p>If such action is found and has <code>enabled = true</code> property, the action is executed.</p>
+</div>
+<div class="paragraph">
+<p>Example of setting the <code>ItemClickAction</code> for the <code>Table</code> component defined in the screen XML with the <code>tableClick</code> id:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private Table&lt;Customer&gt; tableClick;
+
+@Subscribe
+public void onInit(InitEvent event) {
+    tableClick.setItemClickAction(new BaseAction("itemClickAction")
+            .withHandler(actionPerformedEvent -&gt; {
+                Customer customer = tableClick.getSingleSelected();
+                if (customer != null) {
+                    notifications.create()
+                            .withCaption("Item clicked for: " + customer.getFirstName()+
+                                    "" + customer.getLastName())
+                            .show();
+                }
+            }));
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="methods-set-enter-press-action" class="ulist">
+<ul>
+<li>
+<p>The <code>setEnterPressAction()</code> allows you to define an action executed when <strong>Enter</strong> is pressed. If such action is not defined, the table will attempt to find an appropriate one in the list of its actions in the following order:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The action defined by the <code>setItemClickAction()</code> method;</p>
+</li>
+<li>
+<p>The action assigned to the <strong>Enter</strong> key by the <code>shortcut</code> property;</p>
+</li>
+<li>
+<p>The <a href="../../actions/standard-actions/edit-action.html" class="xref page">edit</a> action;</p>
+</li>
+<li>
+<p>The <a href="../../actions/standard-actions/view-action.html" class="xref page">view</a> action;</p>
+<div class="paragraph">
+<p>If such action is found and has <code>enabled = true</code> property, the action is executed.</p>
+</div>
+<div class="paragraph">
+<p>Example of setting the <code>ItemClickAction</code> for the <code>Table</code> component defined in the screen XML with the <code>tableClick</code> id:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private Table&lt;Customer&gt; tableClick;
+
+@Subscribe
+public void onInit(InitEvent event) {
+    tableClick.setEnterPressAction(new BaseAction("enterPressAction")
+            .withHandler(actionPerformedEvent -&gt; {
+                Customer customer = tableClick.getSingleSelected();
+                if (customer != null) {
+                    notifications.create()
+                            .withCaption("Enter pressed for: " + customer.getFirstName()+
+                                    "" + customer.getLastName())
+                            .show();
+                }
+            }));
+}</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="methods-get-aggregation-results" class="ulist">
+<ul>
+<li>
+<p>The <code>getAggregationResults()</code> method returns a map with <a href="#aggregatable">aggregation</a> results, where map keys are table column identifiers and values are aggregation values.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="handlers"><a class="anchor" href="#handlers"></a>Events and Handlers</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To generate a handler stub in Jmix Studio, select the component in the screen descriptor XML or in the <strong>Component Hierarchy</strong> panel and use the <strong>Handlers</strong> tab of the <strong>Component Inspector</strong> panel.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can use the <strong>Generate Handler</strong> button in the top panel of the screen controller.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="aggregation-distribution-provider"><a class="anchor" href="#aggregation-distribution-provider"></a>AggregationDistributionProvider</h3>
+<div class="paragraph">
+<p>Defines the rules for distributing the aggregated value between rows in a table according to a custom algorithm. If the user enters a value in an aggregated cell, it is distributed to the constituent cells. It is supported only for the <code>TOP</code> aggregation style. To make aggregated cells editable, use the <a href="#aggregation-editable">editable</a> attribute of the <code>aggregation</code> element.</p>
+</div>
+<div class="paragraph">
+<p>When creating a provider, use the <code>AggregationDistributionContext&lt;E&gt;</code> object, which contains the data needed to distribute the aggregated value:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Column column</code> where total or group aggregation was changed;</p>
+</li>
+<li>
+<p><code>Object value</code> − the new aggregation value;</p>
+</li>
+<li>
+<p><code>Collection&lt;E&gt; scope</code> − a collection of entities that will be affected by changed aggregation;</p>
+</li>
+<li>
+<p><code>boolean isTotalAggregation</code> - is it a total or group aggregation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As an example, consider a table that represents a budget. The user creates budget categories and sets the percentages according to which the amount of income should be distributed. Next, the user sets the total amount of income in the aggregated cell; after that, it distributes by category.</p>
+</div>
+<div class="paragraph">
+<p>An example of table configuration in an XML descriptor of a screen:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="budgetTable"
+       width="100%"
+       aggregatable="true"
+       dataContainer="budgetItemsDc"&gt;
+    &lt;columns&gt;
+        &lt;column id="category"/&gt;
+        &lt;column id="percent"/&gt;
+        &lt;column id="amount"&gt;
+            &lt;aggregation type="SUM"
+                         editable="true"/&gt;
+        &lt;/column&gt;
+    &lt;/columns&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An example in a screen controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "budgetTable", subject = "aggregationDistributionProvider")
+private void budgetTableAggregationDistributionProvider(
+        Table.AggregationDistributionContext&lt;BudgetItem&gt; context) {
+    Collection&lt;BudgetItem&gt; scope = context.getScope();
+    if (scope.isEmpty()) {
+        return;
+    }
+
+    double value = context.getValue() != null ?
+            ((double) context.getValue()) : 0;
+
+    for (BudgetItem budgetItem : scope) {
+        budgetItem.setAmount(value / 100 * budgetItem.getPercent());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-aggregation-budget.gif" alt="table aggregation budget">
+</div>
+</div>
+<div class="paragraph">
+<p>To register the aggregation distribution provider programmatically, use the <code>setAggregationDistributionProvider()</code> component method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-collapse-event"><a class="anchor" href="#column-collapse-event"></a>ColumnCollapseEvent</h3>
+<div class="paragraph">
+<p><code>ColumnCollapseEvent</code> is sent whenever the <a href="#column-visibility">column visibility</a> changes.</p>
+</div>
+<div class="paragraph">
+<p>Example of subscribing to the event for the table defined in the screen XML with the <code>tableCollapsed</code> id:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Subscribe("tableCollapsed")
+public void onTableCollapsedColumnCollapse(Table.ColumnCollapseEvent&lt;Customer&gt; event) {
+    notifications.create()
+            .withCaption((event.isCollapsed() ? "Collapsed: " : "Expanded: ") +
+                    event.getColumn().getCaption())
+            .show();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To register the event handler programmatically, use the <code>addColumnCollapseListener()</code> component method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="column-reorder-event"><a class="anchor" href="#column-reorder-event"></a>ColumnReorderEvent</h3>
+<div class="paragraph">
+<p><code>ColumnReorderEvent</code> is fired when the user reorders columns.</p>
+</div>
+<div class="paragraph">
+<p>Example of subscribing to the event for the <code>Table</code> component defined in the screen XML with the <code>tableReorder</code> id:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Subscribe("tableReorder")
+public void onTableReorderColumnReorder(Table.ColumnReorderEvent&lt;Customer&gt; event) {
+    notifications.create()
+            .withCaption("Columns were reordered!")
+            .show();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To register the event handler programmatically, use the <code>addColumnReorderListener()</code> component method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="context-help-icon-click-handler"><a class="anchor" href="#context-help-icon-click-handler"></a>ContextHelpIconClickHandler</h3>
+<div class="paragraph">
+<p>See <a href="../api.html#context-help-icon-click-handler" class="xref page">ContextHelpIconClickHandler</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="empty-state-link-click-handler"><a class="anchor" href="#empty-state-link-click-handler"></a>EmptyStateLinkClickHandler</h3>
+<div class="paragraph">
+<p>See <a href="#empty-state-click-event">EmptyStateClickEvent</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="icon-provider"><a class="anchor" href="#icon-provider"></a>IconProvider</h3>
+<div class="paragraph">
+<p>The icon provider allows you to add an icon in the beginning of each table row:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "tableWithIcons", subject = "iconProvider")
+private String tableWithIconsIconProvider(Customer customer) {
+    return customer.getEmail() != null ?
+            JmixIcon.MAIL_FORWARD.source() : JmixIcon.CANCEL.source();
+}</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-icon-provider.png" alt="table icon provider">
+</div>
+</div>
+<div class="paragraph">
+<p>To register the icon provider programmatically, use the <code>setIconProvider()</code> component method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="item-description-provider"><a class="anchor" href="#item-description-provider"></a>ItemDescriptionProvider</h3>
+<div class="paragraph">
+<p>The item description provider generates tooltip descriptions for items when the user hovers over a cell.</p>
+</div>
+<div class="paragraph">
+<p>In the example below, we will show an <code>ItemDescriptionProvider</code> usage for the <code>tableWithDescription</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "tableWithDescription", subject = "itemDescriptionProvider")
+private String tableWithDescriptionItemDescriptionProvider(
+        Customer customer, String property) {
+    if (property == null)
+        return null;
+    else if (property.equals("rewardPoints")) {
+        return "Reward points are a part of the loyalty program affecting the rating of the " +
+                customer.getFirstName() + " " + customer.getLastName();
+    } else if (property.equals("level")) {
+        switch (customer.getLevel()) {
+            case SILVER:
+                return "The customer gets special offers from sellers and birthday congratulations";
+            case GOLD:
+                return "The customer gets 2 coupons with a rating of $ 1";
+            case PLATINUM:
+                return "The customer gets a coupons with a par value of $ 3";
+            case DIAMOND:
+                return "The customer gets a coupon with a par value of $ 5";
+        }
+    }
+    return null;
+}</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-item-description.gif" alt="table item description">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="lookup-select-handler"><a class="anchor" href="#lookup-select-handler"></a>LookupSelectHandler</h3>
+<div class="paragraph">
+<p><code>LookupSelectHandler</code> is a handler invoked when a user presses <strong>Enter</strong> or double-clicks a table row in the lookup screen. It accepts the collection of selected entities. You can define the handler as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "tableLookupSelect", subject = "lookupSelectHandler")
+private void tableLookupSelectLookupSelectHandler(Collection&lt;Customer&gt; collection) {
+    checkCustomers(collection);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To register the select lookup handler programmatically, use the <code>setLookupSelectHandler()</code> component method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selection-event"><a class="anchor" href="#selection-event"></a>SelectionEvent</h3>
+<div class="paragraph">
+<p><code>SelectionEvent</code> is sent when the selection changes.</p>
+</div>
+<div class="paragraph">
+<p>Example of subscribing to the event for the table defined in the screen XML with the <code>tableSelectEvent</code> id:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private Table&lt;Customer&gt; tableSelectEvent;
+
+@Subscribe("tableSelectEvent")
+public void onTableSelectEventSelection(Table.SelectionEvent&lt;Customer&gt; event) {
+    Customer customer = tableSelectEvent.getSingleSelected();
+    notifications.create()
+            .withCaption("You selected " + customer.getFirstName() +
+                    " " + customer.getLastName() + " customer")
+            .show();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To register the event handler programmatically, use the <code>addSelectionListener()</code> component method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="style-provider"><a class="anchor" href="#style-provider"></a>StyleProvider</h3>
+<div class="paragraph">
+<p><code>StyleProvider</code> allows setting table cell display style. The provider is invoked by the table for each row and each cell separately. If the method is invoked for a row, the first parameter contains the entity instance displayed by the row, the second parameter is <code>null</code>. If the method is called for a cell, the second parameter contains the name of the attribute displayed by the cell.</p>
+</div>
+<div class="paragraph">
+<p>Example of setting a style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "styledTable", subject = "styleProvider")
+private String styledTableStyleProvider(Customer entity, String property) {
+    if (property == null) {
+        if (Boolean.TRUE.equals(entity.getEmail() != null)) {
+            return "customer-has-email";
+        }
+    } else if (property.equals("level")) {
+        switch (entity.getLevel()) {
+            case SILVER:
+                return "level-silver";
+            case GOLD:
+                return "level-gold";
+            case PLATINUM:
+                return "level-platinum";
+            case DIAMOND:
+                return "level-diamond";
+        }
+    }
+    return null;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you should define the cell and row styles in the application theme. Detailed information on creating a theme is available in <a href="../../themes.html" class="xref page">Themes</a>. Style names returned by the provider in the screen controller should be used as CSS selectors. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">.customer-has-email {
+    font-weight: bold;
+}
+
+.level-silver {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.level-gold {
+    background-color: #ffda79;
+    color: black;
+}
+
+.level-platinum {
+    background-color: #637497;
+    color: white;
+}
+
+.level-diamond {
+    background-color: #8befff;
+    color: black;
+}</code></pre>
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../../_images/vcl/components/table-style-provider.png" alt="table style provider">
+</div>
+</div>
+<div class="paragraph">
+<p>To register the style provider programmatically, use the <code>setStyleProvider()</code> component method.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="xml"><a class="anchor" href="#xml"></a>All XML Attributes</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can view and edit attributes applicable to the component using the <strong>Component Inspector</strong> panel of the Studio&#8217;s Screen Designer.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_table_xml_attributes"><a class="anchor" href="#_table_xml_attributes"></a>Table XML Attributes</h3>
+<div class="paragraph">
+<p><a href="#aggregatable">aggregatable</a> -
+<a href="#aggregation-style">aggregationStyle</a> -
+<a href="../xml.html#align" class="xref page">align</a> -
+<a href="../xml.html#caption" class="xref page">caption</a> -
+<a href="../xml.html#caption-as-html" class="xref page">captionAsHtml</a> -
+<a href="#column-control-visible">columnControlVisible</a> -
+<a href="#column-header-visible">columnHeaderVisible</a> -
+<a href="../xml.html#colspan" class="xref page">colspan</a> -
+<a href="../xml.html#context-help-text" class="xref page">contextHelpText</a> -
+<a href="../xml.html#context-help-text-html-enabled" class="xref page">contextHelpTextHtmlEnabled</a> -
+<a href="#context-menu-enabled">contextMenuEnabled</a> -
+<a href="../xml.html#css" class="xref page">css</a> -
+<a href="../xml.html#data-container" class="xref page">dataContainer</a> -
+<a href="../xml.html#description" class="xref page">description</a> -
+<a href="../xml.html#description-as-html" class="xref page">descriptionAsHtml</a> -
+<a href="#editable">editable</a> -
+<a href="#empty-state-link-message">emptyStateLinkMessage</a> -
+<a href="#empty-state-message">emptyStateMessage</a> -
+<a href="../xml.html#enable" class="xref page">enable</a> -
+<a href="../xml.html#box-expand-ratio" class="xref page">box.expandRatio</a> -
+<a href="../xml.html#height" class="xref page">height</a> -
+<a href="../xml.html#html-sanitizer-enabled" class="xref page">htmlSanitizerEnabled</a> -
+<a href="../xml.html#icon" class="xref page">icon</a> -
+<a href="../xml.html#id" class="xref page">id</a> -
+<a href="#meta-class">metaClass</a> -
+<a href="#multi-line-cells">multiLineCells</a> -
+<a href="#multiselect">multiselect</a> -
+<a href="#reordering-allowed">reorderingAllowed</a> -
+<a href="../xml.html#responsive" class="xref page">responsive</a> -
+<a href="../xml.html#rowspan" class="xref page">rowspan</a> -
+<a href="#show-selection">showSelection</a> -
+<a href="#table-sorting">sortable</a> -
+<a href="#stylename">stylename</a> -
+<a href="../xml.html#tab-index" class="xref page">tabIndex</a> -
+<a href="#text-selection-enabled">textSelectionEnabled</a> -
+<a href="../xml.html#visible" class="xref page">visible</a> -
+<a href="../xml.html#width" class="xref page">width</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="xml-table-elements"><a class="anchor" href="#xml-table-elements"></a>Table XML Elements</h3>
+<div class="paragraph">
+<p><a href="#actions">actions</a> -
+<a href="#buttons-panel">buttonsPanel</a> -
+<a href="#columns">columns</a> -
+<a href="#paging">simplePagination</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_columns_xml_attributes"><a class="anchor" href="#_columns_xml_attributes"></a>Columns XML Attributes</h3>
+<div class="paragraph">
+<p><a href="#exclude">exclude</a> -
+<a href="#include-all">include-all</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_column_xml_attributes"><a class="anchor" href="#_column_xml_attributes"></a>Column XML Attributes</h3>
+<div class="paragraph">
+<p><a href="#column-alignment">align</a> -
+<a href="#column-caption">caption</a> -
+<a href="#column-caption-as-html">captionAsHtml</a> -
+<a href="#caption-property">captionProperty</a> -
+<a href="#column-collapsed">collapsed</a> -
+<a href="#column-date-format-resolution">dateFormat</a> -
+<a href="../xml.html#description" class="xref page">description</a> -
+<a href="#column-editable">editable</a> -
+<a href="#column-expand-ratio">expandRatio</a> -
+<a href="#column-id">id</a> -
+<a href="#column-link">link</a> -
+<a href="#column-link-screen-id">linkScreenId</a> -
+<a href="#column-link-screen-open-mode">linkScreenOpenMode</a> -
+<a href="#column-max-text-length">maxTextLength</a> -
+<a href="#column-options-container">optionsContainer</a> -
+<a href="#column-date-format-resolution">resolution</a> -
+<a href="../xml.html#required" class="xref page">required</a> -
+<a href="../xml.html#required-message" class="xref page">requiredMessage</a> -
+<a href="#column-sort">sort</a> -
+<a href="#column-sortable">sortable</a> -
+<a href="#column-visible">visible</a> -
+<a href="#column-width">width</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_column_xml_elements"><a class="anchor" href="#_column_xml_elements"></a>Column XML Elements</h3>
+<div class="paragraph">
+<p><a href="#aggregatable">aggregation</a> -
+<a href="#column-formatter">formatter</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aggregation_xml_attributes"><a class="anchor" href="#_aggregation_xml_attributes"></a>Aggregation XML Attributes</h3>
+<div class="paragraph">
+<p><a href="#aggregation-editable">editable</a> -
+<a href="#aggregation-strategy-class">strategyClass</a>-
+<a href="#aggregation-type">type</a> -
+<a href="#aggregation-value-description">valueDescription</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aggregation_xml_element"><a class="anchor" href="#_aggregation_xml_element"></a>Aggregation XML Element</h3>
+<div class="paragraph">
+<p><a href="#aggregation-formatter">formatter</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_api"><a class="anchor" href="#_api"></a>API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="#methods-get-aggregation-results">getAggregationResults</a> -
+<a href="#methods-get-selected">getSelected</a> -
+<a href="#methods-get-selected">getSingleSelected</a> -
+<a href="#methods-scroll-to">scrollTo</a> -
+<a href="#methods-set-enter-press-action">setEnterPressAction</a> -
+<a href="#methods-set-item-click-action">setItemClickAction</a> -
+<a href="#methods-request-focus">requestFocus</a></p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="suggestion-field.html">SuggestionField</a></span>
+  <span class="next"><a href="tag-field.html">TagField</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"
+></script>
+<script>
+  hljs.highlightAll();
+</script>
+<script src="../../../../_/js/vendor/lunr.js"></script>
+<script src="../../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../../_/.." data-snippet-length="100" data-stylesheet="../../../../_/css/search.css"></script>
+<script async src="../../../../_/../search-index.js"></script>
+  </body>
+</html>

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>5. Working With Data in UI :: Jmix Documentation</title>
+    <title>5. Working with Data in UI :: Jmix Documentation</title>
     <link rel="canonical" href="https://docs.jmix.io/jmix/tutorial/data-in-ui.html">
-    <link rel="prev" href="customize-ui.html">
+    <link rel="prev" href="enumerations.html">
     <link rel="next" href="entity-events.html">
     <meta name="generator" content="Antora 3.0.3">
 <link rel="stylesheet" href="../../_/css/site.css">
@@ -99,19 +99,28 @@
     <a class="nav-link" href="simple-crud.html">2. Simple CRUD</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="references.html">3. References And Unique Attributes</a>
+    <a class="nav-link" href="references.html">3. References and Unique Attributes</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="customize-ui.html">4. Customizing UI</a>
+    <a class="nav-link" href="enumerations.html">4. Using Enumerations</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="data-in-ui.html">5. Working With Data in UI</a>
+    <a class="nav-link" href="data-in-ui.html">5. Working with Data in UI</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="entity-events.html">6. Using Entity Events</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ui-from-scratch.html">7. Creating UI From Scratch</a>
+    <a class="nav-link" href="images.html">7. Working with Images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ui-from-scratch.html">8. Creating UI from Scratch</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="data-access-control.html">9. Data Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="next.html">What&#8217;s Next?</a>
   </li>
 </ul>
   </li>
@@ -1440,7 +1449,7 @@
   <ul>
     <li><a href="../intro.html">Jmix Documentation</a></li>
     <li><a href="index.html">Tutorial</a></li>
-    <li><a href="data-in-ui.html">5. Working With Data in UI</a></li>
+    <li><a href="data-in-ui.html">5. Working with Data in UI</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/tutorial/pages/data-in-ui.adoc">Edit this Page</a></div>
@@ -1450,10 +1459,81 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">5. Working With Data in UI</h1>
+<h1 class="page">5. Working with Data in UI</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>WORK IN PROGRESS</strong></p>
+</div>
+<div class="paragraph">
+<p>In the previous chapters, you implemented management of Steps and Departments. Your application also has the default User management which came from the project template.</p>
+</div>
+<div class="paragraph">
+<p>Now you need to add some attributes to Users and link them with Steps and Departments.</p>
+</div>
+<div class="paragraph">
+<p>In this chapter, you will do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add <code>picture</code>, <code>joiningDate</code>, <code>onboardingStatus</code> and <code>department</code> attributes to the <code>User</code> entity and show them in UI.</p>
+</li>
+<li>
+<p>Create the <code>UserStep</code> entity which links a User with an onboarding Step.</p>
+</li>
+<li>
+<p>Add a collection of UserSteps to the <code>User</code> entity and show it on the User edit screen.</p>
+</li>
+<li>
+<p>Implement the generation and saving of UserSteps in the User edit screen.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNpdUDEOwyAM3HkFH8gHmDN3idrdDW5FRQCBGaoofy81FNGwoDuf7s4W6MjQWy6EQe7iEKIRMwaItBX0R18TxkLI8ozmLxfGwYYMHiYmuvyQhQHobqgGcx4Fs1KOVfbyxhn3nIEq9u7uIepCLQSU06lL633qo3jGMBWB4vVqi4zdevVbsEioO5N8pBvYjN8UXnXae4zoecdUDYcbNZ34AH1Jadg=" alt="Diagram">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_attributes_to_user"><a class="anchor" href="#_adding_attributes_to_user"></a>Adding Attributes to User</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Let&#8217;s add required attributes to the <code>User</code> entity:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>department</code> is a reference to the <code>Department</code> entity.</p>
+</li>
+<li>
+<p><code>joiningDate</code> specifies the day when the onboarding starts.</p>
+</li>
+<li>
+<p><code>picture</code> is a user picture.</p>
+</li>
+<li>
+<p><code>onboardingStatus</code> can have one of three values: <code>Not started</code>, <code>In progress</code>, <code>Completed</code>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrjSs0rySypVHBJLUgsKskF8hSquWq5uKDCocWpRUABBSDQ09MD0ylwlVZIusBSWfmZeZl56S6JJalgfkFmcklpEYSdn5eUn1iUApQOLkksKS0GWYJkqW412C4uAP6rLjY=" alt="Diagram">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_dropdowns_for_selecting_references"><a class="anchor" href="#_using_dropdowns_for_selecting_references"></a>Using Dropdowns for Selecting References</h2>
+<div class="sectionbody">
 
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="customize-ui.html">4. Customizing UI</a></span>
+  <span class="prev"><a href="enumerations.html">4. Using Enumerations</a></span>
   <span class="next"><a href="entity-events.html">6. Using Entity Events</a></span>
 </nav>
 </article>

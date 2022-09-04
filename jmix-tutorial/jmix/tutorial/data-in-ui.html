@@ -1466,10 +1466,7 @@
 <p><strong>WORK IN PROGRESS</strong></p>
 </div>
 <div class="paragraph">
-<p>In the previous chapters, you implemented management of Steps and Departments. Your application also has the default User management which came from the project template.</p>
-</div>
-<div class="paragraph">
-<p>Now you need to add some attributes to Users and link them with Steps and Departments.</p>
+<p>At this stage of development, the application has the Steps and Departments management and the default User management with the added <code>Onboarding status</code> attribute. Now you need to link Users with Steps and Departments.</p>
 </div>
 <div class="paragraph">
 <p>In this chapter, you will do the following:</p>
@@ -1477,59 +1474,750 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Add <code>picture</code>, <code>joiningDate</code>, <code>onboardingStatus</code> and <code>department</code> attributes to the <code>User</code> entity and show them in UI.</p>
+<p>Add <code>department</code> and <code>joiningDate</code> attributes to the <code>User</code> entity and show them in UI.</p>
 </li>
 <li>
-<p>Create the <code>UserStep</code> entity which links a User with an onboarding Step.</p>
+<p>Create the <code>UserStep</code> entity which links a user with an onboarding step.</p>
 </li>
 <li>
-<p>Add a collection of UserSteps to the <code>User</code> entity and show it on the User edit screen.</p>
+<p>Add a collection of <code>UserStep</code> entities to the <code>User</code> entity and show it on the <code>User.edit</code> screen.</p>
 </li>
 <li>
-<p>Implement the generation and saving of UserSteps in the User edit screen.</p>
+<p>Implement the generation and saving of <code>UserStep</code> instances in the <code>User.edit</code> screen.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>The diagram below shows the entities and attributes addressed in this chapter:</p>
+</div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/plantuml/svg/eNpdUDEOwyAM3HkFH8gHmDN3idrdDW5FRQCBGaoofy81FNGwoDuf7s4W6MjQWy6EQe7iEKIRMwaItBX0R18TxkLI8ozmLxfGwYYMHiYmuvyQhQHobqgGcx4Fs1KOVfbyxhn3nIEq9u7uIepCLQSU06lL633qo3jGMBWB4vVqi4zdevVbsEioO5N8pBvYjN8UXnXae4zoecdUDYcbNZ34AH1Jadg=" alt="Diagram">
+<img src="https://kroki.io/plantuml/svg/eNptjzEOwyAMRXefgguEAzDnBlW6o2JVRAQQmKGKcvcSgxCqymLsb_9nA3qy9BEPwihOEPVJKeEC6MKKUSc6avZX3jKmSbijGRNqmmZpD9Zb_1414Y_HxLeGQ6lVxRqnuTYoXrNBCrLL_X-FIzokNKOSQ6KndoUpvOJyDgwM3rU0w-nG3gdfdE1VKg==" alt="Diagram">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_adding_attributes_to_user"><a class="anchor" href="#_adding_attributes_to_user"></a>Adding Attributes to User</h2>
+<h2 id="_adding_reference_attribute"><a class="anchor" href="#_adding_reference_attribute"></a>Adding Reference Attribute</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Let&#8217;s add required attributes to the <code>User</code> entity:</p>
+<p>You&#8217;ve already done a similar task when created the <a href="references.html#create-reference-attr" class="xref page">HR Manager attribute</a> of the <code>Department</code> entity as a reference to <code>User</code>. Now you need to create a link in the opposite direction: a User should have a reference to Department.</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrjSs0rySypVHBJLUgsKskF8hSquWq5uKDCocWpRUABBSDQ09MD0ylwlVZIukB6kMzQrQZr5QIAvVgeiQ==" alt="Diagram">
+</div>
+</div>
+<div class="paragraph">
+<p>If your application is running, stop it using the <strong>Stop</strong> button (<span class="image"><img src="_images/common/suspend.svg" alt="suspend"></span>) in the main toolbar.</p>
+</div>
+<div class="paragraph">
+<p>Double-click on the <code>User</code> entity in <strong>Jmix</strong> tool window and select its last attribute (to add the new attribute to the end).</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Add</strong> (<span class="image"><img src="_images/common/add.svg" alt="add"></span>) in the <strong>Attributes</strong> toolbar.</p>
+</div>
+<div class="paragraph">
+<p>In the <strong>New Attribute</strong> dialog, enter <code>department</code> into the <strong>Name</strong> field. Then select:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>department</code> is a reference to the <code>Department</code> entity.</p>
+<p><strong>Attribute type</strong>: <code>ASSOCIATION</code></p>
 </li>
 <li>
-<p><code>joiningDate</code> specifies the day when the onboarding starts.</p>
+<p><strong>Type</strong>: <code>Department</code></p>
 </li>
 <li>
-<p><code>picture</code> is a user picture.</p>
-</li>
-<li>
-<p><code>onboardingStatus</code> can have one of three values: <code>Not started</code>, <code>In progress</code>, <code>Completed</code>.</p>
+<p><strong>Cardinality</strong>: <strong>Many to One</strong></p>
 </li>
 </ul>
 </div>
-<div class="imageblock kroki">
+<div class="imageblock text-center">
 <div class="content">
-<img src="https://kroki.io/plantuml/svg/eNrjSs0rySypVHBJLUgsKskF8hSquWq5uKDCocWpRUABBSDQ09MD0ylwlVZIusBSWfmZeZl56S6JJalgfkFmcklpEYSdn5eUn1iUApQOLkksKS0GWYJkqW412C4uAP6rLjY=" alt="Diagram">
+<img src="_images/data-in-ui/add-attr-1.png" alt="add attr 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Select the new <code>department</code> attribute and click the <strong>Add to Screens</strong> (<span class="image"><img src="_images/common/add-attribute-to-screens.svg" alt="add attribute to screens"></span>) button in the <strong>Attributes</strong> toolbar:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/add-attr-2.png" alt="add attr 2" width="445">
+</div>
+</div>
+<div class="paragraph">
+<p>The appeared dialog window will show <code>User.edit</code> and <code>User.browse</code> screens. Select both screens and click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Studio will add the <code>department</code> attribute to the table component of the <code>User.browse</code> screen and to the form component of the <code>User.edit</code> screen.</p>
+</div>
+<div class="paragraph">
+<p>You may also notice the following code added by Studio automatically to <code>User.browse</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data readOnly="true"&gt;
+    &lt;collection id="usersDc"
+                class="com.company.onboarding.entity.User"&gt;
+        &lt;fetchPlan extends="_base"&gt;
+            &lt;property name="department" fetchPlan="_base"/&gt; &lt;!-- added --&gt;
+        &lt;/fetchPlan&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And to <code>User.edit</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    &lt;instance id="userDc"
+              class="com.company.onboarding.entity.User"&gt;
+        &lt;fetchPlan extends="_base"&gt;
+            &lt;property name="department" fetchPlan="_base"/&gt; &lt;!-- added --&gt;
+        &lt;/fetchPlan&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this code, the referenced Department will be loaded together with the User in the same database query.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The screens would work without including <code>department</code> in the fetch plans due to the <em>lazy loading</em> of references. But in this case, the references would be loaded by separate requests to the database. Lazy loading can affect performance of the browse screen, because then it loads a list of Users with a first request, and after that, executes separate requests for loading a Department of each User in the list (N+1 query problem).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s run the application and see the new attribute in action.</p>
+</div>
+<div class="paragraph">
+<p>Click the <strong>Debug</strong> button (<span class="image"><img src="_images/common/start-debugger.svg" alt="start debugger"></span>) in the main toolbar.</p>
+</div>
+<div class="paragraph">
+<p>Studio will generate a Liquibase changelog for adding the <code>DEPARTMENT_ID</code> column to the <code>USER_</code> table, creating a foreign key constraint and an index. Confirm the changelog.</p>
+</div>
+<div class="paragraph">
+<p>Studio will execute the changelog and start the application.</p>
+</div>
+<div class="paragraph">
+<p>Open <code>http://localhost:8080</code> in your web browser and log in to the application with <code>admin</code> / <code>admin</code> credentials.</p>
+</div>
+<div class="paragraph">
+<p>Click on the <strong>Users</strong> item in the <strong>Application</strong> menu. You will see the <strong>Department</strong> column in the <code>User.browse</code> screen and <strong>Department</strong> picker field in <code>User.edit</code>:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/add-attr-3.png" alt="add attr 3" width="507">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_dropdowns_for_selecting_references"><a class="anchor" href="#_using_dropdowns_for_selecting_references"></a>Using Dropdowns for Selecting References</h2>
+<h2 id="_using_dropdown_for_selecting_reference"><a class="anchor" href="#_using_dropdown_for_selecting_reference"></a>Using Dropdown for Selecting Reference</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>By default, Studio generates the <code>entityPicker</code> component for selecting references. You can see it in the <code>User.edit</code> screen. Open <code>user-edit.xml</code> and switch to XML editor using the button in the top panel:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/dropdown-1.png" alt="dropdown 1" width="689">
+</div>
+</div>
+<div class="paragraph">
+<p>Find the <code>entityPicker</code> component inside the <code>form</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;layout ...&gt;
+    &lt;form id="form" dataContainer="userDc"&gt;
+        &lt;column width="350px"&gt;
+            ...
+            &lt;entityPicker id="departmentField" property="department"/&gt;
+        &lt;/column&gt;
+    &lt;/form&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This component allows you to select a related entity from a lookup screen with filtering, sorting and paging. But when the expected number of records is relatively small (say, less than 1000), it&#8217;s more convenient to select references from a simple dropdown list.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s change the <code>User.edit</code> screen and use the <code>entityComboBox</code> component for selecting a Department.</p>
+</div>
+<div class="paragraph">
+<p>Change the XML element of the component to <code>entityComboBox</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;entityComboBox id="departmentField" property="department"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Switch to the running application and reopen the User editor screen.</p>
+</div>
+<div class="paragraph">
+<p>You will see that the <strong>Department</strong> field is now a dropdown, but its list is empty, even if you have created some Departments.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/dropdown-2.png" alt="dropdown 2" width="506">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creating_options_data_container"><a class="anchor" href="#_creating_options_data_container"></a>Creating Options Data Container</h3>
+<div class="paragraph">
+<p>Let&#8217;s provide a list of options to the <code>entityComboBox</code> component displaying the reference to Department. The list should contain all Departments ordered by name.</p>
+</div>
+<div class="paragraph">
+<p>Select <code>Data components</code> section in the <strong>Component Palette</strong> tool window, drag the <code>Collection</code> item and drop it onto the <code>data</code> element in the <strong>Component Hierarchy</strong>. In the <strong>Data Container Properties Editor</strong> window, select <code>Department</code> in the <strong>Entity</strong> field and click <strong>OK</strong>:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/options-container-1.gif" alt="options container 1">
+</div>
+</div>
+<div class="paragraph">
+<p>The new <code>collection</code> element with <code>departmentsDc</code> id will be created under the <code>data</code> element in <strong>Component Hierarchy</strong> and in XML:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    ...
+    &lt;collection id="departmentsDc" class="com.company.onboarding.entity.Department"&gt;
+        &lt;fetchPlan extends="_base"/&gt;
+        &lt;loader id="departmentsDl"&gt;
+            &lt;query&gt;
+                &lt;![CDATA[select e from Department e]]&gt;
+            &lt;/query&gt;
+        &lt;/loader&gt;
+    &lt;/collection&gt;
+&lt;/data&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This element defines a <em>collection data container</em> and a <em>loader</em> for it. The data container will contain a list of Department entities loaded by the loader with the specified query.</p>
+</div>
+<div class="paragraph">
+<p>You can edit the query right in the XML or use the JPQL designer opened by  the link in the <code>query</code> attribute shown in <strong>Component Inspector</strong> tool window:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/options-container-2.png" alt="options container 2">
+</div>
+</div>
+<div class="paragraph">
+<p>In the <strong>JPQL Query Designer</strong> window, switch to the <strong>ORDER</strong> tab and add the <code>name</code> attribute to the list:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/options-container-3.png" alt="options container 3">
+</div>
+</div>
+<div class="paragraph">
+<p>Click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The resulting query in XML will look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    ...
+    &lt;collection id="departmentsDc" class="com.company.onboarding.entity.Department"&gt;
+        &lt;fetchPlan extends="_base"/&gt;
+        &lt;loader id="departmentsDl"&gt;
+            &lt;query&gt;
+                &lt;![CDATA[select e from Department e
+                order by e.name asc]]&gt;
+            &lt;/query&gt;
+        &lt;/loader&gt;
+    &lt;/collection&gt;
+&lt;/data&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you need to link the <code>entityComboBox</code> component with the <code>departmentsDc</code> collection container.</p>
+</div>
+<div class="paragraph">
+<p>Select <code>departmentField</code> in <strong>Component Hierarchy</strong> and select <code>departmentsDc</code> for the <code>optionsContainer</code> attribute in <strong>Component Inspector</strong>:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/options-container-4.png" alt="options container 4">
+</div>
+</div>
+<div class="paragraph">
+<p>Switch to the running application and reopen the User editor screen.</p>
+</div>
+<div class="paragraph">
+<p>You will see that the <strong>Department</strong> dropdown now has a list of options:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/dropdown-3.png" alt="dropdown 3" width="496">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The <code>entityComboBox</code> component allows you to filter options by entering text into the field. But keep in mind that filtering is performed in the server memory, all options are loaded from the database at once.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_userstep_entity"><a class="anchor" href="#_creating_userstep_entity"></a>Creating UserStep Entity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, you will create the <code>UserStep</code> entity which represents onboarding Steps for a particular User:</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrjSs0rySypVAguSS1QqOZSAAI9PT2uWi4uqERocWoRTgkkXZkpYKoUKGoFlgNzi4EKrMCGg7kppakuiSWpYHZyfm5BTmpJagpcpDi_qCQsMac0FWQL2F7darg1XHD7anUhBgIAluI3SA==" alt="Diagram">
+</div>
+</div>
+<div class="paragraph">
+<p>If your application is running, stop it using the <strong>Stop</strong> button (<span class="image"><img src="_images/common/suspend.svg" alt="suspend"></span>) in the main toolbar.</p>
+</div>
+<div class="paragraph">
+<p>In the <strong>Jmix</strong> tool window, click <strong>New</strong> (<span class="image"><img src="_images/common/add.svg" alt="add"></span>) &#8594; <strong>JPA Entity</strong> and create <code>UserStep</code> entity with <strong>Versioned</strong> trait as you did <a href="references.html#create-entity" class="xref page">before</a>.</p>
+</div>
+<div class="paragraph">
+<p>Add the following attributes to the new entity:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Attribute type</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Cardinality</th>
+<th class="tableblock halign-left valign-top">Mandatory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ASSOCIATION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Many to One</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">step</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ASSOCIATION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Step</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Many to One</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dueDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DATATYPE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LocalDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">completedDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DATATYPE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LocalDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sortValue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DATATYPE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The final state of the entity designer should look as below:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/create-user-step-1.png" alt="create user step 1">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_composition_attribute"><a class="anchor" href="#_adding_composition_attribute"></a>Adding Composition Attribute</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Consider the relationship between <code>User</code> and <code>UserStep</code> entities. <code>UserStep</code> instances exist only in the context of a particular <code>User</code> instance (owned by it). A <code>UserStep</code> instance cannot change its owner - it just doesn&#8217;t make any sense. Also, there are no links to <code>UserStep</code> from other data model objects, they are completely encapsulated in a User context.</p>
+</div>
+<div class="paragraph">
+<p>In Jmix, such a relationship is called <em>composition</em>: the User is composed of a collection of UserSteps, among other attributes.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Composition in Jmix implements the Aggregate pattern of Domain-Driven Design.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>It&#8217;s often convenient to create an attribute that contains the collection of composition items in the owning entity.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s create the <code>steps</code> attribute in the <code>User</code> entity:</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrjSs0rySypVAgtTi1SqOZSAAI9PT0wXVySWlBspeCTWVxiA5IOBvLtuGq5uJC0gMTQtJUCha3AkiC1YHN1q-GKuQBlbCFl" alt="Diagram">
+</div>
+</div>
+<div class="paragraph">
+<p>If your application is running, stop it using the <strong>Stop</strong> button (<span class="image"><img src="_images/common/suspend.svg" alt="suspend"></span>) in the main toolbar.</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Add</strong> (<span class="image"><img src="_images/common/add.svg" alt="add"></span>) in the <strong>Attributes</strong> toolbar of the <code>User</code> entity designer. In the <strong>New Attribute</strong> dialog, enter <code>steps</code> into the <strong>Name</strong> field. Then select:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Attribute type</strong>: <code>COMPOSITION</code></p>
+</li>
+<li>
+<p><strong>Type</strong>: <code>UserStep</code></p>
+</li>
+<li>
+<p><strong>Cardinality</strong>: <strong>One to Many</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/composition-1.png" alt="composition 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that <code>user</code> is selected automatically in the <strong>Mapped by</strong> field. It&#8217;s the attribute of the <code>UserStep</code> entity mapped to a database column which maintains the relationship between UserSteps and Users (the foreign key).</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>UserSteps should be displayed in the User edit screen, so select the new <code>steps</code> attribute and click the <strong>Add to Screens</strong> (<span class="image"><img src="_images/common/add-attribute-to-screens.svg" alt="add attribute to screens"></span>) button in the <strong>Attributes</strong> toolbar. Select <code>User.edit</code> screen and click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Studio will modify <code>user-edit.xml</code> as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;data&gt;
+    &lt;instance id="userDc"
+              class="com.company.onboarding.entity.User"&gt;
+        &lt;fetchPlan extends="_base"&gt;
+            &lt;property name="department" fetchPlan="_base"/&gt;
+            &lt;property name="steps" fetchPlan="_base"/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;/fetchPlan&gt;
+        &lt;loader/&gt;
+        &lt;collection id="stepsDc" property="steps"/&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;/instance&gt;
+    ...
+&lt;layout ...&gt;
+    &lt;form id="form" dataContainer="userDc"&gt;
+        ...
+    &lt;/form&gt;
+    &lt;groupBox id="stepsBox" ...&gt;
+        &lt;table id="stepsTable" dataContainer="stepsDc" ...&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+            &lt;actions&gt;
+                &lt;action id="create" type="create"/&gt;
+                &lt;action id="edit" type="edit"/&gt;
+                &lt;action id="remove" type="remove"/&gt;
+            &lt;/actions&gt;
+            &lt;columns&gt;
+                &lt;column id="version"/&gt;
+                &lt;column id="dueDate"/&gt;
+                &lt;column id="completedDate"/&gt;
+                &lt;column id="sortValue"/&gt;
+            &lt;/columns&gt;
+            &lt;buttonsPanel&gt;
+                &lt;button action="stepsTable.create"/&gt;
+                &lt;button action="stepsTable.edit"/&gt;
+                &lt;button action="stepsTable.remove"/&gt;
+            &lt;/buttonsPanel&gt;
+        &lt;/table&gt;
+    &lt;/groupBox&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Attribute <code>steps</code> of the fetch plan ensures the collection of UserSteps is loaded eagerly together with User.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The nested <code>stepsDc</code> collection data container enables binding of visual components to the <code>steps</code> collection attribute.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>table</code> component wrapped in <code>groupBox</code> displays data from the linked <code>stepsDc</code> collection container.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let’s run the application and see these changes in action.</p>
+</div>
+<div class="paragraph">
+<p>Click the <strong>Debug</strong> button (<span class="image"><img src="_images/common/start-debugger.svg" alt="start debugger"></span>) in the main toolbar.</p>
+</div>
+<div class="paragraph">
+<p>Studio will generate a Liquibase changelog for creating the <code>USER_STEP</code> table, foreign key constraints and indexes for references to <code>USER_</code> and <code>STEP</code>. Confirm the changelog.</p>
+</div>
+<div class="paragraph">
+<p>Studio will execute the changelog and start the application.</p>
+</div>
+<div class="paragraph">
+<p>Open <code>http://localhost:8080</code> in your web browser and log in to the application with <code>admin</code> / <code>admin</code> credentials.</p>
+</div>
+<div class="paragraph">
+<p>Open a user for editing. You will see the <strong>Steps</strong> table displaying the <code>UserStep</code> entity:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/composition-2.png" alt="composition 2">
+</div>
+</div>
+<div class="paragraph">
+<p>If you click <strong>Create</strong> in the <strong>Steps</strong> table, you will get an exception saying that <code>Screen 'UserStep.edit' is not defined</code>. This is true - you didn&#8217;t create an edit screen for the <code>UserStep</code> entity. But you don&#8217;t actually need it, because <code>UserStep</code> instances should be generated from the predefined <code>Step</code> instances for the particular <code>User</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generating_usersteps_for_user"><a class="anchor" href="#_generating_usersteps_for_user"></a>Generating UserSteps for User</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, you will implement the generation and showing of <code>UserStep</code> instances for the edited <code>User</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_adding_joiningdate_attribute"><a class="anchor" href="#_adding_joiningdate_attribute"></a>Adding JoiningDate Attribute</h3>
+<div class="paragraph">
+<p>First, let&#8217;s add the <code>joiningDate</code> attribute to the <code>User</code> entity:</p>
+</div>
+<div class="imageblock kroki">
+<div class="content">
+<img src="https://kroki.io/plantuml/svg/eNrjSs0rySypVAgtTi1SqOZSAAI9PT0wnZWfmZeZl-6SWJLKVcsFAPbMC50=" alt="Diagram">
+</div>
+</div>
+<div class="paragraph">
+<p>It will be used to calculate the <code>dueDate</code> attribute of the generated <code>UserStep</code> entity: <code>UserStep.dueDate = User.joiningDate + Step.duration</code>.</p>
+</div>
+<div class="paragraph">
+<p>If your application is running, stop it using the <strong>Stop</strong> button (<span class="image"><img src="_images/common/suspend.svg" alt="suspend"></span>) in the main toolbar.</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Add</strong> (<span class="image"><img src="_images/common/add.svg" alt="add"></span>) in the <strong>Attributes</strong> toolbar of the <code>User</code> entity designer. In the <strong>New Attribute</strong> dialog, enter <code>joiningDate</code> into the <strong>Name</strong> field and select <code>LocalDate</code> in the <strong>Type</strong> field:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/joining-date-1.png" alt="joining date 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Select the newly created <code>joiningDate</code> attribute and click the <strong>Add to Screens</strong> (<span class="image"><img src="_images/common/add-attribute-to-screens.svg" alt="add attribute to screens"></span>) button in the <strong>Attributes</strong> toolbar. Select both <code>User.edit</code> and <code>User.browse</code> screens in the appeared dialog and click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Click the <strong>Debug</strong> button (<span class="image"><img src="_images/common/start-debugger.svg" alt="start debugger"></span>) in the main toolbar.</p>
+</div>
+<div class="paragraph">
+<p>Studio will generate a Liquibase changelog for adding the <code>JOINING_DATE</code> column to the <code>USER_</code> table. Confirm the changelog.</p>
+</div>
+<div class="paragraph">
+<p>Studio will execute the changelog and start the application. Open <code>http://localhost:8080</code> in your web browser, log in to the application and check that the new attribute is shown in the User browse edit screens.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_custom_button"><a class="anchor" href="#_adding_custom_button"></a>Adding Custom Button</h3>
+<div class="paragraph">
+<p>Now you need to remove the standard actions and buttons for managing UserSteps and add a button for starting a custom logic of creating entities.</p>
+</div>
+<div class="paragraph">
+<p>Open <code>user-edit.xml</code> and remove the <code>actions</code> element and all <code>button</code> elements from <code>table</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="stepsTable" dataContainer="stepsDc" width="100%" height="200px"&gt;
+    &lt;columns&gt;
+        &lt;column id="version"/&gt;
+        &lt;column id="dueDate"/&gt;
+        &lt;column id="completedDate"/&gt;
+        &lt;column id="sortValue"/&gt;
+    &lt;/columns&gt;
+    &lt;buttonsPanel&gt;
+    &lt;/buttonsPanel&gt;
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then drag and drop the <code>Button</code> component from <strong>Component Palette</strong> onto the <code>buttonsPanel</code> element in <strong>Component Hierarchy</strong>. Then select the created <code>button</code> element and set its <code>id</code> to <code>generateButton</code> and <code>caption</code> to <code>Generate</code> in <strong>Component Inspector</strong>. After that, switch to the <strong>Handlers</strong> tab and create a <code>ClickEvent</code> handler method:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/data-in-ui/button-1.gif" alt="button 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Press <strong>Ctrl/Cmd+S</strong> and switch to the running application. Reopen the User edit screen and check that the <strong>Generate</strong> button is shown instead of the standard CRUD buttons:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/data-in-ui/button-2.png" alt="button 2"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_creating_and_saving_userstep_instances"><a class="anchor" href="#_creating_and_saving_userstep_instances"></a>Creating and Saving UserStep Instances</h3>
+<div class="paragraph">
+<p>Let&#8217;s implement the logic of generating <code>UserStep</code> instances.</p>
+</div>
+<div class="paragraph">
+<p>Add the following fields to the <code>UserEdit</code> controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class UserEdit extends StandardEditor&lt;User&gt; {
 
+    @Autowired
+    private DataManager dataManager;
+
+    @Autowired
+    private DataContext dataContext;
+
+    @Autowired
+    private CollectionPropertyContainer&lt;UserStep&gt; stepsDc;</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can inject screen components and Spring beans using the <strong>Inject</strong> button in the actions panel:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/data-in-ui/inject-1.gif" alt="inject 1">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Add the logic of creating and saving <code>UserStep</code> objects to the <code>generateButton</code> handler method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Subscribe("generateButton")
+public void onGenerateButtonClick(Button.ClickEvent event) {
+    User user = getEditedEntity(); <i class="conum" data-value="1"></i><b>(1)</b>
+
+    if (user.getJoiningDate() == null) { <i class="conum" data-value="2"></i><b>(2)</b>
+        notifications.create()
+                .withCaption("Cannot generate steps for user without 'Joining date'")
+                .show();
+        return;
+    }
+
+    List&lt;Step&gt; steps = dataManager.load(Step.class)
+            .query("select s from Step s order by s.sortValue asc")
+            .list(); <i class="conum" data-value="3"></i><b>(3)</b>
+
+    for (Step step : steps) {
+        if (stepsDc.getItems().stream().noneMatch(userStep -&gt;
+                    userStep.getStep().equals(step))) { <i class="conum" data-value="4"></i><b>(4)</b>
+            UserStep userStep = dataContext.create(UserStep.class); <i class="conum" data-value="5"></i><b>(5)</b>
+            userStep.setUser(user);
+            userStep.setStep(step);
+            userStep.setDueDate(user.getJoiningDate().plusDays(step.getDuration()));
+            userStep.setSortValue(step.getSortValue());
+            stepsDc.getMutableItems().add(userStep); <i class="conum" data-value="6"></i><b>(6)</b>
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use <code>getEditedEntity()</code> method of the base <code>StandardEditor</code> class to get the <code>User</code> being edited.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>If <code>joiningDate</code> attribute is not set, show a message and quit.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Load the list of registered Steps.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Skip the Step if it&#8217;s already in the <code>stepsDc</code> collection container.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Create new <code>UserStep</code> instance using <code>DataContext.create()</code> method.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Add the new <code>UserStep</code> instance to the <code>stepsDc</code> collection container to show it in the UI.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When you create an entity instance through the <code>DataContext</code> object, the instance becomes managed by <code>DataContext</code> and is saved automatically when the screen is committed, that is when you click <strong>OK</strong> button of the screen.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Press <strong>Ctrl/Cmd+S</strong> and switch to the running application. Reopen the User edit screen and check that when you click the <strong>Generate</strong> button, a few records corresponding to the onboarding Steps are created.</p>
+</div>
+</div>
 </div>
 </div>
 <nav class="pagination">

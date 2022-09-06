@@ -1463,9 +1463,6 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>WORK IN PROGRESS</strong></p>
-</div>
-<div class="paragraph">
 <p>At this stage of development, the application has the Steps and Departments management and the default User management with the added <code>Onboarding status</code> attribute. Now you need to link Users with Steps and Departments.</p>
 </div>
 <div class="paragraph">
@@ -1928,6 +1925,16 @@ Composition in Jmix implements the Aggregate pattern of Domain-Driven Design.
 <p>Click <strong>OK</strong>.</p>
 </div>
 <div class="paragraph">
+<p>The attribute source code will have the <code>@Composition</code> annotation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Composition
+@OneToMany(mappedBy = "user")
+private List&lt;UserStep&gt; steps;</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>UserSteps should be displayed in the User edit screen, so select the new <code>steps</code> attribute and click the <strong>Add to Screens</strong> (<span class="image"><img src="_images/common/add-attribute-to-screens.svg" alt="add attribute to screens"></span>) button in the <strong>Attributes</strong> toolbar. Select <code>User.edit</code> screen and click <strong>OK</strong>.</p>
 </div>
 <div class="paragraph">
@@ -2141,7 +2148,7 @@ Composition in Jmix implements the Aggregate pattern of Domain-Driven Design.
 </table>
 </div>
 <div class="paragraph">
-<p>Add the logic of creating and saving <code>UserStep</code> objects to the <code>generateButton</code> handler method:</p>
+<p>Add the logic of creating and saving <code>UserStep</code> objects to the <code>generateButton</code> click handler method:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2217,6 +2224,367 @@ When you create an entity instance through the <code>DataContext</code> object, 
 <div class="paragraph">
 <p>Press <strong>Ctrl/Cmd+S</strong> and switch to the running application. Reopen the User edit screen and check that when you click the <strong>Generate</strong> button, a few records corresponding to the onboarding Steps are created.</p>
 </div>
+<div class="paragraph">
+<p>If you commit the screen by clicking <strong>OK</strong>, all created UserSteps will be saved. If you click <strong>Cancel</strong>, nothing will be saved to the database. It happens because in the code above, you don&#8217;t save the created <code>UserStep</code> objects directly to the database. Instead, you merge them into the screen&#8217;s <code>DataContext</code> by creating them through <code>DataContext.create()</code>. So the new instances are saved only when the entire <code>DataContext</code> is committed.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_improving_usersteps_table"><a class="anchor" href="#_improving_usersteps_table"></a>Improving UserSteps Table</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the sections below, you will finalize the UI for working with generated UserSteps.</p>
+</div>
+<div class="sect2">
+<h3 id="_ordering_nested_collection"><a class="anchor" href="#_ordering_nested_collection"></a>Ordering Nested Collection</h3>
+<div class="paragraph">
+<p>You may notice that when you open a User with previously generated UserSteps, they are not ordered according to the <code>sortValue</code> attribute:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/ordering-1.png" alt="ordering 1">
+</div>
+</div>
+<div class="paragraph">
+<p>The table displays the <code>steps</code> collection attribute of the <code>User</code> entity, so you can introduce ordering on the data model level.</p>
+</div>
+<div class="paragraph">
+<p>Open the <code>User</code> entity, select <code>steps</code> attribute and enter <code>sortValue</code> to the <strong>Order by</strong> field:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/ordering-2.png" alt="ordering 2">
+</div>
+</div>
+<div class="paragraph">
+<p>If you switch to the <strong>Text</strong> tab, you can see the <code>@OrderBy</code> annotation on the <code>steps</code> attribute:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@OrderBy("sortValue")
+@Composition
+@OneToMany(mappedBy = "user")
+private List&lt;UserStep&gt; steps;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now when you load the <code>User</code> entity, its <code>steps</code> collection will be sorted by the <code>UserStep.sortValue</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>If your application is running, restart it.</p>
+</div>
+<div class="paragraph">
+<p>Open the User edit screen. Now the ordering of UserSteps is correct:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/ordering-3.png" alt="ordering 3">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rearranging_table_columns"><a class="anchor" href="#_rearranging_table_columns"></a>Rearranging Table Columns</h3>
+<div class="paragraph">
+<p>Currently, the table of UserSteps is not very informative. Let&#8217;s remove the <code>Version</code> and <code>Sort value</code> columns and add a column showing the Step name.</p>
+</div>
+<div class="paragraph">
+<p>Removing a column is straightforward: just select it in <strong>Component Hierarchy</strong> and press <strong>Delete</strong>, or remove the element directly from XML.</p>
+</div>
+<div class="paragraph">
+<p>To add a column, select the <code>columns</code> element in <strong>Component Hierarchy</strong> and click <strong>Add</strong> &#8594; <strong>Column</strong> in the <strong>Component Inspector</strong>. The <strong>Add Column</strong> dialog appears:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/columns-2.png" alt="columns 2">
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see, it doesn&#8217;t allow you to add a Step name. This is because the <code>step</code> attribute is a reference, and you didn&#8217;t define a proper fetch plan to load it.</p>
+</div>
+<div class="paragraph">
+<p>Select the <code>userDc</code> data container in <strong>Component Hierarchy</strong> and click the <strong>Edit</strong> button (<span class="image"><img src="_images/common/edit.svg" alt="edit"></span>) either in the <code>fetchPlan</code> property in <strong>Component Inspector</strong> or in the gutter of the XML editor:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/columns-3.png" alt="columns 3">
+</div>
+</div>
+<div class="paragraph">
+<p>In the <strong>Edit Fetch Plan</strong> window, select <code>steps</code> &#8594; <code>step</code> attribute and click <strong>OK</strong>:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/columns-4.png" alt="columns 4">
+</div>
+</div>
+<div class="paragraph">
+<p>The nested attribute will be added to fetch plan XML:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;instance id="userDc"
+          class="com.company.onboarding.entity.User"&gt;
+    &lt;fetchPlan extends="_base"&gt;
+        &lt;property fetchPlan="_base" name="department"/&gt;
+        &lt;property fetchPlan="_base" name="steps"&gt;
+            &lt;property name="step" fetchPlan="_base"/&gt;
+        &lt;/property&gt;
+    &lt;/fetchPlan&gt;
+    &lt;loader/&gt;
+    &lt;collection id="stepsDc" property="steps"/&gt;
+&lt;/instance&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now the collection of UserSteps will be eagerly loaded from the database together with the <code>User</code> instance.</p>
+</div>
+<div class="paragraph">
+<p>Select the <code>columns</code> element in <strong>Component Hierarchy</strong> and click <strong>Add</strong> &#8594; <strong>Column</strong> in the <strong>Component Inspector</strong>. The <strong>Add Column</strong> dialog now contains the related <code>Step</code> entity and its attributes:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/columns-5.png" alt="columns 5" width="386">
+</div>
+</div>
+<div class="paragraph">
+<p>Select <code>step</code> &#8594; <code>name</code> and click <strong>OK</strong>. The new column will be added to the end of the columns list:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="stepsTable" dataContainer="stepsDc" ...&gt;
+    &lt;columns&gt;
+        &lt;column id="dueDate"/&gt;
+        &lt;column id="completedDate"/&gt;
+        &lt;column id="step.name"/&gt;
+    &lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Instead of <code>step.name</code> you could use just <code>step</code>. In this case, the column would display the <a href="references.html#instance-name" class="xref page">instance name</a> of the entity. For <code>Step</code>, the instance name is obtained from the <code>name</code> attribute, so the result would be the same.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You could also add the <code>step</code> column directly in XML without modifying the fetch plan, and the UI would still work due to lazy loading of references. But then <code>Step</code> instances would be loaded by separate requests for each <code>UserStep</code> in the collection (N+1 query problem).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Move the <code>step.name</code> column to the beginning by dragging and dropping the element in <strong>Component Hierarchy</strong> or editing the XML directly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="stepsTable" dataContainer="stepsDc" ...&gt;
+    &lt;columns&gt;
+        &lt;column id="step.name"/&gt;
+        &lt;column id="dueDate"/&gt;
+        &lt;column id="completedDate"/&gt;
+    &lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Press <strong>Ctrl/Cmd+S</strong> and switch to the running application. Reopen the User edit screen and make sure the <strong>Steps</strong> table now shows the Step name:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/columns-6.png" alt="columns 6">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_generated_column"><a class="anchor" href="#_adding_generated_column"></a>Adding Generated Column</h3>
+<div class="paragraph">
+<p>In this section, you will implement an ability to mark a UserStep completed by clicking a checkbox in the table row.</p>
+</div>
+<div class="paragraph">
+<p>A UI table component can have so called <em>generated columns</em> not linked with particular entity attributes. In a generated column&#8217;s cell, you can show any visual component or a container with multiple components inside.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s add a generated column which displays a checkbox.</p>
+</div>
+<div class="paragraph">
+<p>Select the <code>columns</code> element in <strong>Component Hierarchy</strong> and click <strong>Add</strong> &#8594; <strong>Column</strong> in the <strong>Component Inspector</strong>. The <strong>Add Column</strong> dialog appears:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/generated-column-1.png" alt="generated column 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Select <strong>New Custom Column</strong> and click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>In the <strong>Additional Settings for Custom Coulmn</strong> dialog, enter <code>completed</code> into <strong>Custom column id</strong> field and select the <strong>Create generator</strong> checkbox:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/generated-column-2.png" alt="generated column 2" width="536">
+</div>
+</div>
+<div class="paragraph">
+<p>Click <strong>OK</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Studio will add the <code>completed</code> column to the table XML:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/generated-column-3.png" alt="generated column 3" width="537">
+</div>
+</div>
+<div class="paragraph">
+<p>and a handler method to the <code>UserEdit</code> controller:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/generated-column-4.png" alt="generated column 4" width="709">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice the line markers on the left: they allow you to switch between the column definition in XML and its handler method in the controller.</p>
+</div>
+<div class="paragraph">
+<p>Inject <code>UiComponents</code> object into controller class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private UiComponents uiComponents;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Implement the handler method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "stepsTable.completed", subject = "columnGenerator") <i class="conum" data-value="1"></i><b>(1)</b>
+private Component stepsTableCompletedColumnGenerator(UserStep userStep) { <i class="conum" data-value="2"></i><b>(2)</b>
+    CheckBox checkBox = uiComponents.create(CheckBox.class); <i class="conum" data-value="3"></i><b>(3)</b>
+    checkBox.setValue(userStep.getCompletedDate() != null);
+    checkBox.addValueChangeListener(e -&gt; { <i class="conum" data-value="4"></i><b>(4)</b>
+        if (userStep.getCompletedDate() == null) {
+            userStep.setCompletedDate(LocalDate.now());
+        } else {
+            userStep.setCompletedDate(null);
+        }
+    });
+    return checkBox; <i class="conum" data-value="5"></i><b>(5)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>@Install</code> annotation indicates that the method is a <em>delegate</em>: a UI component invokes it on some stage of its lifecycle.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This specific delegate (column generator) receives an entity instance which is shown in the table row as an argument.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>CheckBox</code> component instance is created using the <code>UiComponents</code> factory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>When you click the checkbox, its value changes and the checkbox calls its <code>ValueChangeEvent</code> listener. The listener sets the <code>completedDate</code> attribute of the <code>UserStep</code> entity.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The column generator delegate returns the visual component to be shown in the column cells.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Move the <code>completed</code> column on top, set its <code>caption</code> attribute to empty string and <code>width</code> to <code>50px</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table id="stepsTable" dataContainer="stepsDc" ...&gt;
+    &lt;columns&gt;
+        &lt;column id="completed" caption="" width="50px"/&gt;
+        &lt;column id="step.name"/&gt;
+        &lt;column id="dueDate"/&gt;
+        &lt;column id="completedDate"/&gt;
+    &lt;/columns&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Press <strong>Ctrl/Cmd+S</strong> and switch to the running application. Reopen the User edit screen and click checkboxes for some rows. The <strong>Completed date</strong> column will change accordingly:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/data-in-ui/generated-column-5.png" alt="generated column 5">
+</div>
+</div>
+<div class="paragraph">
+<p>The changes in <code>UserStep</code> instances will be saved to the database when you click <strong>OK</strong> in the screen. It&#8217;s the responsibility of the screen&#8217;s <code>DataContext</code>: it tracks changes in all entities and saves to the database changed instances.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, you have implemented two features:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ability to specify a department for a user.</p>
+</li>
+<li>
+<p>Generation and management of onboarding steps for a user.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You have learned that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference attributes should be added to a screen&#8217;s <a href="../data-access/fetching.html#fetch-plan" class="xref page">fetch plan</a> to avoid the N+1 query problem.</p>
+</li>
+<li>
+<p>The <a href="../ui/vcl/components/entity-combo-box.html" class="xref page">EntityComboBox</a> component can be used to select related entity from a dropdown. This component requires a <a href="../ui/data/collection-container.html" class="xref page">CollectionContainer</a> with options to be set in the <a href="../ui/vcl/xml.html#options-container" class="xref page">optionsContainer</a> property.</p>
+</li>
+<li>
+<p>The relationship between <code>User</code> and <code>UserStep</code> entities is an example of <em>composition</em>, when instances of the related entity (<code>UserStep</code>) can exist only as a part of its owning entity instance (<code>User</code>). Such a reference is marked with <a href="../data-model/entities.html#composition" class="xref page">@Composition</a> annotation.</p>
+</li>
+<li>
+<p>A collection of related entities can be ordered using the <code>@OrderBy</code> annotation on the reference attribute.</p>
+</li>
+<li>
+<p>The <code>ClickEvent</code> handler of the <a href="../ui/vcl/components/button.html" class="xref page">Button</a> component is used to handle button clicks. It can be generated on the <strong>Handlers</strong> tab of the <strong>Component Inspector</strong> tool window.</p>
+</li>
+<li>
+<p>The <code>getEditedEntity()</code> method of the <a href="../ui/screens/methods.html#methods-of-standard-editor" class="xref page">edit screen controller</a> returns the entity instance being edited.</p>
+</li>
+<li>
+<p>The <a href="../ui/notifications.html" class="xref page">Notifications</a> interface is used to show popup notifications.</p>
+</li>
+<li>
+<p>The <a href="../data-access/data-manager.html" class="xref page">DataManager</a> interface can be used to load data from the database.</p>
+</li>
+<li>
+<p>A nested collection of related entities is loaded into a <a href="../ui/data/property-containers.html" class="xref page">CollectionPropertyContainer</a>. Its <code>getItems()</code> and <code>getMutableItems()</code> methods can be used to iterate over and to add/remove items to the collection.</p>
+</li>
+<li>
+<p><a href="../ui/data/data-context.html" class="xref page">DataContext</a> tracks changes in entities and saves changed instances to the database when user clicks <strong>OK</strong> in the screen.</p>
+</li>
+<li>
+<p>The UI table can have <a href="../ui/vcl/components/table.html#table-column-generation" class="xref page">generated columns</a> which display arbitrary visual components.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>7. Working with Images :: Jmix Documentation</title>
+    <title>6. Working with Images :: Jmix Documentation</title>
     <link rel="canonical" href="https://docs.jmix.io/jmix/tutorial/images.html">
-    <link rel="prev" href="entity-events.html">
+    <link rel="prev" href="data-in-ui.html">
     <link rel="next" href="ui-from-scratch.html">
     <meta name="generator" content="Antora 3.0.3">
 <link rel="stylesheet" href="../../_/css/site.css">
@@ -107,14 +107,14 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="data-in-ui.html">5. Working with Data in UI</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="entity-events.html">6. Using Entity Events</a>
-  </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="images.html">7. Working with Images</a>
+    <a class="nav-link" href="images.html">6. Working with Images</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ui-from-scratch.html">8. Creating UI from Scratch</a>
+    <a class="nav-link" href="ui-from-scratch.html">7. Creating UI from Scratch</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="entity-events.html">8. Using Entity Events</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="data-access-control.html">9. Data Access Control</a>
@@ -1449,7 +1449,7 @@
   <ul>
     <li><a href="../intro.html">Jmix Documentation</a></li>
     <li><a href="index.html">Tutorial</a></li>
-    <li><a href="images.html">7. Working with Images</a></li>
+    <li><a href="images.html">6. Working with Images</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="file:///Users/knst/work/jmix/docs/jmix-docs-tut/content/modules/tutorial/pages/images.adoc">Edit this Page</a></div>
@@ -1459,36 +1459,28 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">7. Working with Images</h1>
+<h1 class="page">6. Working with Images</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>WORK IN PROGRESS</strong></p>
-</div>
-<div class="paragraph">
-<p>Your application already has the default User management which came from the project template. In this chapter, you will add a <code>picture</code> attribute to the <code>User</code> entity and learn how to upload and display images in UI.</p>
+<p>In this chapter, you will add the <code>picture</code> attribute to the <code>User</code> entity and learn how to upload and display images in UI.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_file_reference_attribute"><a class="anchor" href="#_file_reference_attribute"></a>File Reference Attribute</h2>
+<h2 id="file-ref-attr"><a class="anchor" href="#file-ref-attr"></a>Adding File Reference Attribute</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Jmix allows you to store uploaded files outside the database in a so-called <em>file storage</em>. In the simple case, it&#8217;s just a file system directory with a special structure. To link the file to an entity, you create an attribute of the <code>FileRef</code> type.</p>
+<p>Jmix allows you to store uploaded files outside the database in a so-called <em>file storage</em>. In the simple case, it&#8217;s just a file system directory with a special structure. To link the file located in the file storage to an entity, you create an attribute of the <code>FileRef</code> type.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s create such an attribute for the User picture.</p>
+<p>Let&#8217;s create such an attribute for managing the user picture.</p>
 </div>
 <div class="paragraph">
 <p>If your application is running, stop it using the <strong>Stop</strong> button (<span class="image"><img src="_images/common/suspend.svg" alt="suspend"></span>) in the main toolbar.</p>
 </div>
 <div class="paragraph">
-<p>Double-click on the <code>User</code> entity in <strong>Jmix</strong> tool window and select its last attribute (to add new attributes after it):</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/images/attribute-1.png" alt="attribute 1">
-</div>
+<p>Double-click on the <code>User</code> entity in <strong>Jmix</strong> tool window and select the <code>joiningDate</code> attribute (to add the new attribute after it).</p>
 </div>
 <div class="paragraph">
 <p>Click <strong>Add</strong> (<span class="image"><img src="_images/common/add.svg" alt="add"></span>) in the <strong>Attributes</strong> toolbar. In the <strong>New Attribute</strong> dialog, enter <code>picture</code> into the <strong>Name</strong> field and select <code>FileRef</code> in the <strong>Type</strong> dropdown:</p>
@@ -1505,45 +1497,36 @@
 <p>Click <strong>OK</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Select the <code>picture</code> attribute and click the <strong>Add to Screens</strong> (<span class="image"><img src="_images/common/add-attribute-to-screens.svg" alt="add attribute to screens"></span>) button in the <strong>Attributes</strong> toolbar:</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="_images/images/attribute-3.png" alt="attribute 3">
-</div>
+<p>Select the <code>picture</code> attribute and click the <strong>Add to Screens</strong> (<span class="image"><img src="_images/common/add-attribute-to-screens.svg" alt="add attribute to screens"></span>) button in the <strong>Attributes</strong> toolbar.</p>
 </div>
 <div class="paragraph">
-<p>The appeared dialog window will show all screens that display the <code>User</code> entity. Select both <code>User.edit</code> and <code>User.browse</code> screens:</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="_images/images/attribute-4.png" alt="attribute 4" width="805">
-</div>
-</div>
-<div class="paragraph">
-<p>Click <strong>OK</strong>.</p>
+<p>The appeared dialog window will show all screens that display the <code>User</code> entity. Select both <code>User.edit</code> and <code>User.browse</code> screens and click <strong>OK</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Studio will create the <code>picture</code> column in the <code>usersTable</code> of the <code>User.browse</code> screen:</p>
 </div>
-<div class="imageblock text-center">
+<div class="listingblock">
 <div class="content">
-<img src="_images/images/ui-1.png" alt="ui 1">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;groupTable id="usersTable" dataContainer="usersDc" ...&gt;
+    ...
+    &lt;columns&gt;
+        ...
+        &lt;column id="picture"/&gt;
+    &lt;/columns&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>And the <code>pictureField</code> component in the form of the <code>User.edit</code> screen:</p>
+<p>and the <code>pictureField</code> component in the form of the <code>User.edit</code> screen:</p>
 </div>
-<div class="imageblock text-center">
+<div class="listingblock">
 <div class="content">
-<img src="_images/images/ui-2.png" alt="ui 2">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;form id="form" dataContainer="userDc"&gt;
+    &lt;column ...&gt;
+        ...
+        &lt;fileStorageUpload id="pictureField" property="picture"/&gt;
+    &lt;/column&gt;</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="run-app"><a class="anchor" href="#run-app"></a>Running the Application</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>Click the <strong>Debug</strong> button (<span class="image"><img src="_images/common/start-debugger.svg" alt="start debugger"></span>) in the main toolbar.</p>
 </div>
@@ -1568,7 +1551,7 @@
 <p>Open <code>http://localhost:8080</code> in your web browser and log in to the application with <code>admin</code> / <code>admin</code> credentials.</p>
 </div>
 <div class="paragraph">
-<p>Click on the <code>Users</code> item in the <code>Application</code> menu. You will see the <code>Picture</code> column in the <code>User.browse</code> screen:</p>
+<p>Click on the <code>Users</code> item in the <code>Application</code> menu. You will see the <code>Picture</code> column in the <code>User.browse</code> screen (scroll the table to the right):</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
@@ -1585,9 +1568,196 @@
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="image-in-form"><a class="anchor" href="#image-in-form"></a>Displaying Image in Form</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, you will improve the edit screen to display the uploaded picture in the form.</p>
+</div>
+<div class="paragraph">
+<p>First, add a second column to the <code>form</code> component and move <code>fileStorageUpload</code> to it:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/form-1.gif" alt="form 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Then add the <code>image</code> component below <code>fileStorageUpload</code> with the following attributes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;form id="form" dataContainer="userDc"&gt;
+    ...
+    &lt;column&gt;
+        &lt;fileStorageUpload id="pictureField" property="picture"/&gt;
+        &lt;image id="image" property="picture"
+               scaleMode="CONTAIN"
+               rowspan="10" caption=""
+               height="200" width="200"/&gt;
+    &lt;/column&gt;
+&lt;/form&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>property="picture"</code> binds the <code>image</code> component to the <code>picture</code> attribute of the <code>User</code> entity.</p>
+</li>
+<li>
+<p><code>scaleMode="CONTAIN"</code> makes sure the image fills the whole allocated area but keeps the proportions.</p>
+</li>
+<li>
+<p><code>rowspan="10"</code> allows the component to fill up to 10 rows of the form instead of 1. So the image will occupy all available space on the right.</p>
+</li>
+<li>
+<p><code>caption=""</code> removes the default caption inferred from the entity attribute.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Press <strong>Ctrl/Cmd+S</strong> and switch to the running application. Reopen the User edit screen:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/images/form-2.png" alt="form 2">
+</div>
+</div>
+<div class="paragraph">
+<p>If you upload a picture from a file, the file name will be shown by <code>fileStorageUpload</code> and the picture will be displayed by the <code>image</code> component:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/images/form-3.png" alt="form 3">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="image-in-table"><a class="anchor" href="#image-in-table"></a>Displaying Image in Table</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you close the edit screen after uploading a picture, you will see that the table column shows only the name of the uploaded file:</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/images/table-1.png" alt="table 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s move the <code>picture</code> column to the first position and create a <code>columnGenerator</code> handler for it:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/table-2.gif" alt="table 2">
+</div>
+</div>
+<div class="paragraph">
+<p>Inject <code>UiComponents</code> object into the controller class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private UiComponents uiComponents;</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can use <strong>Inject</strong> button in the top actions panel of the editor to inject dependencies into screen controllers and Spring beans.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Implement the handler method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Install(to = "usersTable.picture", subject = "columnGenerator") <i class="conum" data-value="1"></i><b>(1)</b>
+private Component usersTablePictureColumnGenerator(User user) { <i class="conum" data-value="2"></i><b>(2)</b>
+    if (user.getPicture() != null) {
+        Image image = uiComponents.create(Image.class); <i class="conum" data-value="3"></i><b>(3)</b>
+        image.setScaleMode(Image.ScaleMode.CONTAIN);
+        image.setSource(FileStorageResource.class)
+                .setFileReference(user.getPicture()); <i class="conum" data-value="4"></i><b>(4)</b>
+        image.setWidth("30px");
+        image.setHeight("30px");
+        return image; <i class="conum" data-value="5"></i><b>(5)</b>
+    } else {
+        return null;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>@Install</code> annotation indicates that the method is a <em>delegate</em>: a UI component (table in this case) invokes it on some stage of its lifecycle.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This specific delegate (column generator) receives an entity instance which is shown in the table row as an argument.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>Image</code> component instance is created using the <code>UiComponents</code> factory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The image component gets its content from the file storage by the reference stored in the <code>picture</code> attribute of the <code>User</code> entity.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The column generator delegate returns the visual component to be shown in the column cells.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Press <strong>Ctrl/Cmd+S</strong> and switch to the running application. Reopen the User browse screen. You will see the user&#8217;s picture in the first table column:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/images/table-3.png" alt="table 3">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary"><a class="anchor" href="#summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, you have added the ability to upload and show a user&#8217;s picture.</p>
+</div>
+<div class="paragraph">
+<p>You have learned that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../files/uploading-files.html" class="xref page">Uploaded files</a> can be stored in a <a href="../files/file-storage.html" class="xref page">file storage</a> and linked with entities using attributes of the <code>FileRef</code> type.</p>
+</li>
+<li>
+<p>The <a href="../ui/vcl/components/file-storage-upload-field.html" class="xref page">FileStorageUploadField</a> component allows you to upload files, save them into the file storage and link to an entity attribute.</p>
+</li>
+<li>
+<p>The <a href="../ui/vcl/components/image.html" class="xref page">Image</a> component can display images saved in the file storage.</p>
+</li>
+<li>
+<p><a href="../ui/vcl/components/table.html#table-column-generation" class="xref page">Generated columns</a> can be used to display images in table cells.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="entity-events.html">6. Using Entity Events</a></span>
-  <span class="next"><a href="ui-from-scratch.html">8. Creating UI from Scratch</a></span>
+  <span class="prev"><a href="data-in-ui.html">5. Working with Data in UI</a></span>
+  <span class="next"><a href="ui-from-scratch.html">7. Creating UI from Scratch</a></span>
 </nav>
 </article>
   </div>

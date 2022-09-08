@@ -6,7 +6,7 @@
     <title>5. Working with Data in UI :: Jmix Documentation</title>
     <link rel="canonical" href="https://docs.jmix.io/jmix/tutorial/data-in-ui.html">
     <link rel="prev" href="enumerations.html">
-    <link rel="next" href="entity-events.html">
+    <link rel="next" href="images.html">
     <meta name="generator" content="Antora 3.0.3">
 <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
@@ -108,13 +108,13 @@
     <a class="nav-link" href="data-in-ui.html">5. Working with Data in UI</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="entity-events.html">6. Using Entity Events</a>
+    <a class="nav-link" href="images.html">6. Working with Images</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="images.html">7. Working with Images</a>
+    <a class="nav-link" href="ui-from-scratch.html">7. Creating UI from Scratch</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="ui-from-scratch.html">8. Creating UI from Scratch</a>
+    <a class="nav-link" href="entity-events.html">8. Using Entity Events</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="data-access-control.html">9. Data Access Control</a>
@@ -1495,7 +1495,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_adding_reference_attribute"><a class="anchor" href="#_adding_reference_attribute"></a>Adding Reference Attribute</h2>
+<h2 id="ref-attr"><a class="anchor" href="#ref-attr"></a>Adding Reference Attribute</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You&#8217;ve already done a similar task when created the <a href="references.html#create-reference-attr" class="xref page">HR Manager attribute</a> of the <code>Department</code> entity as a reference to <code>User</code>. Now you need to create a link in the opposite direction: a User should have a reference to Department.</p>
@@ -1619,7 +1619,7 @@ The screens would work without including <code>department</code> in the fetch pl
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_dropdown_for_selecting_reference"><a class="anchor" href="#_using_dropdown_for_selecting_reference"></a>Using Dropdown for Selecting Reference</h2>
+<h2 id="using-dropdown"><a class="anchor" href="#using-dropdown"></a>Using Dropdown for Selecting Reference</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>By default, Studio generates the <code>entityPicker</code> component for selecting references. You can see it in the <code>User.edit</code> screen. Open <code>user-edit.xml</code> and switch to XML editor using the button in the top panel:</p>
@@ -1669,7 +1669,7 @@ The screens would work without including <code>department</code> in the fetch pl
 </div>
 </div>
 <div class="sect2">
-<h3 id="_creating_options_data_container"><a class="anchor" href="#_creating_options_data_container"></a>Creating Options Data Container</h3>
+<h3 id="options-container"><a class="anchor" href="#options-container"></a>Creating Options Data Container</h3>
 <div class="paragraph">
 <p>Let&#8217;s provide a list of options to the <code>entityComboBox</code> component displaying the reference to Department. The list should contain all Departments ordered by name.</p>
 </div>
@@ -1778,7 +1778,7 @@ The <code>entityComboBox</code> component allows you to filter options by enteri
 </div>
 </div>
 <div class="sect1">
-<h2 id="_creating_userstep_entity"><a class="anchor" href="#_creating_userstep_entity"></a>Creating UserStep Entity</h2>
+<h2 id="user-step-entity"><a class="anchor" href="#user-step-entity"></a>Creating UserStep Entity</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will create the <code>UserStep</code> entity which represents onboarding Steps for a particular User:</p>
@@ -1863,7 +1863,7 @@ The <code>entityComboBox</code> component allows you to filter options by enteri
 </div>
 </div>
 <div class="sect1">
-<h2 id="_adding_composition_attribute"><a class="anchor" href="#_adding_composition_attribute"></a>Adding Composition Attribute</h2>
+<h2 id="composition-attr"><a class="anchor" href="#composition-attr"></a>Adding Composition Attribute</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Consider the relationship between <code>User</code> and <code>UserStep</code> entities. <code>UserStep</code> instances exist only in the context of a particular <code>User</code> instance (owned by it). A <code>UserStep</code> instance cannot change its owner - it just doesn&#8217;t make any sense. Also, there are no links to <code>UserStep</code> from other data model objects, they are completely encapsulated in a User context.</p>
@@ -2024,13 +2024,13 @@ private List&lt;UserStep&gt; steps;</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_generating_usersteps_for_user"><a class="anchor" href="#_generating_usersteps_for_user"></a>Generating UserSteps for User</h2>
+<h2 id="generate-user-steps"><a class="anchor" href="#generate-user-steps"></a>Generating UserSteps for User</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you will implement the generation and showing of <code>UserStep</code> instances for the edited <code>User</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="_adding_joiningdate_attribute"><a class="anchor" href="#_adding_joiningdate_attribute"></a>Adding JoiningDate Attribute</h3>
+<h3 id="joining-date-attr"><a class="anchor" href="#joining-date-attr"></a>Adding JoiningDate Attribute</h3>
 <div class="paragraph">
 <p>First, let&#8217;s add the <code>joiningDate</code> attribute to the <code>User</code> entity:</p>
 </div>
@@ -2070,7 +2070,7 @@ private List&lt;UserStep&gt; steps;</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_adding_custom_button"><a class="anchor" href="#_adding_custom_button"></a>Adding Custom Button</h3>
+<h3 id="custom-button"><a class="anchor" href="#custom-button"></a>Adding Custom Button</h3>
 <div class="paragraph">
 <p>Now you need to remove the standard actions and buttons for managing UserSteps and add a button for starting a custom logic of creating entities.</p>
 </div>
@@ -2107,7 +2107,7 @@ private List&lt;UserStep&gt; steps;</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_creating_and_saving_userstep_instances"><a class="anchor" href="#_creating_and_saving_userstep_instances"></a>Creating and Saving UserStep Instances</h3>
+<h3 id="create-user-steps"><a class="anchor" href="#create-user-steps"></a>Creating and Saving UserStep Instances</h3>
 <div class="paragraph">
 <p>Let&#8217;s implement the logic of generating <code>UserStep</code> instances.</p>
 </div>
@@ -2231,13 +2231,13 @@ When you create an entity instance through the <code>DataContext</code> object, 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_improving_usersteps_table"><a class="anchor" href="#_improving_usersteps_table"></a>Improving UserSteps Table</h2>
+<h2 id="improve-table"><a class="anchor" href="#improve-table"></a>Improving UserSteps Table</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In the sections below, you will finalize the UI for working with generated UserSteps.</p>
 </div>
 <div class="sect2">
-<h3 id="_ordering_nested_collection"><a class="anchor" href="#_ordering_nested_collection"></a>Ordering Nested Collection</h3>
+<h3 id="order-nested-collection"><a class="anchor" href="#order-nested-collection"></a>Ordering Nested Collection</h3>
 <div class="paragraph">
 <p>You may notice that when you open a User with previously generated UserSteps, they are not ordered according to the <code>sortValue</code> attribute:</p>
 </div>
@@ -2284,7 +2284,7 @@ private List&lt;UserStep&gt; steps;</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_rearranging_table_columns"><a class="anchor" href="#_rearranging_table_columns"></a>Rearranging Table Columns</h3>
+<h3 id="rearrange-table-columns"><a class="anchor" href="#rearrange-table-columns"></a>Rearranging Table Columns</h3>
 <div class="paragraph">
 <p>Currently, the table of UserSteps is not very informative. Let&#8217;s remove the <code>Version</code> and <code>Sort value</code> columns and add a column showing the Step name.</p>
 </div>
@@ -2398,7 +2398,7 @@ You could also add the <code>step</code> column directly in XML without modifyin
 </div>
 </div>
 <div class="sect2">
-<h3 id="_adding_generated_column"><a class="anchor" href="#_adding_generated_column"></a>Adding Generated Column</h3>
+<h3 id="generated-column"><a class="anchor" href="#generated-column"></a>Adding Generated Column</h3>
 <div class="paragraph">
 <p>In this section, you will implement an ability to mark a UserStep completed by clicking a checkbox in the table row.</p>
 </div>
@@ -2458,6 +2458,18 @@ You could also add the <code>step</code> column directly in XML without modifyin
 private UiComponents uiComponents;</code></pre>
 </div>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can use <strong>Inject</strong> button in the top actions panel of the editor to inject dependencies into screen controllers and Spring beans.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Implement the handler method:</p>
 </div>
@@ -2482,7 +2494,7 @@ private Component stepsTableCompletedColumnGenerator(UserStep userStep) { <i cla
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <code>@Install</code> annotation indicates that the method is a <em>delegate</em>: a UI component invokes it on some stage of its lifecycle.</td>
+<td>The <code>@Install</code> annotation indicates that the method is a <em>delegate</em>: a UI component (table in this case) invokes it on some stage of its lifecycle.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -2531,7 +2543,7 @@ private Component stepsTableCompletedColumnGenerator(UserStep userStep) { <i cla
 </div>
 </div>
 <div class="sect1">
-<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<h2 id="summary"><a class="anchor" href="#summary"></a>Summary</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, you have implemented two features:</p>
@@ -2555,10 +2567,10 @@ private Component stepsTableCompletedColumnGenerator(UserStep userStep) { <i cla
 <p>Reference attributes should be added to a screen&#8217;s <a href="../data-access/fetching.html#fetch-plan" class="xref page">fetch plan</a> to avoid the N+1 query problem.</p>
 </li>
 <li>
-<p>The <a href="../ui/vcl/components/entity-combo-box.html" class="xref page">EntityComboBox</a> component can be used to select related entity from a dropdown. This component requires a <a href="../ui/data/collection-container.html" class="xref page">CollectionContainer</a> with options to be set in the <a href="../ui/vcl/xml.html#options-container" class="xref page">optionsContainer</a> property.</p>
+<p>The <a href="../ui/vcl/components/entity-combo-box.html" class="xref page">EntityComboBox</a> component can be used to select a related entity from a dropdown. This component requires a <a href="../ui/data/collection-container.html" class="xref page">CollectionContainer</a> with options to be set in the <a href="../ui/vcl/xml.html#options-container" class="xref page">optionsContainer</a> property.</p>
 </li>
 <li>
-<p>The relationship between <code>User</code> and <code>UserStep</code> entities is an example of <em>composition</em>, when instances of the related entity (<code>UserStep</code>) can exist only as a part of its owning entity instance (<code>User</code>). Such a reference is marked with <a href="../data-model/entities.html#composition" class="xref page">@Composition</a> annotation.</p>
+<p>The relationship between <code>User</code> and <code>UserStep</code> entities is an example of <em>composition</em>, when instances of the related entity (<code>UserStep</code>) can exist only as a part of its owner (<code>User</code>). Such a reference is marked with <a href="../data-model/entities.html#composition" class="xref page">@Composition</a> annotation.</p>
 </li>
 <li>
 <p>A collection of related entities can be ordered using the <code>@OrderBy</code> annotation on the reference attribute.</p>
@@ -2590,7 +2602,7 @@ private Component stepsTableCompletedColumnGenerator(UserStep userStep) { <i cla
 </div>
 <nav class="pagination">
   <span class="prev"><a href="enumerations.html">4. Using Enumerations</a></span>
-  <span class="next"><a href="entity-events.html">6. Using Entity Events</a></span>
+  <span class="next"><a href="images.html">6. Working with Images</a></span>
 </nav>
 </article>
   </div>
